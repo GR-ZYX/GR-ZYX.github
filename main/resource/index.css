@@ -13,14 +13,24 @@ html,body{
     background-color: rgb(243,242,238);
 }
 
+.title h1{
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    margin-right: 10px;
+} 
+
 .return a{
     width: 50px;
     height: 60px;
     font-size: 20px;
     text-align: center;
     line-height: 60px;
-    margin-left: 20px;
+    margin-right: 50px;
     color: rgb(97, 94, 94);
+    float: right;
 }
 
 iframe{
