@@ -1,0 +1,73 @@
+.subjects{
+    margin-left: 10px;
+    width: 84%;
+    float: left;
+}
+
+.subject{
+    width: 100%;
+    margin-top: 10px;
+    float: left;
+    background-color: rgb(228, 227, 227);
+}
+
+.subject h1{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.card{
+    margin-left: 3%;
+    margin-right: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20%;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+
+}
+
+.card:hover{
+    background-color: rgb(241, 241, 241);
+    box-shadow: 10px 10px 5px #888888;
+}
+
+@media screen and (max-width: 600px){
+    .subjects{
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+        float: left;
+    }
+
+    .subject{
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+        float: left;
+        background-color: rgb(243,242,238);
+    }
+
+    .card{
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 100px;
+    background-color: white;
+    border-radius: 5%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    }
+
+}
