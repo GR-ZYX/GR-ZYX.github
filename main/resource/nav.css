@@ -28,7 +28,7 @@ a{
 }
 .hide{
     height: 0;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 .hide h5{
     height: 50px;
