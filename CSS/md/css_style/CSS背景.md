@@ -2,9 +2,7 @@
 
 [TOC]
 
-## 背景色：background-color
-
-### 详细介绍
+## 背景色：`background-color`
 
 可以使用 `background-color` 属性为元素设置背景色。
 
@@ -25,16 +23,6 @@ p {background-color: gray; padding: 20px;}
 background-color 不能继承，**其默认值是 transparent**。transparent 有“透明”之意。也就是说，如果一个元素没有指定背景色，那么背景就是透明的，这样其祖先元素的背景才能可见。
 
 ### 定义和用法
-
-background-color 属性设置元素的背景颜色。
-
-**元素背景的范围**
-
-background-color 属性为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。
-
-**transparent 值**
-
-尽管在大多数情况下，没有必要使用 transparent。不过如果您不希望某元素拥有背景色，同时又不希望用户对浏览器的颜色设置影响到您的设计，那么设置 transparent 值还是有必要的。
 
 | 默认值：          | transparent                              |
 | :---------------- | ---------------------------------------- |
@@ -60,9 +48,7 @@ background-color 属性为元素设置一种纯色。这种颜色会填充元素
 
 
 
-## 背景图像：background-image
-
-### 详细介绍
+## 背景图像：`background-image`
 
 要把图像放入背景，需要使用 `background-image` 属性
 
@@ -94,12 +80,6 @@ a.radio {background-image: url(/i/eg_bg_07.gif);}
 
 ### 定义和用法
 
-background-image 属性为元素设置背景图像。
-
-元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。
-
-默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。
-
 **提示：**请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。
 
 | 默认值：          | none                                            |
@@ -124,9 +104,7 @@ background-image 属性为元素设置背景图像。
 
 
 
-## 背景重复：background-repeat
-
-### 详细介绍
+## 背景重复：`background-repeat`
 
 如果需要在页面上对背景图像进行平铺，可以使用 `background-repeat` 属性
 
@@ -144,17 +122,11 @@ body
 
 ### 定义和用法
 
-background-repeat 属性设置是否及如何重复背景图像。
-
-默认地，背景图像在水平和垂直方向上重复。
-
 | 默认值：          | repeat                                     |
 | :---------------- | ------------------------------------------ |
 | 继承性：          | no                                         |
 | 版本：            | CSS1                                       |
 | JavaScript 语法： | *object*.style.backgroundRepeat="repeat-y" |
-
-### 提示和注释
 
 **提示：**背景图像的位置是根据 background-position 属性设置的。如果未规定 background-position 属性，图像会被放置在元素的左上角。
 
@@ -176,9 +148,7 @@ background-repeat 属性设置是否及如何重复背景图像。
 
 
 
-## 背景定位：background-position
-
-### 详细介绍
+## 背景定位：`background-position`
 
 可以利用 `background-position` 属性改变图像在背景中的位置
 
@@ -273,10 +243,6 @@ body
 
 ### 定义和用法
 
-background-position 属性设置背景图像的起始位置。
-
-**提示：**需要把 background-attachment 属性设置为 "fixed"，才能保证该属性在 Firefox 和 Opera 中正常工作。
-
 | 默认值：          | 0% 0%                                      |
 | :---------------- | ------------------------------------------ |
 | 继承性：          | no                                         |
@@ -299,9 +265,7 @@ background-position 属性设置背景图像的起始位置。
 
 
 
-## 背景关联：background-attachment
-
-### 详细介绍
+## 背景关联：`background-attachment`
 
 **如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。**
 

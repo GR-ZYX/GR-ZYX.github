@@ -1,0 +1,601 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>CSS文本</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="css文本" class="md-header-anchor"></a><span>CSS文本</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#css文本">CSS文本</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n6"><a class="md-toc-inner" href="#文本颜色color">文本颜色：color</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n371"><a class="md-toc-inner" href="#定义和用法">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n390"><a class="md-toc-inner" href="#属性值">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n409"><a class="md-toc-inner" href="#文本首行缩进text-indent">文本首行缩进：text-indent</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n699"><a class="md-toc-inner" href="#定义和用法-n699">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n718"><a class="md-toc-inner" href="#属性值-n718">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n48"><a class="md-toc-inner" href="#文本水平对齐text-align">文本水平对齐：text-align</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n603"><a class="md-toc-inner" href="#定义和用法-n603">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n619"><a class="md-toc-inner" href="#属性值-n619">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1248"><a class="md-toc-inner" href="#文本装饰text-decoration">文本装饰：text-decoration</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1254"><a class="md-toc-inner" href="#定义和用法-n1254">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1268"><a class="md-toc-inner" href="#属性值-n1268">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1377"><a class="md-toc-inner" href="#文本方向direction">文本方向：direction</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1381"><a class="md-toc-inner" href="#定义和用法-n1381">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1397"><a class="md-toc-inner" href="#属性值-n1397">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1510"><a class="md-toc-inner" href="#文本行高line-height">文本行高：line-height </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1511"><a class="md-toc-inner" href="#定义和用法-n1511">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1530"><a class="md-toc-inner" href="#属性值-n1530">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n108"><a class="md-toc-inner" href="#字单词）间隔word-spacing">字（单词）间隔：word-spacing</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n926"><a class="md-toc-inner" href="#定义和用法-n926">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n946"><a class="md-toc-inner" href="#属性值-n946">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n141"><a class="md-toc-inner" href="#字符间隔letter-spacing">字符间隔：letter-spacing</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n529"><a class="md-toc-inner" href="#定义和用法-n529">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n546"><a class="md-toc-inner" href="#属性值-n546">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n159"><a class="md-toc-inner" href="#字符大小写转换text-transform">字符大小写转换：text-transform</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n737"><a class="md-toc-inner" href="#定义和用法-n737">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n756"><a class="md-toc-inner" href="#属性值-n756">属性值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n258"><a class="md-toc-inner" href="#处理空白符white-space">处理空白符：white-space</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n785"><a class="md-toc-inner" href="#定义和用法-n785">定义和用法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n801"><a class="md-toc-inner" href="#属性值-n801">属性值</a></span></p></div><h2><a name="文本颜色color" class="md-header-anchor"></a><span>文本颜色：color</span></h2><h3><a name="定义和用法" class="md-header-anchor"></a><span>定义和用法</span></h3><p><code>color</code><span> 属性规定文本的颜色。</span></p><p><span>这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 </span><code>color</code><span> 影响。这个颜色还会应用到元素的所有边框，除非被 </span><code>border-color</code><span> 或另外某个边框颜色属性覆盖。</span></p><p><span>要设置一个元素的前景色，最容易的方法是使用 </span><code>color</code><span> 属性。</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><em><span>not specified</span></em></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.color=&quot;#FF0000&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><em><span>color_name</span></em></td><td style='text-align:left;' ><span>规定颜色值为颜色名称的颜色（比如 red）。</span></td></tr><tr><td style='text-align:left;' ><em><span>hex_number</span></em></td><td style='text-align:left;' ><span>规定颜色值为十六进制值的颜色（比如 #ff0000）。</span></td></tr><tr><td style='text-align:left;' ><em><span>rgb_number</span></em></td><td style='text-align:left;' ><span>规定颜色值为 rgb 代码的颜色（比如 rgb(255,0,0)）。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承颜色。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="文本首行缩进text-indent" class="md-header-anchor"></a><span>文本首行缩进：text-indent</span></h2><p><span>把 Web 页面上的段落的第一行缩进，这是一种最常用的文本格式化效果。</span></p><p><span>CSS 提供了 </span><code>text-indent</code><span> 属性，该属性可以方便地实现文本缩进。</span></p><p><span>这个属性最常见的用途是将段落的首行缩进，下面的规则会使所有段落的首行缩进 5 em：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {text-indent: 5em;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><strong><span>注意：</span></strong><span>一般来说，可以为所有块级元素应用 </span><code>text-indent</code><span>，但无法将该属性应用于行内元素，图像之类的替换元素上也无法应用 </span><code>text-indent</code><span> 属性。不过，如果一个块级元素（比如段落）的首行中有一个图像，它会随该行的其余文本移动。</span></p><p><strong><span>提示：</span></strong><span>如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果。</span></p><p><strong><span>使用负值，实现悬挂缩进</span></strong></p><p><code>text-indent</code><span> 还可以设置为负值。利用这种技术，可以实现很多有趣的效果，比如</span><strong><span>“悬挂缩进”</span></strong><span>，即第一行悬挂在元素中余下部分的左边：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {text-indent: -5em;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>不过在为 </span><code>text-indent</code><span> 设置负值时要当心，如果对一个段落设置了负值，那么首行的某些文本可能会超出浏览器窗口的左边界。为了避免出现这种显示问题，建议针对负缩进再设置一个外边距或一些内边距：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {text-indent: -5em; padding-left: 5em;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><strong><span>使用百分比值</span></strong></p><p><span>百分数要相对于缩进元素父元素的宽度。换句话说，如果将缩进值设置为 20%，所影响元素的第一行会缩进其父元素宽度的 20%。</span></p><p><span>在下例中，缩进值是父元素的 20%，即 100 个像素：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">div {width: 500px;}</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {text-indent: 20%;}</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;div&gt;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;p&gt;this is a paragragh&lt;/p&gt;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/div&gt;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 134px;"></div><div class="CodeMirror-gutters" style="display: none; height: 134px;"></div></div></div></pre><p><strong><span>继承</span></strong></p><p><code>text-indent</code><span> 属性可以继承，请考虑如下标记：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">div#outer {width: 500px;}</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">div#inner {text-indent: 10%;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {width: 200px;}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;div id="outer"&gt;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;div id="inner"&gt;some text. some text. some text.</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;p&gt;this is a paragragh.&lt;/p&gt;</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/div&gt;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/div&gt;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 202px;"></div><div class="CodeMirror-gutters" style="display: none; height: 202px;"></div></div></div></pre><p><span>以上标记中的段落也会缩进 50 像素，这是因为这个段落继承了 </span><code>id</code><span> 为 </span><code>inner</code><span> 的 </span><code>div</code><span> 元素的缩进值。</span></p><h3><a name="定义和用法-n699" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><em><span>not specified</span></em></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.textIndent=&quot;50px&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n718" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><em><span>length</span></em></td><td style='text-align:left;' ><span>定义固定的缩进。默认值：0。</span></td></tr><tr><td style='text-align:left;' ><em><span>%</span></em></td><td style='text-align:left;' ><span>定义基于父元素宽度的百分比的缩进。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 text-indent 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="文本水平对齐text-align" class="md-header-anchor"></a><span>文本水平对齐：text-align</span></h2><p><code>text-align</code><span> 是一个基本的属性，它会影响一个元素中的</span><strong><span>文本行</span></strong><span>互相之间的对齐方式。</span></p><p><span>值 </span><code>left</code><span>、</span><code>right</code><span> 和 </span><code>center</code><span> 会使元素中的文本分别左对齐、右对齐和居中。</span></p><p><span>西方语言都是从左向右读，所有 </span><code>text-align</code><span> 的默认值是 </span><code>left</code><span>。对于希伯来语和阿拉伯语之类的的语言，</span><code>text-align</code><span> 则默认为 </span><code>right</code><span>，因为这些语言从右向左读。</span><code>center</code><span> 会使每个文本行在元素中居中。</span></p><p><strong><span>提示：</span></strong><span>将块级元素或表元素居中，要通过在这些元素上适当地设置左、右外边距来实现。</span></p><p><strong><span>text-align:center 与 </span><code>&lt;CENTER&gt;</code></strong></p><p><code>&lt;CENTER&gt;</code><span>不仅影响文本，还会把整个元素居中。</span><code>text-align</code><span> 不会控制元素的对齐，而只影响内部内容。元素本身不会从一段移到另一端，只是其中的文本受影响。</span></p><p><strong><span>justify</span></strong></p><p><span>水平对齐属性是 </span><code>justify</code><span>。</span></p><p><span>在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。</span></p><h3><a name="定义和用法-n603" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>如果 direction 属性是 ltr，则默认值是 left；如果 direction 是 rtl，则为 right。</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.textAlign=&quot;right&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n619" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>left</span></td><td style='text-align:left;' ><span>把文本排列到左边。默认值：由浏览器决定。</span></td></tr><tr><td style='text-align:left;' ><span>right</span></td><td style='text-align:left;' ><span>把文本排列到右边。</span></td></tr><tr><td style='text-align:left;' ><span>center</span></td><td style='text-align:left;' ><span>把文本排列到中间。</span></td></tr><tr><td style='text-align:left;' ><span>justify</span></td><td style='text-align:left;' ><span>实现两端对齐文本效果。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 text-align 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="文本装饰text-decoration" class="md-header-anchor"></a><span>文本装饰：text-decoration</span></h2><p><span>链接默认地会有下划线。如果希望去掉超链接的下划线，可以使用以下 CSS 来做到这一点：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">a {text-decoration: none;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>不过要注意的是，如果两个不同的装饰都与同一元素匹配，胜出规则的值会完全取代另一个值。请考虑以下的规则：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h2.stricken {text-decoration: line-through;}</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h2 {text-decoration: underline overline;}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 45px;"></div><div class="CodeMirror-gutters" style="display: none; height: 45px;"></div></div></div></pre><p><span>对于给定的规则，所有 </span><code>class</code><span> 为 </span><code>stricken</code><span> 的 h2 元素都只有一个贯穿线装饰，而没有下划线和上划线，因为 </span><code>text-decoration</code><span> 值会替换而不是累积起来。</span></p><h3><a name="定义和用法-n1254" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>none</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>no</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.textDecoration=&quot;overline&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n1268" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>none</span></td><td style='text-align:left;' ><span>默认。定义标准的文本。</span></td></tr><tr><td style='text-align:left;' ><span>underline</span></td><td style='text-align:left;' ><span>定义文本下的一条线。</span></td></tr><tr><td style='text-align:left;' ><span>overline</span></td><td style='text-align:left;' ><span>定义文本上的一条线。</span></td></tr><tr><td style='text-align:left;' ><span>line-through</span></td><td style='text-align:left;' ><span>定义穿过文本下的一条线。</span></td></tr><tr><td style='text-align:left;' ><span>blink</span></td><td style='text-align:left;' ><span>定义闪烁的文本。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 text-decoration 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="文本方向direction" class="md-header-anchor"></a><span>文本方向：direction</span></h2><p><code>direction</code><span> 属性影响块级元素中文本的书写方向、表中列布局的方向、内容水平填充其元素框的方向、以及两端对齐元素中最后一行的位置。</span></p><p><strong><span>注释：</span></strong><span>对于行内元素，只有当 </span><code>unicode-bidi</code><span> 属性设置为 </span><code>embed</code><span> 或 </span><code>bidi-override</code><span> 时才会应用 </span><code>direction</code><span> 属性。</span></p><p><code>direction</code><span> 属性有两个值：</span><code>ltr</code><span> 和 </span><code>rtl</code><span>。大多数情况下，默认值是 </span><code>ltr</code><span>，显示从左到右的文本。如果显示从右到左的文本，应使用值 </span><code>rtl</code><span>。</span></p><h3><a name="定义和用法-n1381" class="md-header-anchor"></a><span>定义和用法</span></h3><p><code>direction</code><span> 属性规定文本的方向 / 书写方向。</span></p><p><span>该属性指定了块的基本书写方向，以及针对 </span><code>Unicode</code><span> 双向算法的嵌入和覆盖方向。不支持双向文本的用户代理可以忽略这个属性。</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>ltr</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS2</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.direction=&quot;rtl&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n1397" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>ltr</span></td><td style='text-align:left;' ><span>默认。文本方向从左到右。</span></td></tr><tr><td style='text-align:left;' ><span>rtl</span></td><td style='text-align:left;' ><span>文本方向从右到左。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 direction 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="文本行高line-height" class="md-header-anchor"></a><span>文本行高：line-height </span></h2><h3><a name="定义和用法-n1511" class="md-header-anchor"></a><span>定义和用法</span></h3><p><code>line-height</code><span> 属性设置行间的距离（行高）。</span></p><p><strong><span>注释：</span></strong><span>不允许使用负值。</span></p><p><strong><span>说明</span></strong></p><p><span>该属性会影响行框的布局。在应用到一个块级元素时，它定义了该元素中基线之间的最小距离而不是最大距离。</span></p><p><code>line-height</code><span> 与 </span><code>font-size</code><span> 的计算值之差（在 CSS 中成为“行间距”）分为两半，分别加到一个文本行内容的顶部和底部。可以包含这些内容的最小框就是行框。</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>normal</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.lineHeight=&quot;2&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n1530" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>normal</span></td><td style='text-align:left;' ><span>默认。设置合理的行间距。</span></td></tr><tr><td style='text-align:left;' ><em><span>number</span></em></td><td style='text-align:left;' ><span>设置数字，此数字会与当前的字体尺寸相乘来设置行间距。</span></td></tr><tr><td style='text-align:left;' ><em><span>length</span></em></td><td style='text-align:left;' ><span>设置固定的行间距。</span></td></tr><tr><td style='text-align:left;' ><em><span>%</span></em></td><td style='text-align:left;' ><span>基于当前字体尺寸的百分比行间距。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 line-height 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="字单词）间隔word-spacing" class="md-header-anchor"></a><span>字（单词）间隔：word-spacing</span></h2><p><code>word-spacing</code><span> 属性可以改变字（单词）之间的标准间隔。其默认值 </span><code>normal</code><span> 与设置值为 0 是一样的。</span></p><p><code>word-spacing</code><span> 属性接受一个正长度值或负长度值。如果提供一个正长度值，那么字之间的间隔就会增加。为 </span><code>word-spacing</code><span> 设置一个负值，会把它拉近</span></p><h3><a name="定义和用法-n926" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>normal</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.wordSpacing=&quot;10px&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n946" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>normal</span></td><td style='text-align:left;' ><span>默认。定义单词间的标准空间。</span></td></tr><tr><td style='text-align:left;' ><em><span>length</span></em></td><td style='text-align:left;' ><span>定义单词间的固定空间。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 word-spacing 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="字符间隔letter-spacing" class="md-header-anchor"></a><span>字符间隔：letter-spacing</span></h2><p><code>letter-spacing</code><span> 属性与 </span><code>word-spacing</code><span> 的区别在于，字符间隔修改的是字符或字母之间的间隔。</span></p><p><span>与 </span><code>word-spacing</code><span> 属性一样，</span><code>letter-spacing</code><span> 属性的可取值包括所有长度。默认关键字是 </span><code>normal</code><span>（这与 </span><code>letter-spacing:0</code><span> 相同）。输入的长度值会使字母之间的间隔增加或减少指定的量</span></p><h3><a name="定义和用法-n529" class="md-header-anchor"></a><span>定义和用法</span></h3><p><strong><span>注释：</span></strong><span>允许使用负值，这会让字母之间挤得更紧。</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>normal</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.letterSpacing=&quot;3px&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n546" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>normal</span></td><td style='text-align:left;' ><span>默认。规定字符间没有额外的空间。</span></td></tr><tr><td style='text-align:left;' ><em><span>length</span></em></td><td style='text-align:left;' ><span>定义字符间的固定空间（允许使用负值）。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 letter-spacing 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="字符大小写转换text-transform" class="md-header-anchor"></a><span>字符大小写转换：text-transform</span></h2><p><code>text-transform</code><span> 属性处理文本的大小写。</span></p><p><span>作为一个属性，text-transform 可能无关紧要，不过如果您突然决定把所有 h1 元素变为大写，这个属性就很有用。不必单独地修改所有 h1 元素的内容，只需使用 text-transform 为你完成这个修改：</span></p><p><span>使用 </span><code>text-transform</code><span> 有两方面的好处。首先，只需写一个简单的规则来完成这个修改。其次，如果以后决定将所有大小写再切换为原来的大小写，可以更容易地完成修改。</span></p><h3><a name="定义和用法-n737" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>none</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.textTransform=&quot;uppercase&quot;</span></td></tr></tbody></table></figure><p><strong><span>注释：</span></strong><span>不同的用户代理可能会用不同的方法来确定单词从哪里开始，相应地确定哪些字母要大写。例如，文本 &quot;w3-school&quot; 可以用两种方式显示：&quot;W3-school&quot; 和 &quot;W3-School&quot;。CSS 并没有规定哪一种是正确的，所以这两种都是可以的。</span></p><h3><a name="属性值-n756" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>描述</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>none</span></td><td style='text-align:left;' ><span>默认。定义带有小写字母和大写字母的标准的文本。</span></td></tr><tr><td style='text-align:left;' ><span>capitalize</span></td><td style='text-align:left;' ><span>文本中的每个单词以大写字母开头。</span></td></tr><tr><td style='text-align:left;' ><span>uppercase</span></td><td style='text-align:left;' ><span>定义仅有大写字母。</span></td></tr><tr><td style='text-align:left;' ><span>lowercase</span></td><td style='text-align:left;' ><span>定义无大写字母，仅有小写字母。</span></td></tr><tr><td style='text-align:left;' ><span>inherit</span></td><td style='text-align:left;' ><span>规定应该从父元素继承 text-transform 属性的值。</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><p>&nbsp;</p><h2><a name="处理空白符white-space" class="md-header-anchor"></a><span>处理空白符：white-space</span></h2><p><code>white-space</code><span>属性会影响到用户代理对源文档中的空格、换行和 tab 字符的处理。</span></p><p><span>通过使用该属性，可以影响浏览器处理字之间和文本行之间的空白符的方式。从某种程度上讲，默认的 XHTML 处理已经完成了空白符处理：它会把所有空白符合并为一个空格。所以给定以下标记，它在 Web 浏览器中显示时，各个字之间只会显示一个空格，同时忽略元素中的换行：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;p&gt;This &nbsp; &nbsp; paragraph has &nbsp;  many</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  spaces &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; in it.&lt;/p&gt;</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 45px;"></div><div class="CodeMirror-gutters" style="display: none; height: 45px;"></div></div></div></pre><p><span>可以用以下声明显式地设置这种默认行为：</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">p {white-space: normal;}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p><span>上面的规则告诉浏览器按照平常的做法去处理：丢掉多余的空白符。如果给定这个值，换行字符（回车）会转换为空格，一行中多个空格的序列也会转换为一个空格。</span></p><p><strong><code>pre</code></strong></p><p><span>如果将 </span><code>white-space</code><span> 设置为 </span><code>pre</code><span>，受这个属性影响的元素中，空白符不会被忽略。</span></p><p><strong><span>注意：</span></strong><span>经测试，IE 7 以及更早版本的浏览器不支持该。</span></p><p><strong><code>nowrap</code></strong></p><p><span>它会防止元素中的文本换行，除非使用了一个 </span><code>br</code><span> 元素。</span></p><p><strong><code>pre-wrap</code><span> 和 </span><code>pre-line</code></strong></p><p><span>CSS2.1 引入了值 </span><code>pre-wrap</code><span> 和 </span><code>pre-line</code><span>，这在以前版本的 CSS 中是没有的。</span></p><p><span>如果元素的 </span><code>white-space</code><span> 设置为 </span><code>pre-wrap</code><span>，那么该元素中的文本会保留空白符序列，但是文本行会正常地换行。如果设置为这个值，源文本中的行分隔符以及生成的行分隔符也会保留。</span></p><p><code>pre-line</code><span> ，会像正常文本中一样合并空白符序列，但保留换行符。</span></p><h3><a name="定义和用法-n785" class="md-header-anchor"></a><span>定义和用法</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>默认值：</span></th><th><span>normal</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>继承性：</span></td><td><span>yes</span></td></tr><tr><td style='text-align:left;' ><span>版本：</span></td><td><span>CSS1</span></td></tr><tr><td style='text-align:left;' ><span>JavaScript 语法：</span></td><td><em><span>object</span></em><span>.style.whiteSpace=&quot;pre&quot;</span></td></tr></tbody></table></figure><h3><a name="属性值-n801" class="md-header-anchor"></a><span>属性值</span></h3><figure><table><thead><tr><th style='text-align:left;' ><span>值</span></th><th style='text-align:left;' ><span>空白符</span></th><th style='text-align:left;' ><span>换行符</span></th><th style='text-align:left;' ><span>自动换行</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>pre-line</span></td><td style='text-align:left;' ><span>合并</span></td><td style='text-align:left;' ><span>保留</span></td><td style='text-align:left;' ><span>允许</span></td></tr><tr><td style='text-align:left;' ><span>normal</span></td><td style='text-align:left;' ><span>合并</span></td><td style='text-align:left;' ><span>忽略</span></td><td style='text-align:left;' ><span>允许</span></td></tr><tr><td style='text-align:left;' ><span>nowrap</span></td><td style='text-align:left;' ><span>合并</span></td><td style='text-align:left;' ><span>忽略</span></td><td style='text-align:left;' ><span>不允许</span></td></tr><tr><td style='text-align:left;' ><span>pre</span></td><td style='text-align:left;' ><span>保留</span></td><td style='text-align:left;' ><span>保留</span></td><td style='text-align:left;' ><span>不允许</span></td></tr><tr><td style='text-align:left;' ><span>pre-wrap</span></td><td style='text-align:left;' ><span>保留</span></td><td style='text-align:left;' ><span>保留</span></td><td style='text-align:left;' ><span>允许</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><a href='#css文本'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>
