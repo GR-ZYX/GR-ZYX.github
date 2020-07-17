@@ -2,11 +2,11 @@
 
 [TOC]
 
-## 文本颜色：color
+## 文本颜色：`color`
 
 ### 定义和用法
 
-`color` 属性规定文本的颜色。
+**`color` 属性**规定文本的颜色。
 
 这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 `color` 影响。这个颜色还会应用到元素的所有边框，除非被 `border-color` 或另外某个边框颜色属性覆盖。
 
@@ -35,11 +35,11 @@
 
 
 
-## 文本首行缩进：text-indent
+## 文本首行缩进：`text-indent`
 
 把 Web 页面上的段落的第一行缩进，这是一种最常用的文本格式化效果。
 
-CSS 提供了 `text-indent` 属性，该属性可以方便地实现文本缩进。
+CSS 提供了 **`text-indent` 属性**，该属性可以方便地实现文本缩进。
 
 这个属性最常见的用途是将段落的首行缩进，下面的规则会使所有段落的首行缩进 5 em：
 
@@ -122,7 +122,7 @@ p {width: 200px;}
 
 
 
-## 文本水平对齐：text-align
+## 文本水平对齐：`text-align`
 
 `text-align` 是一个基本的属性，它会影响一个元素中的**文本行**互相之间的对齐方式。
 
@@ -168,7 +168,7 @@ p {width: 200px;}
 
 
 
-## 文本装饰：text-decoration
+## 文本装饰：`text-decoration`
 
 链接默认地会有下划线。如果希望去掉超链接的下划线，可以使用以下 CSS 来做到这一点：
 
@@ -212,9 +212,9 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 文本方向：direction
+## 文本方向：`direction`
 
-`direction` 属性影响块级元素中文本的书写方向、表中列布局的方向、内容水平填充其元素框的方向、以及两端对齐元素中最后一行的位置。
+**`direction` 属性**影响块级元素中文本的书写方向、表中列布局的方向、内容水平填充其元素框的方向、以及两端对齐元素中最后一行的位置。
 
 **注释：**对于行内元素，只有当 `unicode-bidi` 属性设置为 `embed` 或 `bidi-override` 时才会应用 `direction` 属性。
 
@@ -248,11 +248,11 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 文本行高：line-height 
+## 文本行高：`line-height` 
 
 ### 定义和用法
 
-`line-height` 属性设置行间的距离（行高）。
+**`line-height` 属性**设置行间的距离（行高）。
 
 **注释：**不允许使用负值。
 
@@ -286,9 +286,9 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 字（单词）间隔：word-spacing
+## 字（单词）间隔：`word-spacing`
 
-`word-spacing` 属性可以改变字（单词）之间的标准间隔。其默认值 `normal` 与设置值为 0 是一样的。
+**`word-spacing` 属性**可以改变字（单词）之间的标准间隔。其默认值 `normal` 与设置值为 0 是一样的。
 
 `word-spacing` 属性接受一个正长度值或负长度值。如果提供一个正长度值，那么字之间的间隔就会增加。为 `word-spacing` 设置一个负值，会把它拉近
 
@@ -316,9 +316,9 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 字符间隔：letter-spacing
+## 字符间隔：`letter-spacing`
 
-`letter-spacing` 属性与 `word-spacing` 的区别在于，字符间隔修改的是字符或字母之间的间隔。
+**`letter-spacing` 属性**与 `word-spacing` 的区别在于，字符间隔修改的是字符或字母之间的间隔。
 
 与 `word-spacing` 属性一样，`letter-spacing` 属性的可取值包括所有长度。默认关键字是 `normal`（这与 `letter-spacing:0` 相同）。输入的长度值会使字母之间的间隔增加或减少指定的量
 
@@ -348,9 +348,9 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 字符大小写转换：text-transform
+## 字符大小写转换：`text-transform`
 
-`text-transform` 属性处理文本的大小写。
+**`text-transform` 属性**处理文本的大小写。
 
 作为一个属性，text-transform 可能无关紧要，不过如果您突然决定把所有 h1 元素变为大写，这个属性就很有用。不必单独地修改所有 h1 元素的内容，只需使用 text-transform 为你完成这个修改：
 
@@ -386,9 +386,9 @@ h2 {text-decoration: underline overline;}
 
 
 
-## 处理空白符：white-space
+## 处理空白符：`white-space`
 
-`white-space`属性会影响到用户代理对源文档中的空格、换行和 tab 字符的处理。
+**`white-space`属性**会影响到用户代理对源文档中的空格、换行和 tab 字符的处理。
 
 通过使用该属性，可以影响浏览器处理字之间和文本行之间的空白符的方式。从某种程度上讲，默认的 XHTML 处理已经完成了空白符处理：它会把所有空白符合并为一个空格。所以给定以下标记，它在 Web 浏览器中显示时，各个字之间只会显示一个空格，同时忽略元素中的换行：
 
