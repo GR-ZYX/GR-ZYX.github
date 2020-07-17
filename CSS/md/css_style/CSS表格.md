@@ -6,7 +6,7 @@
 
 如需在 CSS 中设置表格边框，使用 `border` 属性。
 
-下面的例子为 table、th 以及 td 设置了蓝色边框：
+下面的例子为 `table`、`th` 以及 `td` 设置了蓝色边框：
 
 ```
 table, th, td
@@ -55,7 +55,7 @@ table, th, td
 
 ## 表格宽度和高度
 
-通过 `width` 和 height 属性定义表格的宽度和高度。
+通过 `width` 和 `height` 属性定义表格的宽度和高度。
 
 
 
