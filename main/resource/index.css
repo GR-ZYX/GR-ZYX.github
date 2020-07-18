@@ -7,6 +7,10 @@ html,body{
     height: 100%;
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
 .head{
     width: 100%;
     height: 60px;
