@@ -2,6 +2,11 @@
     width: 15%;
     height: 100%;
     float: left;
+    overflow-y: scroll;
+}
+
+.nav::-webkit-scrollbar { 
+    display: none; 
 }
 
 .nav-list{
@@ -13,7 +18,9 @@
     text-align: center;
     font-size: 15px;
     background-color:rgb(153, 153, 153);
-    margin-top: 5px;
+    margin-top: 0px;
+    border-top-style: solid;
+    border-top-color: rgb(173, 173, 173);
     color: white;
 }
 .nav-list i{

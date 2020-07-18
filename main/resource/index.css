@@ -11,27 +11,35 @@ body::-webkit-scrollbar {
     display: none; 
 }
 
+.bodys{
+    height: 92%;
+}
+
 .head{
     width: 100%;
-    height: 60px;
+    height: 8%;
     background-color: rgb(243,242,238);
+}
+
+.title{
+    height: 100%;
 }
 
 .title h1{
     width: 200px;
-    height: 60px;
+    height: 100%;
     font-size: 20px;
     text-align: center;
-    line-height: 60px;
+    line-height: 50px;
     margin-right: 10px;
 } 
 
 .return a{
     width: 50px;
-    height: 60px;
+    height: 100%;
     font-size: 20px;
     text-align: center;
-    line-height: 60px;
+    line-height: 50px;
     margin-right: 50px;
     color: rgb(97, 94, 94);
     float: right;
@@ -39,14 +47,14 @@ body::-webkit-scrollbar {
 
 iframe{
     width: 85%;
-    height: 750px;
+    height: 100%;
     float: left;
 }
 
 @media screen and (max-width: 600px){
     iframe{
         width: 100%;
-        height: 750px;
+        height: 100%;
         float: left;
     }
 
