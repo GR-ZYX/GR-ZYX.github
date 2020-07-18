@@ -11,10 +11,6 @@ body::-webkit-scrollbar {
     display: none; 
 }
 
-.bodys{
-    height: 92%;
-}
-
 .head{
     width: 100%;
     height: 8%;
@@ -47,11 +43,12 @@ body::-webkit-scrollbar {
 
 iframe{
     width: 82%;
-    height: 100%;
+    height: 92%;
     float: left;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1000px){
+  
     iframe{
         width: 100%;
         height: 100%;
