@@ -19,21 +19,23 @@ body::-webkit-scrollbar {
 
 .title{
     height: 100%;
-    padding-top: 4%;
+    height: 100%;
 }
 
 .title h1{
     width: 180px;
     font-size: 20px;
+    line-height: 60px;
     text-align: center;
     margin-right: 10px;
 } 
 
 .return a{
     width: 50px;
+    height: 100%;
     font-size: 20px;
-    padding-top: 4%;
     text-align: center;
+    line-height: 60px;
     margin-right: 80px;
     color: rgb(97, 94, 94);
     float: right;
@@ -55,3 +57,16 @@ iframe{
 
 }
 
+@media screen and (max-width: 600px){
+  
+    .title h1{
+        line-height: 55px;
+        font-size: 15px;
+    } 
+
+    .return a{
+        line-height: 55px;
+        font-size: 15px;
+    }
+
+}
