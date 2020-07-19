@@ -5,7 +5,7 @@ var flist = document.getElementsByClassName("nav-list");
                 child = this.nextElementSibling;
                 childs = this.firstElementChild;
                 var h5s = child.getElementsByTagName("h5").length;
-                var l = h5s * 50;
+                var l = h5s * 52;
                 l = l + "px";
                 if(child.id === "active"){
                     child.id = "";
