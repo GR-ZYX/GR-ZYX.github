@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>课程概述</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="课程概述" class="md-header-anchor"></a><span>课程概述</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1053"><a class="md-toc-inner" href="#课程概述">课程概述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1056"><a class="md-toc-inner" href="#一课程的概念">一、课程的概念</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1069"><a class="md-toc-inner" href="#二课程的类型重点）">二、课程的类型（重点）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1070"><a class="md-toc-inner" href="#一）分科课程综合课程与活动课程">（一）分科课程、综合课程与活动课程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1151"><a class="md-toc-inner" href="#二）必修课程与选修课程">（二）必修课程与选修课程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1162"><a class="md-toc-inner" href="#三）国家课程地方课程与校本课程">（三）国家课程、地方课程与校本课程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1179"><a class="md-toc-inner" href="#四）显性课程与隐性课程">（四）显性课程与隐性课程</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1207"><a class="md-toc-inner" href="#三课程理论流派">三、课程理论流派</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1208"><a class="md-toc-inner" href="#一）学科中心课程论">（一）学科中心课程论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1266"><a class="md-toc-inner" href="#二）活动中心课程论">（二）活动中心课程论</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1303"><a class="md-toc-inner" href="#三）社会中心课程论">（三）社会中心课程论</a></span></p></div><h2><a name="一课程的概念" class="md-header-anchor"></a><span>一、课程的概念</span></h2><p><span>在西方， </span><strong><span>英国教育家斯宾塞</span></strong><span>在他的著作</span><strong><span>《什么知识最有价值》</span></strong><span>中</span><strong><span>最早提出了“课程”一词</span></strong><span>，意思是</span><strong><span>“组织起来的教育内容”</span></strong><span>。</span></p><p><span>一般认为，</span><strong><span>美国学者博比特</span></strong><span>于1918年出版的</span><strong><span>《课程》</span></strong><span>一书，标志着课程作为专门研究领域的诞生，这也是教育史上第一本课程理论专著。</span></p><p><span>近代兴办学校以来，</span><strong><span>我国的课程概念有广义、狭义之分</span></strong><span>。</span></p><ul><li><strong><span>广义的课程：</span></strong><span>是指各级各类学校为实现培养目标而规定的学习科目及其进程的总和。</span></li><li><strong><span>狭义的课程：</span></strong><span>特指某一门学科，如数学课程、历史课程等。</span></li></ul><p>&nbsp;</p><p><a href='#课程概述'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二课程的类型重点）" class="md-header-anchor"></a><span>二、课程的类型（重点）</span></h2><h3><a name="一）分科课程综合课程与活动课程" class="md-header-anchor"></a><span>（一）分科课程、综合课程与活动课程</span></h3><ol start='' ><li><p><strong><span>分科课程（学科课程）与综合课程</span></strong></p><p><span>按</span><strong><span>课程内容的组织形式</span></strong><span>来划分，课程可分为</span><strong><span>分科课程</span></strong><span>与</span><strong><span>综合课程</span></strong><span>。</span></p><p><strong><span>（1）分科课程</span></strong></p><ul><li><span>分科课程是一种</span><strong><span>单学科</span></strong><span>的课程组织模式，它强调不同学科门类之间的</span><strong><span>相对独立性</span></strong><span>，强调</span><strong><span>一门学科</span></strong><span>逻辑体系的完整性。</span></li><li><span>分科课程的</span><strong><span>主导价值</span></strong><span>在于</span><strong><span>使学生获得逻辑严密和条理清晰的文化知识</span></strong><span>。</span></li></ul><p><strong><span>（2）综合课程（重点）</span></strong></p><ul><li><p><span>综合课程是指</span><strong><span>打破传统的学科课程的知识领域</span></strong><span>，组合两门或两门以上学科领域而</span><strong><span>构成的一门新的学科</span></strong><span>，它</span><strong><span>强调学科之间的关联性、统一性和内在联系</span></strong><span>。</span></p></li><li><p><span>综合课程的</span><strong><span>主导价值</span></strong><span>在于通过相关学科的整合，</span><strong><span>促进学生认识的整体性发展，并形成全面把握和解决问题的视野与方法</span></strong><span>。</span></p></li><li><p><strong><span>根据联系紧密程度</span></strong><span>，综合学科课程分为以下四类：</span></p><ul><li><p><strong><span>相关课程：</span></strong><span>由两门或两门以上学科组成的</span><strong><span>分科课程体系</span></strong><span>，各学科联系紧密并互相配合，同时保持各自的独立性。</span></p></li><li><p><strong><span>融合课程：</span></strong><span>将有关学科</span><strong><span>融合为一门新的学科，融合之后原来学科之间的界限不复存在</span></strong><span>。</span></p><p><span>例如，将植物学、动物学、解剖学、生理学融合为生物学。</span></p></li><li><p><strong><span>广域课程：</span></strong><span>合并数门相邻学科的教学内容而形成的</span><strong><span>综合性课程</span></strong><span>。</span><strong><span>门类多、跨度大</span></strong></p><p><span>例如，“社会研究课”(含地理学、历史学、经济学、政治学、社会学、法学和人类学等)</span></p></li><li><p><strong><span>问题课程（也称核心课程、回题中心课程）：</span></strong><span>即打破原有学科界线，围绕一些</span><strong><span>重大社会问题</span></strong><span>组织教学内容。</span></p><p><span>例如，课程要求学生研究社会(特别是他们所处的社会)的特征与问题，如学校的功能、社会生活的主要活动、学生乃至整个人类的诸多问题等。</span></p></li></ul></li><li><p><strong><span>综合课程的特点（重点）</span></strong></p><ul><li><strong><span>目标</span></strong><span>通常指向学生知识的增长与统整、能力的培养与提高、知情意行的协调发展等</span></li><li><strong><span>内容</span></strong><span>具有明显的</span><strong><span>跨学科性质</span></strong><span>，内容的组织</span><strong><span>打破了原有的学科体系和学科界限</span></strong><span>，强调所研究的客观对象的</span><strong><span>整体性</span></strong></li><li><span>综合课程的</span><strong><span>类型是多样的</span></strong><span>，有相关课程、融合课程、广域课程、问题课程等，相应的</span><strong><span>学习活动方式也是灵活多样的</span></strong><span>。</span></li></ul></li></ul></li><li><p><strong><span>学科课程与活动课程</span></strong></p><p><span>按</span><strong><span>学科固有的属性（间接经验/直接经验）</span></strong><span>来划分，课程可分为</span><strong><span>学科课程</span></strong><span>和</span><strong><span>活动课程</span></strong></p><p><strong><span>（1）学科课程</span></strong></p><ul><li><p><span>学科课程是</span><strong><span>以文化知识为基础</span></strong><span>，从不同的</span><strong><span>知识领域</span></strong><span>或</span><strong><span>学术领域</span></strong><span>选择一定的内容，根据</span><strong><span>知识的逻辑体系</span></strong><span>将所选出来的知识组织为学科的课程。</span></p></li><li><p><span>学科课程是</span><strong><span>最古老、使用范围最广</span></strong><span>的课程类型。</span></p></li><li><p><span>一般认为，</span><strong><span>中国古代的“六艺”、西方古代的“七艺”</span></strong><span>是</span><strong><span>最早的学科课程</span></strong><span>。</span></p></li><li><p><span>学科课程的</span><strong><span>主导价值</span></strong><span>在于</span><strong><span>传承人类文明</span></strong><span>，使学生</span><strong><span>掌握、传递和发展</span></strong><span>千百年来人类积累起来的</span><strong><span>知识文化遗产</span></strong><span>。</span></p></li><li><p><span>当前学校里最主要的课程是学科课程。</span></p></li><li><p><strong><span>学科课程的特点（前人的间接经验）：</span></strong></p><ul><li><span>从</span><strong><span>知识体系、社会需要</span></strong><span>出发设计课程，是</span><strong><span>知识本位、社会本位</span></strong><span>的课程</span></li><li><span>以</span><strong><span>知识的内在逻辑体系</span></strong><span>为核心编制课程</span></li><li><span>重视学科的</span><strong><span>理论知识</span></strong><span>，强调把基本概念、基本原理、规律和事实教给学生。</span></li></ul></li></ul><p><strong><span>（2）活动课程</span></strong></p><ul><li><p><span>活动课程</span><strong><span>又称儿童中心课程、经验课程</span></strong><span>，是打破学科逻辑组织的界限，从</span><strong><span>儿童的兴趣和需要</span></strong><span>出发，以</span><strong><span>活动为中心</span></strong>
+<span>组织的课程。</span></p></li><li><p><span>活动课程的代表人物是</span><strong><span>杜威</span></strong></p></li><li><p><span>活动课程的</span><strong><span>主导价值</span></strong><span>在于使学生获得关于现实世界的</span><strong><span>直接经验和真切体验</span></strong><span>。</span></p></li><li><p><strong><span>活动课程的特点（直接经验）：</span></strong></p><ul><li><span>从儿童的</span><strong><span>需要，兴趣和个性</span></strong><span>出发设计课程</span></li><li><span>以儿童的</span><strong><span>心理发展顺序</span></strong><span>为中心编制课程</span></li><li><span>主张儿童在</span><strong><span>活动</span></strong><span>中探索，尝试错误，学到方法。</span></li></ul></li></ul></li></ol><h3><a name="二）必修课程与选修课程" class="md-header-anchor"></a><span>（二）必修课程与选修课程</span></h3><p><span>按对学生的</span><strong><span>学习要求</span></strong><span>来划分，课程可分为</span><strong><span>必修课程</span></strong><span>与</span><strong><span>选修课程</span></strong></p><ol start='' ><li><p><strong><span>必修课程</span></strong></p><p><span>必修课程是指国家、地方或学校规定，学生</span><strong><span>必须学习</span></strong><span>的公共课程，是为了保证所有学生的基础学历而开发的课程。</span></p><p><span>必修课程的</span><strong><span>主导价值</span></strong><span>在于</span><strong><span>培养和发展学生的共性</span></strong><span>，体现对学生的</span><strong><span>基本要求</span></strong><span>。</span></p></li><li><p><strong><span>选修课程</span></strong></p><p><span>选修课程是指</span><strong><span>依据不同学生的特点和发展方向</span></strong><span>，允许个人选择的课程，是为了适应学生的个性差异而开发的课程。</span></p><p><span>选修课程的</span><strong><span>主导价值</span></strong><span>在于</span><strong><span>满足学生的兴趣、爱好，培养和发展学生的良好个性</span></strong><span>。</span></p></li></ol><h3><a name="三）国家课程地方课程与校本课程" class="md-header-anchor"></a><span>（三）国家课程、地方课程与校本课程</span></h3><p><span>按</span><strong><span>课程设计、开发和管理的主休</span></strong><span>来划分，课程可分为</span><strong><span>国家课程、地方课程</span></strong><span>与</span><strong><span>校本课程</span></strong></p><ol start='' ><li><p><strong><span>国家课程</span></strong></p><p><span>国家课程是根据所有公民的</span><strong><span>基本素质发展的一般要求</span></strong><span>设计的课程，它反映了国家教育的</span><strong><span>基本标准</span></strong><span>，体现了国家对各个地方的中小学教育的</span><strong><span>共同要求</span></strong><span>。</span></p><p><span>国家课程的</span><strong><span>主导价值</span></strong><span>在于通过课程体现国家的</span><strong><span>教育意志</span></strong><span>，</span><strong><span>确保所有公民的共同基本素质</span></strong><span>。它对政治方向的把握、教育方针的贯彻、培养目标的落实起着</span><strong><span>决定性作用</span></strong><span>。</span></p></li><li><p><strong><span>地方课程</span></strong></p><p><span>地方课程是</span><strong><span>地方教育主管部门以国家课程标准为基础</span></strong><span>，在一定的教育思想和课程观念的指导下，根据地方经济、政治和文化发展水平等实际情况而设计的课程。</span></p><p><span>地方课程的</span><strong><span>主导价值</span></strong><span>在于通过课程</span><strong><span>满足地方社会发展的现实需要</span></strong><span>。</span></p><p><span>地方课程是</span><strong><span>基础教育课程结构的重要组成部分</span></strong><span>，</span><strong><span>与国家课程具有平等的地位和作用</span></strong><span>，不是国家课程的补充和延伸，在基础教育课程体系中，</span><strong><span>地方课程具有相对独立的地位</span></strong><span>。</span></p></li><li><p><strong><span>校本课程</span></strong></p><p><span>校本课程是</span><strong><span>以学校为课程编制主体</span></strong><span>，学校自主开发与实施的一种课程，是相对于国家课程和地方课程的一种课程。</span></p><p><span>校本课程的</span><strong><span>主导价值</span></strong><span>在于</span><strong><span>通过课程展示学校的办学宗旨和特色</span></strong><span>。</span></p><p><span>学校可根据学校课程开发与管理的指导意见和所在地区的教育环境优势，结合本校的传统和资源，兼顾学生的兴趣和需要，在专家指导下，</span><strong><span>组织学校教师、学生、家长和社区有关人士共同参与</span></strong><span>，进行校本课程的开发、设计、管理和实施工作。</span></p></li></ol><h3><a name="四）显性课程与隐性课程" class="md-header-anchor"></a><span>（四）显性课程与隐性课程</span></h3><p><span>按</span><strong><span>课程的呈现方式</span></strong><span>来划分，课程可分为</span><strong><span>显性课程</span></strong><span>与</span><strong><span>隐性课程</span></strong></p><ol start='' ><li><p><strong><span>显性课程（有计划、有组织）</span></strong></p><p><span>显性课程又称</span><strong><span>公开课程</span></strong><span>，是指</span><strong><span>在学校情境中以直接的、明显的方式呈现的课</span></strong><span>。</span></p><p><strong><span>计划性</span></strong><span>是显性课程的主要特征，同时也是区分显性课程和隐性课程的</span><strong><span>主要标志</span></strong></p></li><li><p><strong><span>隐性课程（无计划性/潜移默化的发挥作用）</span></strong></p><p><strong><span>杜威</span></strong><span>曾在</span><strong><span>《经验与教育》</span></strong><span>一书中提到</span><strong><span>“连带学习”</span></strong><span>概念。</span></p><p><span>他认为“连带学习”在一定条件下，甚至比正规教学内容有更重大的教育影响。例如，一个数学成绩优秀的学生在学习数学的过程中，由于某种原因而“学会”了对数学的厌恶，那就可以预料，在离开学校后，他很可能永远不会再去主动钻研数学问题了。</span></p><p><span>美国教育家</span><strong><span>克伯屈</span></strong><span>曾提出</span><strong><span>“附属学习”</span></strong><span>的概念。他认为“附属学习”是学生在学习正规课程内容时，</span><strong><span>有意或无意间接受的态度、兴趣和情感的熏陶</span></strong><span>。</span></p><p><strong><span>隐性课程</span></strong><span>是指在学校情境中以间接的、内隐的方式呈现的课程，即</span><strong><span>学校通过教育环境</span></strong><span>(包括物质的、文 化的和社会关系结构的)</span><strong><span>有意或无意地传递给学生的非公开的教育经验</span></strong><span>(包括学术的与非学术的)。</span></p><p><strong><span>隐性课程是伴随着显性课程而产生的，没有显性课程就没有隐性课程。</span></strong></p><p><strong><span>隐性课程的主要表现形式：</span></strong></p><ul><li><strong><span>观念性隐性课程：</span></strong><span>包括隐藏于显性课程之中的</span><strong><span>意识形态</span></strong><span>，学校的校风、学风，有关领导与教师的教育理念、价值观、知识观、教学风格、教学指导思想等</span></li><li><strong><span>物质性隐性课程：</span></strong><span>包括学校建筑、教室的布置、校园环境等</span></li><li><strong><span>制度性隐性课程：</span></strong><span>包括学校管理体制、学校组织机构、班级管理方式、班级运行方式等</span></li><li><strong><span>心理性隐性课程：</span></strong><span>包括学校的人际关系状况，师生特有的心态、行为方式等。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#课程概述'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三课程理论流派" class="md-header-anchor"></a><span>三、课程理论流派</span></h2><h3><a name="一）学科中心课程论" class="md-header-anchor"></a><span>（一）学科中心课程论</span></h3><ol start='' ><li><p><strong><span>主要观点</span></strong></p><p><strong><span>学科中心课程论</span></strong><span>又称</span><strong><span>知识中心课程论</span></strong><span>，以</span><strong><span>斯宾塞、赫尔巴特和布鲁纳为代表</span></strong><span>。</span></p><p><strong><span>学科中心课程论</span></strong><span>主张</span><strong><span>学校教育的目的在于把人类积累的文化科学知识传递给下一代</span></strong><span>，而这些文化科学知识的精华就包含在学校设置的各门学科里。教师的任务是把各门学科的知识教给学生，学生的任务是掌握预先为他们准备好的各门学科的知识。学校课程应以学科的分类为基础，以学科教学为核心，以使学生掌握学科的基础知识、基本规律和相应的技能为目标。</span></p><p><strong><span>该流派的代表理论如下：</span></strong></p><ul><li><p><strong><span>结构主义课程理论</span></strong></p><p><strong><span>主要代表人物是布鲁纳</span></strong></p><p><strong><span>主要观点：</span></strong></p><ul><li><span>重视学科结构的重要性</span></li><li><span>提倡螺旋式课程</span></li><li><span>倡导发现学习</span></li></ul></li><li><p><strong><span>要素主义课程理论</span></strong></p><p><strong><span>主要代表人物是巴格莱</span></strong></p><p><strong><span>主要观点：</span></strong></p><ul><li><span>课程的内容应该是人类文化的“共同要素”，课程的设置首先要考虑国家和民族的利益</span></li><li><span>学科课程是向学生提供经验的最佳方法</span></li><li><span>重视系统知识的传授，以学科课程为中心</span></li></ul></li><li><p><strong><span>永恒主义课程理论</span></strong></p><p><strong><span>主要代表人物是赫饮斯</span></strong></p><p><strong><span>主要观点：</span></strong></p><ul><li><span>具有理智训练价值的、传统的“永恒学科”的价值高于实用学科的价值</span></li><li><span>“永恒学科”是课程的核心。</span></li></ul></li></ul></li><li><p><strong><span>对该理论的评价</span></strong>
+<strong><span>优点：</span></strong></p><ul><li><span>有利于传授系统的科学知识，继承人类文化遗产</span></li><li><span>重视学生对知识的系统学习，便于学生对知识的掌握与运用</span></li><li><span>受到历史传统的影响，大多数教师习惯于此</span></li><li><span>课程的构成比较简单，易于评价。</span></li></ul><p><strong><span>局限性：</span></strong></p><ul><li><span>容易把各门学科的知识割裂开来，学生不能在知识的整体中、联系中进行学习</span></li><li><span>编制的课程完全从成人的生活需要出发，不利于因材施教，容易导致理论与实践脱节，导致学生不能学以致用</span></li><li><span>各学科容易出现不必要的重复，增加学生的学习负担。</span></li></ul></li></ol><h3><a name="二）活动中心课程论" class="md-header-anchor"></a><span>（二）活动中心课程论</span></h3><ol start='' ><li><p><strong><span>主要观点</span></strong></p><p><span>活动中心课程论又称</span><strong><span>儿童中心课程论或经验课程论</span></strong><span>，其</span><strong><span>代表人物是美国的杜威及其学生克伯屈</span></strong><span>。</span></p><p><span>活动中心课程论主张教育内容应密切联系儿童的社会生活经验，从儿童的兴趣和需要出发，</span><strong><span>以儿童的活动为中心</span></strong><span>来设计课程的内容和结构。</span></p></li><li><p><strong><span>对该理论的评价</span></strong></p><p><strong><span>优点：</span></strong></p><ul><li><span>重视学生学习活动的心理准备，</span><strong><span>有利于调动学生学习的主动性和积极性</span></strong></li><li><span>强调实践活动，重视学生通过亲自体验获得直接经验，</span><strong><span>有利于培养学生解决实际问题的能力</span></strong></li><li><span>强调围绕现实社会生活的各个领域精心设计和组织课程，</span><strong><span>有利于学生获得对世界的完整认识</span></strong></li></ul><p><strong><span>局限性：</span></strong></p><ul><li><span>夸大了学生个人经验的作用，忽视了知识本身的逻辑顺序，影响了系统的知识学习，只能使学生学到一些片段式的、零碎的知识，最终导致教学质量的降低</span></li><li><span>没有具体、明确的课程标准，因此活动中心课程往往带有随意性和狭隘性</span></li></ul></li></ol><h3><a name="三）社会中心课程论" class="md-header-anchor"></a><span>（三）社会中心课程论</span></h3><ol><li><p><strong><span>主要观点</span></strong></p><p><span>社会中心课程论</span><strong><span>又称社会改造主义课程论</span></strong><span>，</span><strong><span>以布拉梅尔德为代表</span></strong><span>。</span></p><p><span>社会中心课程论认为应该把课程的重点放在</span><strong><span>当代社会的问题、社会的主要功能、学生关心的社会现象，以及社会改造和社会活动计划等</span></strong><span>方面。</span></p><p><span>其核心观点在于课程不应该帮助学生去适应社会，而应该</span><strong><span>建立一种新的社会秩序和社会文化</span></strong><span>。</span></p></li><li><p><strong><span>社会中心课程论特点</span></strong></p><p><span>主张</span><strong><span>学生尽可能多地参与到社会中去</span></strong></p><p><span>主张</span><strong><span>课程要以广泛的社会问题为中心</span></strong></p></li><li><p><strong><span>对该理论的评价</span></strong>
+<strong><span>优点：</span></strong></p><ul><li><span>重视教育与社会、课程程与社会的联系，</span><strong><span>以社会的需要来设计课程，有利于为社会需要服务</span></strong></li><li><span>重视各门学科的综合学习，有利于学生掌握解决问题的方法</span></li></ul><p><strong><span>局限性：</span></strong></p><ul><li><span>片面强调社会需要忽视制约课程的其他因素，如学生本身的需要</span></li><li><span>忽视各门学科的系统性，不利于学生掌握各门学科的系统知识</span></li><li><span>夸大了教育的作用，而许多社会问题单靠教育是不能解决的</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#课程概述'><span>返回目录</span></a></p><hr /><p>&nbsp;</p></div>
+</body>
+</html>
