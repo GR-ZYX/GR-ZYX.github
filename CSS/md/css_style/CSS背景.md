@@ -163,7 +163,7 @@ body
   }
 ```
 
-为 background-position 属性提供值有很多方法。首先，可以使用一些关键字：**top、bottom、left、right 和 center**。还可以使用长度值，如 100px 或 5cm，最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。
+为 `background-position` 属性提供值有很多方法。首先，可以使用一些关键字：**top、bottom、left、right 和 center**。还可以使用长度值，如 100px 或 5cm，最后也可以使用百分数值。不同类型的值对于背景图像的放置稍有差异。
 
 **关键字**
 
@@ -299,6 +299,142 @@ body
 | scroll  | 默认值。背景图像会随着页面其余部分的滚动而移动。        |
 | fixed   | 当页面的其余部分滚动时，背景图像不会移动。              |
 | inherit | 规定应该从父元素继承 background-attachment 属性的设置。 |
+
+
+
+[返回目录](#CSS背景)
+
+------
+
+
+
+## CSS3 背景图片的尺寸：`background-size` 
+
+### 定义和用法
+
+**`background-size` 属性**规定背景图片的尺寸。
+
+在 CSS3 之前，背景图片的尺寸是由图片的实际尺寸决定的。在 CSS3 中，可以规定背景图片的尺寸。
+
+能够以像素或百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。
+
+| 默认值：          | auto                                      |
+| :---------------- | ----------------------------------------- |
+| 继承性：          | no                                        |
+| 版本：            | CSS3                                      |
+| JavaScript 语法： | *object*.style.backgroundSize="60px 80px" |
+
+**语法**
+
+```
+background-size: length|percentage|cover|contain;
+```
+
+### 属性值
+
+| 值           | 描述                                                         |
+| :----------- | :----------------------------------------------------------- |
+| *length*     | 设置背景图像的高度和宽度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。 |
+| *percentage* | 以父元素的百分比来设置背景图像的宽度和高度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。 |
+| cover        | 把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。 |
+| contain      | 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。 |
+
+
+
+[返回目录](#CSS背景)
+
+------
+
+
+
+## CSS3 背景图片的定位区域：`background-origin` 
+
+### 定义和用法
+
+**`background-origin` 属性**规定背景图片的定位区域。
+
+背景图片可以放置于 `content-box`、`padding-box` 或 `border-box` 区域。
+
+![背景图片的定位区域](..\..\image\background-origin.gif)
+
+**注释：**如果背景图像的 `background-attachment` 属性为 "fixed"，则该属性没有效果。
+
+| 默认值：          | padding-box                                   |
+| :---------------- | --------------------------------------------- |
+| 继承性：          | no                                            |
+| 版本：            | CSS3                                          |
+| JavaScript 语法： | *object*.style.backgroundOrigin="content-box" |
+
+**语法**
+
+background-origin: padding-box|border-box|content-box;
+
+### 属性值
+
+| 值          | 描述                           |
+| :---------- | :----------------------------- |
+| padding-box | 背景图像相对于内边距框来定位。 |
+| border-box  | 背景图像相对于边框盒来定位。   |
+| content-box | 背景图像相对于内容框来定位。   |
+
+
+
+[返回目录](#CSS背景)
+
+------
+
+
+
+## CSS3 背景的绘制区域：`background-clip`
+
+### 定义和用法
+
+**`background-clip` 属性**规定背景的绘制区域。
+
+| 默认值：          | border-box                                  |
+| :---------------- | ------------------------------------------- |
+| 继承性：          | no                                          |
+| 版本：            | CSS3                                        |
+| JavaScript 语法： | *object*.style.backgroundClip="content-box" |
+
+**语法**
+
+background-clip: border-box|padding-box|content-box;
+
+### 属性值
+
+| 值          | 描述                   |
+| :---------- | :--------------------- |
+| border-box  | 背景被裁剪到边框盒。   |
+| padding-box | 背景被裁剪到内边距框。 |
+| content-box | 背景被裁剪到内容框。   |
+
+
+
+[返回目录](#CSS背景)
+
+------
+
+
+
+## CSS3 多重背景图片
+
+CSS3 允许为元素使用多个背景图像。
+
+**实例**
+
+为 body 元素设置两幅背景图片：
+
+```
+body
+{ 
+background-image:url(bg_flower.gif),url(bg_flower_2.gif);
+}
+```
+
+**运行结果**
+
+<img src="D:\基础\Web 前端\note\GR-ZYX.github\CSS\image\多背景.png" style="zoom:33%;" />
 
 
 

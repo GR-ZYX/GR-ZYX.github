@@ -355,3 +355,195 @@ a:hover {border-color: gray;}
 
 ------
 
+
+
+## CSS3 圆角边框：`border-radius`
+
+### 定义和用法
+
+在 CSS3 中，**`border-radius` 属性**用于创建圆角：
+
+border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
+
+**实例**
+
+向 div 元素添加圆角：
+
+```
+div{
+    text-align:center;
+    border:2px solid #a1a1a1;
+    padding:10px 40px; 
+    background:#dddddd;
+    width:350px;
+    border-radius:25px;
+    -moz-border-radius:25px; /* 老的 Firefox */
+}
+
+<div>border-radius 属性允许您向元素添加圆角。</div>
+```
+
+**运行结果：**
+
+<div style="text-align:center;border:2px solid #a1a1a1;padding:10px 40px; background:#dddddd;width:500px;border-radius:25px;">border-radius 属性允许向元素添加圆角。</div>
+
+### 属性值
+
+| 默认值：          | 0                                 |
+| :---------------- | --------------------------------- |
+| 继承性：          | no                                |
+| 版本：            | CSS3                              |
+| JavaScript 语法： | *object*.style.borderRadius="5px" |
+
+**注释：**按此顺序设置每个 `radii` 的四个值。如果省略 `bottom-left`，则与 `top-right` 相同。如果省略 `bottom-right`，则与 `top-left` 相同。如果省略 `top-right`，则与 `top-left` 相同。
+
+| 值       | 描述                     |
+| :------- | :----------------------- |
+| *length* | 定义圆角的形状。         |
+| *%*      | 以百分比定义圆角的形状。 |
+
+
+
+[返回目录](#CSS边框)
+
+------
+
+
+
+## CSS3 边框阴影：`box-shadow`
+
+### 定义和用法
+
+在 CSS3 中，**`box-shadow`属性** 用于向方框添加阴影：
+
+**实例**
+
+向 div 元素添加方框阴影：
+
+```
+div{
+    width:300px;
+    height:100px;
+    background-color:#ff9900;
+    -moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */
+    box-shadow: 10px 10px 5px #888888;
+}
+
+<div></div>
+```
+
+**运行结果**
+
+<div style=" width:300px;height:100px;background-color:#ff9900;-moz-box-shadow: 10px 10px 5px #888888; /* 老的 Firefox */ box-shadow: 10px 10px 5px #888888;"></div>
+
+| 默认值：          | none                                             |
+| :---------------- | ------------------------------------------------ |
+| 继承性：          | no                                               |
+| 版本：            | CSS3                                             |
+| JavaScript 语法： | *object*.style.boxShadow="10px 10px 5px #888888" |
+
+**语法**
+
+```
+box-shadow: h-shadow v-shadow blur spread color inset;
+```
+
+**注释：**box-shadow 向框添加一个或多个阴影。该属性是由逗号分隔的阴影列表，每个阴影由 2-4 个长度值、可选的颜色值以及可选的 inset 关键词来规定。省略长度的值是 0。
+
+### 属性值
+
+| 值         | 描述                                     |
+| :--------- | :--------------------------------------- |
+| *h-shadow* | 必需。水平阴影的位置。允许负值。         |
+| *v-shadow* | 必需。垂直阴影的位置。允许负值。         |
+| *blur*     | 可选。模糊距离。                         |
+| *spread*   | 可选。阴影的尺寸。                       |
+| *color*    | 可选。阴影的颜色。请参阅 CSS 颜色值。    |
+| inset      | 可选。将外部阴影 (outset) 改为内部阴影。 |
+
+
+
+[返回目录](#CSS边框)
+
+------
+
+
+
+## CSS3 边框图片：`border-image`
+
+### 定义和用法
+
+通过 CSS3 的 **`border-image` 属性**，可以使用图片来创建边框：
+
+用于创建上面的边框的原始图片：
+
+![用于边框的图片](..\..\image\border.png)
+
+**实例**
+
+使用图片创建围绕 div 元素的边框：
+
+```
+div{
+    border:15px solid transparent;
+    width:300px;
+    padding:10px 20px;
+}
+
+#round{
+    -moz-border-image:url(/i/border.png) 30 30 round;	/* Old Firefox */
+    -webkit-border-image:url(/i/border.png) 30 30 round;	/* Safari and Chrome */
+    -o-border-image:url(/i/border.png) 30 30 round;		/* Opera */
+    border-image:url(/i/border.png) 30 30 round;
+}
+
+#stretch{
+    -moz-border-image:url(/i/border.png) 30 30 stretch;	/* Old Firefox */
+    -webkit-border-image:url(/i/border.png) 30 30 stretch;	/* Safari and Chrome */
+    -o-border-image:url(/i/border.png) 30 30 stretch;	/* Opera */
+    border-image:url(/i/border.png) 30 30 stretch;
+}
+
+<div id="round">在这里，图片铺满整个边框。</div>
+<br>
+<div id="stretch">在这里，图片被拉伸以填充该区域。</div>
+```
+
+**运行结果**
+
+![](..\..\image\边框图片.png)
+
+**`border-image` 属性**是一个简写属性，用于设置以下属性：
+
+- `border-image-source`
+- `border-image-slice`
+- `border-image-width`
+- `border-image-outset`
+- `border-image-repeat`
+
+如果省略值，会设置其默认值。
+
+**提示：**请使用 border-image-* 属性来构造漂亮的可伸缩按钮！
+
+| 默认值：          | none 100% 1 0 stretch                                    |
+| :---------------- | -------------------------------------------------------- |
+| 继承性：          | no                                                       |
+| 版本：            | CSS3                                                     |
+| JavaScript 语法： | *object*.style.borderImage="url(border.png) 30 30 round" |
+
+### 属性值
+
+| 值                    | 描述                                                         |
+| :-------------------- | :----------------------------------------------------------- |
+| *border-image-source* | 用在边框的图片的路径。                                       |
+| *border-image-slice*  | 图片边框向内偏移。                                           |
+| *border-image-width*  | 图片边框的宽度。                                             |
+| *border-image-outset* | 边框图像区域超出边框的量。                                   |
+| *border-image-repeat* | 图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。 |
+
+
+
+[返回目录](#CSS边框)
+
+------
+
