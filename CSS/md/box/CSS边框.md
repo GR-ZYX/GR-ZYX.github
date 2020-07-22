@@ -363,7 +363,23 @@ a:hover {border-color: gray;}
 
 在 CSS3 中，**`border-radius` 属性**用于创建圆角：
 
-border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性。
+`border-radius` 属性是一个**简写属性**，用于设置四个 border-\*-\*-radius 属性。
+
+- **`border-top-left-radius`：**定义左上角的弧度
+
+  **JavaScript 语法**：*object* object.style.borderTopLeftRadius="5px"
+
+- **`border-top-right-radius`：**定义右上角的弧度
+
+  **JavaScript 语法**：*object* object.style.borderTopRightRadius="5px"
+
+- **`border-bottom-right-radius`：**定义右下角的弧度
+
+  **JavaScript 语法**：*object* object.style.borderBottomRightRadius="5px"
+
+- **`border-bottom-left-radius`：**定义左下角的弧度
+
+  **JavaScript 语法**：*object* object.style.borderBottomLeftRadius="5px"
 
 **实例**
 
@@ -395,7 +411,7 @@ div{
 | 版本：            | CSS3                              |
 | JavaScript 语法： | *object*.style.borderRadius="5px" |
 
-**注释：**按此顺序设置每个 `radii` 的四个值。如果省略 `bottom-left`，则与 `top-right` 相同。如果省略 `bottom-right`，则与 `top-left` 相同。如果省略 `top-right`，则与 `top-left` 相同。
+**注释：**从左上角按顺时针顺序设置每个 `radii` 的四个值。如果省略 `bottom-left`，则与 `top-right` 相同。如果省略 `bottom-right`，则与 `top-left` 相同。如果省略 `top-right`，则与 `top-left` 相同。
 
 | 值       | 描述                     |
 | :------- | :----------------------- |
