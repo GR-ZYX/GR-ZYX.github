@@ -34,7 +34,7 @@ a{
     border-bottom: 2px solid white;
     text-align: center;
     font-size: 13px;
-    color: black;
+    color: rgb(87, 87, 87);
 }
 
 .hide h5:hover{
