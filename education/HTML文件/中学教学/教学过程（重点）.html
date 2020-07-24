@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>教学过程（重点）</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="教学过程重点）" class="md-header-anchor"></a><span>教学过程（重点）</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#教学过程重点）">教学过程（重点）</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" href="#一教学过程的概念">一、教学过程的概念</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n24"><a class="md-toc-inner" href="#二教学过程的本质观">二、教学过程的本质观</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n93"><a class="md-toc-inner" href="#三教学过程的本质">三、教学过程的本质</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n157"><a class="md-toc-inner" href="#四教学过程的本质规律重点）识记">四、教学过程的本质规律（重点）【识记】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n159"><a class="md-toc-inner" href="#一）直接经验与间接经验相统一的规律间接性规律学生认识的特殊性规律">（一）直接经验与间接经验相统一的规律(间接性规律、学生认识的特殊性规律)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n215"><a class="md-toc-inner" href="#二）掌握知识与发展能力智力）相统一的规律发展性规律）理解运用">（二）掌握知识与发展能力（智力）相统一的规律（发展性规律）【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n338"><a class="md-toc-inner" href="#三）教师的主导作用与学生的主体作用用统一的规律双边性规律）理解运用">（三）教师的主导作用与学生的主体作用用统一的规律（双边性规律）【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n398"><a class="md-toc-inner" href="#四）传授知识与思想教育相统一的规律教育性规律教学的教育性规律）理解运用">（四）传授知识与思想教育相统一的规律（教育性规律、教学的教育性规律）【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n465"><a class="md-toc-inner" href="#五教学过程的基本阶段">五、教学过程的基本阶段</a></span></p></div><h2><a name="一教学过程的概念" class="md-header-anchor"></a><span>一、教学过程的概念</span></h2><p><span>教学过程是教师根据</span><strong><span>教学目的、任务</span></strong><span>和</span><strong><span>学生身心发展的特点</span></strong><span>，指导学生</span><strong><span>有目的、有计划</span></strong><span>地掌握系统的科学文化基础知识和基本技能，同时使学生身心获得一定的发展，形成一定的思想品德的过程。</span></p><p>&nbsp;</p><p><a href='#教学过程重点）'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二教学过程的本质观" class="md-header-anchor"></a><span>二、教学过程的本质观</span></h2><p><span> 关于教学过程的本质的说法有很多，以下是比较有代表性的几种。</span></p><ol><li><p><strong><span>特殊认识说</span></strong></p><p><span>特殊认识说认为，教学过程首先是一种认识过程，但是，教学过程作为一种认识过程又具有自己的特殊性。因此，</span><strong><span>教学过程本质上是一种特殊的认识过程</span></strong><span>。</span></p></li><li><p><strong><span>认识-发展说</span></strong></p><p><span>认识-发展说认为，教学过程是教师有目的、有计划地引导学生掌握科学文化基础知识和基本能力，逐步培养学生的辩证唯物主义世界观和共产主义道德品质的过程。</span></p></li><li><p><strong><span>认识-实践说</span></strong></p><p><span>认识-实践说认为，教学过程是认识和实践统一的活动过程；是学生在教师的指导下，对人类已有的知识经验的认识活动和改造主观世界、形成和谐发展个性的实践活动的统一过程。</span></p></li><li><p><strong><span>双边活动说</span></strong></p><p><span>双边活动说认为，教学过程是</span><strong><span>教师的教与学生的学相结合</span></strong><span>的双边活动过程。</span></p></li><li><p><strong><span>多重本质说</span></strong></p><p><span>多重本质说认为，教学过程是多层次、多类型的，教学过程的本质也应该是多级别、多类型的。</span></p></li><li><p><strong><span>交往本质说</span></strong></p><p><span>交往本质说认为，教学过程中学生和教师都是主体存在，师生之间只有通过交往，人的主体性才能生成和发展。</span><strong><span>交往是教学过程的本质。</span></strong></p></li></ol><p>&nbsp;</p><p><a href='#教学过程重点）'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三教学过程的本质" class="md-header-anchor"></a><span>三、教学过程的本质</span></h2><ol><li><p><strong><span>教学过程本质上是一种认识过程</span></strong></p><p><u><span>教学过程本质上是一种认识过程。</span></u><span>一般来讲，</span><u><span>教学过程的主要矛盾是</span><strong><span>学生与其所学知识</span></strong><span>之间的矛盾</span></u><span>，具体体现在教师提出的教学任务同学生完成这些任务的需要、实际水平之间的矛盾。这一矛盾实际上是</span><strong><span>学生认识过程</span></strong><span>的矛盾。</span></p></li><li><p><strong><span>教学过程是一种特殊的认识过程</span></strong><span>（识记）</span></p><p><span>教学过程是认识过程的一种特殊形式，</span><u><span>其目的在于在教师的指导下，学生把</span><strong><span>社会历史经验</span></strong><span>变为</span><strong><span>个体的精神财富</span></strong><span>，在获得客观的映象即知识的同时，也能获得发展</span></u><span>。</span></p><p><span>这种特殊的认识过程具体表现为以下几个方面。</span></p><ul><li><strong><span>间接性。</span></strong><span>学生主要以学习人类积累的科学文化知识为中介，间接地认识现实世界。</span></li><li><strong><span>引导性。</span></strong><span>学生需要在教师引导下认识，不能独立完成。教学是在教师引导下，师生互动的过程。</span></li><li><strong><span>简捷性。</span></strong><span>学生走的是一条认识的捷径，是一种</span><strong><span>科学文化知识的再生产</span></strong><span>。正如马克思所说：“再生产科学所需要的劳动时间，同最初生产科学所需要的劳动时间是无法相比的，例如学生在一小时内就能学会二项式定理。”</span></li></ul></li></ol><p>&nbsp;</p><p>&nbsp;</p><p><a href='#教学过程重点）'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="四教学过程的本质规律重点）识记" class="md-header-anchor"></a><span>四、教学过程的本质规律（重点）【识记】</span></h2><p><strong><span>规律：客观存在、不能改变、不能创造，只能利用</span></strong></p><h3><a name="一）直接经验与间接经验相统一的规律间接性规律学生认识的特殊性规律" class="md-header-anchor"></a><span>（一）直接经验与间接经验相统一的规律(间接性规律、学生认识的特殊性规律)</span></h3><p><span>直接经验与间接经验相统一，反映的是教学中</span><strong><span>传授系统的科学文化知识与丰富学生感性认识</span></strong><span>的关系。</span></p><p><span>直接经验是学生通过亲自探索、实践获得的经验；</span></p><p><span>间接经验是指他人的认识成果，主要指人类在长期认识过程中积累并整理而成的书本知识，此外还包括以各种现代技术形式呈现的知识与信息，如电视和互联网上的知识与信息等。</span></p><ol><li><p><strong><span>学生以学习间接经验为主</span></strong></p><p><u><span>教学中学生主要是学习间接经验，并且是间接地去体验。</span></u><span>学生循序渐进地学习，高效地掌握大量的、系统的科学文化基础知识。同时，学生在新的起点上继续认识客观世界，继续开拓新的认识领域。</span></p></li><li><p><strong><span>学生学习间接经验要以直接经验为基础</span></strong></p><p><strong><span>陶行知</span></strong><span>先生曾说过：</span><strong><span>“接知如接枝。”</span></strong><span>教师在教学中要充分利用学生已有经验，以增加学生学习新知识所必需的感性认识，从而保证教学的顺利进行。</span></p></li><li><p><strong><span>坚持直接经验与间接经验相统一</span></strong></p><p><span>在教学过程中要</span><strong><span>防止两种倾向</span></strong><span>：一是只重视书本知识的传授，忽视引导学生通过亲身参与、独立探索去积累直接经验，获取知识；二是只强调学生通过自己的探索去发现、积累知识，忽视书本知识的学习和教师的系统传授。在教学过程中，</span><strong><span>教师应该把直接经验和间接经验有机结合起来</span></strong><span>。</span></p></li></ol><h3><a name="二）掌握知识与发展能力智力）相统一的规律发展性规律）理解运用" class="md-header-anchor"></a><span>（二）掌握知识与发展能力（智力）相统一的规律（发展性规律）【理解、运用】</span></h3><p><span>在教学过程中，</span><u><span>教师既要重视知识的传授，又要重视能力的发展，</span></u><span>并将二者辩证统一于教学活动之中。正如我们平常所说的</span><u><span>“授人以鱼不如授人以渔”，教师不能满足于“授人以鱼”，更要做到“授人以渔”</span></u></p><ol><li><p><strong><span>掌握知识是发展能力的基础</span></strong></p><p><u><span>学生认识能力的发展有赖于知识的掌握。</span></u><span>知识为能力的发展提供了广阔的领域。同时，知识中也包含认识方法的启示。教师要把心智操作的方式教给学生。掌握知识的过程必然要求学生积极进行认识、思考和判断等心智活动，只有在心智操作的活动中才能发展认识能力。</span></p></li><li><p><strong><span>发展能力是掌握知识的重要条件</span></strong></p><p><u><span>学生具有一定的认识能力，是他们进一步掌握科学文化知识的必要条件。学生掌握知识的速度与质量，依赖于学生</span><strong><span>原有的能力水平</span></strong><span>。</span></u><span>在教学中，教师应启发学生利用自己的潜在能力，使学生在掌握知识的过程中发展认识能力。</span></p></li><li><p><span>.</span><strong><span>掌握知识与发展能力具有相互转化的内在机制</span></strong></p><p><u><span>知识与能力相互依存、相互促进，但</span><strong><span>知识不等同于智力或能力</span></strong><span>。知识掌握的多少，并不一定都与能力发展水平成正比</span><strong><span>（不成正比）</span></strong><span>。</span></u><span>发展能力不仅与知识掌握的多少有关，而且与掌握知识的质量、获得知识的方法和思维方式的运用等有密切的关系，</span><strong><span>知识与能力不是同步发展的</span></strong><span>。</span></p><p><span>在教学中，必须探索掌握知识与发展能力两者之间的差异以及相互转化的</span><strong><span>过程和条件</span></strong><span>，以引导学生在掌握知识的同时有效地发展智力或能力。二者</span><strong><span>转化的条件</span></strong><span>主要有以下几个方面：</span></p><ul><li><span>传授给学生的</span><strong><span>知识应是科学的、有规律性的</span></strong></li><li><span>必须</span><strong><span>科学地组织教学过程</span></strong></li><li><span>重视教学中学生的</span><strong><span>操作与活动</span></strong><span>，培养学生的参与意识和能力，提供学生积极参与实践的时间和空间</span></li><li><span>培养学生良好的个性品质，重视学生的</span><strong><span>个别差异</span></strong></li></ul></li><li><p><strong><span>教学中应该防止两种倾向</span></strong></p><p><strong><span>（1）形式教育论（重视训练思维方式）</span></strong></p><ul><li><span>形式教育论起源于古希腊，主要代表人物是</span><strong><span>洛克和裴斯泰洛齐</span></strong><span>。</span></li></ul><ul><li><u><span>形式教育论的主要观点：教育的目的在于发展学生的</span><strong><span>各种官能或能力</span></strong></u></li></ul><p><strong><span>（2）实质教育论（重视传授知识）</span></strong></p><ul><li><span>实质教育论起源于古希腊和古罗马，主要代表人物是</span><strong><span>赫尔巴特和斯宾塞</span></strong><span>。</span></li><li><u><span>实质教育论的主要观点：教育的目的是向学生传授与生活相关的</span><strong><span>广泛知识内容</span></strong></u></li></ul><p><span>在教学中，既不能只强调训练学生的思维方式，忽视知识的传授；也不能只向学生传授对实际生活有用的知识，忽视学生的能力训练。要把</span><strong><span>二者有机结合</span></strong><span>起来，才能提高教学质量。</span></p></li></ol><h3><a name="三）教师的主导作用与学生的主体作用用统一的规律双边性规律）理解运用" class="md-header-anchor"></a><span>（三）教师的主导作用与学生的主体作用用统一的规律（双边性规律）【理解、运用】</span></h3><p><span>教学过程中既要充分注重教师的教，也要充分调动学生学的积极性，使</span><strong><span>教师的主导作用与学生的主体作用</span></strong><span>有机结合，取得良好的教学效果。</span></p><ol><li><p><strong><span>发挥教师的主导作用是引导学生学习知识、发展身心的必要条件</span></strong></p><p><span>教师是教学过程的组织者和领导者，对教学内容是已知者，按照一定社会的要求培养和教育人。可以说，</span><u><span>教师主导作用的性质和程度决定着教学过程的思想方向和活动的进程，决定着教学的质量</span></u><span>。可见，</span><u><span>在教学过程中，教师为了学生的学习要发挥主导作用，学生在教师的主导作用下发挥学习的积极性</span></u><span>。</span><u><span>学生的主动性和学习的效果怎样，是衡量教师主导作用发挥得好坏的主要标志。</span></u></p></li><li><p><strong><span>充分注重学生的主体地位，调动学生学习的积极性和主动性是使教学得以顺利进行的另一个必要条件</span></strong></p><p><strong><span>主体一主观能动性</span></strong></p><p><span>在教学过程中，学生不仅是教师施教的客体，而且是认识和发展的主体。</span><u><span>学生学习的过程决定着教学内容内化的可能性和程度，学生的学习的积极性不仅有利于知识的吸收、消化和掌握，而且能激发教师教学的热情、责任心、积极性和创造性，促进教师主导作用的充分发挥</span></u><span>；教师要更好地发挥主导作用，必须充分调动学生学习的主观能动性。</span></p></li><li><p><strong><span>教师的主导作用和学生学习的能动性是辩证统一的，教与学要相长</span></strong></p><p><span>只有通过教师的组织、指导和调节，学生才能迅速有效地掌握知识并获得发展；同时，也只有在学生积极主动参与教学活动时，教师的指导、调节才能起到应有的作用。因此，在教学实践中，要把教师的主导作用与学生学习的积极主动性辩证统一起来。</span></p></li></ol><h3><a name="四）传授知识与思想教育相统一的规律教育性规律教学的教育性规律）理解运用" class="md-header-anchor"></a><span>（四）传授知识与思想教育相统一的规律（教育性规律、教学的教育性规律）【理解、运用】</span></h3><p><strong><span>知识和品德互为基础</span></strong></p><p><span>在教学过程中，教师在传授知识的同时，一定要注重对学生进行息想品德教育，并使</span><strong><span>二者有机结合</span></strong><span>起来，使学生在知识能力和思想品德等方面获得发展与进步。</span></p><ol><li><p><strong><span>知识是思想品德形成的基础</span></strong></p><p><u><span>学生思想品德的提高有赖于其对科学文化知识的掌握。</span></u><span>首先，科学的世界观和先进的思想都要有一定的科学文化知识作为基础；其次，知识学习本身是艰苦的劳动，可以培养学生优秀的道德品质。</span></p></li><li><p><strong><span>学生思想品德的提高为他们积极地学习知识奠定了基础</span></strong></p><p><span>掌握科学文化知识的过程是一个能动的认识过程，</span><u><span>学生的思想品德状况对学习的积极性起着重要的作用</span></u><span>。</span></p></li><li><p><strong><span>传授知识和思想品德教育有机结合</span></strong></p><p><span>在教学中要防止两种倾向：一是</span><u><span>脱离知识进行思想品德教育</span></u><span>。二是</span><u><span>只强调传授知识，忽视思想品德教育</span></u><span>。在教学过程中要注意把两者有机结合起来。</span><u><span>正如赫尔巴特所说：“我想不到有任何无教学的教育，正如在相反方面，我不承认有任何无教育的教学。</span></u></p></li></ol><p>&nbsp;</p><p>&nbsp;</p><p><a href='#教学过程重点）'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="五教学过程的基本阶段" class="md-header-anchor"></a><span>五、教学过程的基本阶段</span></h2><p><span>教学过程的基本阶段即</span><strong><span>教学过程的结构</span></strong><span>。教学过程一般分为如下几个阶段。</span></p><ol><li><p><strong><span>激发学习动机</span></strong></p><p><span>学生的学习兴趣和求知欲是直接推动学生学习的动力。学习兴趣和学习愿望是学生进行学习的基本条件和心理起点。</span></p><p><span>激发学生学习的求知欲与兴趣，需要注意以下三个方面：</span></p><ul><li><span>第一，学生所学内容及知识本身，要具有吸引力</span></li><li><span>第二，要强调学生的活动</span></li><li><span>第三，要依靠教师的引导，教师要特别注意把</span><strong><span>所学内容与学生的生活实际</span></strong><span>有机地结合起来</span></li></ul></li><li><p><strong><span>领会知识（中心环节）</span></strong><span>（识记）</span></p><p><u><span>领会知识是</span><strong><span>教学过程的中心环节</span></strong><span>，包括使学生</span><strong><span>感知教材</span></strong><span>和理</span><strong><span>解教材</span></strong><span>。</span></u></p><ul><li><strong><span>感知教材，形成表象</span></strong><span>。教师要引导学生通过感知形成清晰的表象和鲜明的观点，为理解抽象概念提供感性知识的基础，发展学生相应的能力。</span></li><li><strong><span>理解教材，形成概念</span></strong><span>。教师要引导学生在感知教材的基础上，真正认识事物的本质和规律。</span><u><strong><span>理解教材</span></strong><span>是学生</span><strong><span>掌握知识的中心环节</span></strong><span>。</span></u></li></ul></li><li><p><strong><span>巩固知识</span></strong></p><p><span>巩固所学的知识是教学过程的一个</span><strong><span>必要环节</span></strong><span>。巩固知识的必要性在于以下两个方面：</span></p><ul><li><span>学生在课堂上所获得的知识主要是间接知识，容易遗忘，必须通过复习来加以巩固</span></li><li><span>学生只有掌握了知识，才能为下一步学习奠定基础，才能顺利地学习新知识、新材料。</span></li></ul></li><li><p><strong><span>运用知识</span></strong></p><p><span>掌握知识是为了运用知识。在教学中，运用知识，形成技能技巧，主要是通过教学实践来实现的，需要经过反复的练习。运用知识还应包括对知识的</span><strong><span>迁移和创造</span></strong><span>等。</span></p></li><li><p><strong><span>检查知识</span></strong></p><p><span>检查知识是指教师对学生的学习效果进行考查的过程。检查学习效果的目的在于教师及时获得关于教学效果的反馈信息，调整教学进程与要求；帮助学生了解自己对知识技能的掌握情况，发现自身学习上的问题，改进学习方法，提高学习效率。</span></p></li></ol><p>&nbsp;</p><p><a href='#教学过程重点）'><span>返回目录</span></a></p><hr /><p>&nbsp;</p></div>
+</body>
+</html>
