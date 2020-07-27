@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>教学方法</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="教学方法" class="md-header-anchor"></a><span>教学方法</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#教学方法">教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#一教学方法的概念">一、教学方法的概念</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#二我国中学常用的教学方法">二、我国中学常用的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n15"><a class="md-toc-inner" href="#一）以语言传递为主的教学方法">（一）以语言传递为主的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n385"><a class="md-toc-inner" href="#二）以直观感知为主的教学方法">（二）以直观感知为主的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n486"><a class="md-toc-inner" href="#三）以实际训练为主的教学方法">（三）以实际训练为主的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n698"><a class="md-toc-inner" href="#四）以情感陶冶为主的教学方法">（四）以情感陶冶为主的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n765"><a class="md-toc-inner" href="#五）以探究为主的教学方法">（五）以探究为主的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n801"><a class="md-toc-inner" href="#三国外常用的教学方法">三、国外常用的教学方法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n879"><a class="md-toc-inner" href="#四教学方法的选择与运用">四、教学方法的选择与运用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n881"><a class="md-toc-inner" href="#一）选择教学方法的基本依据">（一）选择教学方法的基本依据</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n960"><a class="md-toc-inner" href="#二）运用教学方法的要求">（二）运用教学方法的要求</a></span></p></div><h2><a name="一教学方法的概念" class="md-header-anchor"></a><span>一、教学方法的概念</span></h2><p><span>教学方法是为完成教学任务而采用的办法，包括</span><strong><span>教师教的方法和学生学的方法</span></strong><span>，是教师引导学生掌握知识技能、获得身心发展的方法。</span></p><p>&nbsp;</p><p><a href='#教学方法'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二我国中学常用的教学方法" class="md-header-anchor"></a><span>二、我国中学常用的教学方法</span></h2><h3><a name="一）以语言传递为主的教学方法" class="md-header-anchor"></a><span>（一）以语言传递为主的教学方法</span></h3><ol><li><p><strong><span>讲授法</span></strong></p><p><strong><span>（1）讲授法的概念</span></strong></p><ul><li><u><span>讲授法是教师通过口头语言系统连贯地向学生传授知识的方法。它是</span><strong><span>最古老</span></strong><span>的一种教学方法，也是迄今为止在世界范围内</span><strong><span>应用最广泛、最普遍</span></strong><span>的一种教学方法，其他各种教学方法在运用中常常要与讲授法结合。</span></u></li></ul><p><strong><span>（2）讲授法的方式</span></strong></p><p><u><span>讲授法主要有</span><strong><span>讲述、讲解、讲读、讲演</span></strong><span>四种方式。</span></u></p><ul><li><strong><span>讲述</span></strong><span>是指教师运用具体生动的语言对教学内容做</span><strong><span>系统叙述和形象描绘</span></strong><span>的一种讲授方式。</span></li><li><strong><span>讲解</span></strong><span>是指教师运用通俗易懂的语言对教材内容进行</span><strong><span>解释、说明、论证</span></strong><span>的一种讲授方式。</span></li><li><strong><span>讲读</span></strong><span>是指教师把</span><strong><span>讲述、讲解同阅读教材有机结合</span></strong><span>，是讲、读、练、思相结合的一种讲授方式。</span></li><li><strong><span>讲演</span></strong><span>是指教师</span><strong><span>以报告或者其他形式</span></strong><span>在较长的时间里系统地讲授教材内容，条分缕析，旁征博引，科学论证，从而得出科学结论的一种讲授方式。</span></li></ul><p><strong><span>（3）讲授法的优缺点</span></strong></p><ul><li><p><strong><span>优点：</span></strong></p><ul><li><span>有利于发挥教师的主导作用，使学生在短时间内获得大量系统的科学知识；</span></li><li><span>有利于发展学生的智力，系统地对学生进行思想品德教育；</span></li><li><span>有利于教学活动有目的、有计划地进行。</span></li></ul></li><li><p><strong><span>缺点：</span></strong></p><ul><li><span>不利于学生主动、自觉地学习；</span></li><li><span>对教师的个人语言素养依赖较强。</span></li></ul></li></ul><p><strong><span>（4）运用讲授法的基本要求</span></strong></p><ul><li><u><span>教师要注意启发诱导学生。</span></u></li><li><u><span>教师要认真组织教学内容。</span></u></li><li><u><span>教师要讲究语言艺术。</span></u></li><li><u><span>教师要组织学生听讲。</span></u></li></ul></li><li><p><strong><span>谈话法</span></strong></p><p><strong><span>（1）谈话法的概念</span></strong></p><ul><li><u><span>谈话法也叫</span><strong><span>问答法</span></strong><span>，是教师按一定的教学要求向学生提出问题，要求学生回答，并</span><strong><span>通过问答的形式</span></strong><span>来引导学生获取或巩固知识的教学方法。</span></u></li></ul><p><strong><span>（2）谈话法的优缺点</span></strong></p><ul><li><p><strong><span>优点：</span></strong></p><ul><li><span>能充分激发学生的主动思维，促进学生独立思考；</span></li><li><span>对学生的智力发展有积极作用；</span></li><li><span>有利于学生语言表达能力的锻炼和提高。</span></li></ul></li><li><p><strong><span>缺点：</span></strong></p><ul><li><span>完成相同教学任务，需要更多的时间；</span></li><li><span>学生人数较多时，很难照顾到每一个人。</span></li></ul></li></ul><p><strong><span>（3）运用谈话法的基本要求</span></strong></p><ul><li><span>教师要准备好问题和谈话计划。</span></li><li><span>教师提出的问题要明确、具体，能引起学生思维兴奋，即提问要富有挑战性和启发性，问题的难易要因人而异。</span></li><li><span>教师要善于启发诱导学生思考。</span></li><li><span>教师要做好归纳、小结，使学生的知识系统化、科学化，并注意纠正学生错误的认识，帮助他们准确地掌握知识。</span></li></ul></li><li><p><strong><span>讨论法</span></strong></p><p><strong><span>（1）讨论法的概念</span></strong></p><ul><li><u><span>讨论法是学生在教师指导下为解决某个问题而进行探讨，辨明是非真伪，以获取知识的教学方法。</span></u></li></ul><p><strong><span>（2）讨论法的优缺点</span></strong></p><ul><li><p><strong><span>优点：</span></strong></p><ul><li><span>有利于激发学生的兴趣、活跃学生的思维；</span></li><li><span>有助于学生集思广益、互相启发、加深理解，发展独立思考的能力；</span></li><li><span>能够促进学生思维能力的发展；</span></li><li><span>有助于调动学生的学习积极性；</span></li><li><span>能够促进学生口头语言表达能力的发展。</span></li></ul></li><li><p><strong><span>缺点：</span></strong></p><ul><li><span>受学生知识基础、经验水平和理解能力的限制；</span></li><li><span>讨论容易脱离主题，流于形式。</span></li></ul></li></ul><p><strong><span>（3）运用讨论法的基本要求</span></strong></p><ul><li><span>教师要选择有吸引力的讨论题目，做好充分准备。</span></li><li><span>教师要善于在讨论中启发、引导学生，让学生围绕中心议题发言，切勿偏离主题。</span></li><li><span>讨论结束后，教师要做好总结。</span></li></ul></li><li><p><strong><span>读书指导法</span></strong></p><p><strong><span>（1）读书指导法的概念</span></strong></p><ul><li><u><span>读书指导法是教师指导</span><strong><span>学生通过阅读教科书和其他参考书</span></strong><span>以获得或巩固知识的教学方法。</span></u></li></ul><p><strong><span>（2）运用读书指导法的基本要求</span></strong></p><ul><li><span>教师要提出明确的目的、要求和思考题。</span></li><li><span>教师要教给学生读书的方法，让学生学会使用工具书，学会做读书笔记等。</span></li><li><span>教师要善于在读书中发现问题和解决问题。</span></li><li><span>教师要适当组织学生交流读书心得。</span></li></ul></li></ol><h3><a name="二）以直观感知为主的教学方法" class="md-header-anchor"></a><span>（二）以直观感知为主的教学方法</span></h3><ol><li><p><strong><span>演示法</span></strong></p><p><strong><span>（1）演示法的概念</span></strong></p><ul><li><u><span>演示法是教师通过</span><strong><span>展示实物、直观教具，运用示范性实验</span></strong><span>或</span><strong><span>现代化视听手段</span></strong><span>，指导学生获得知识或巩固知识的教学方法。</span></u><span>演示的特点在于</span><strong><span>加强教学的直观性</span></strong><span>。演示法体现了</span><strong><span>直观性、理论联系实际</span></strong><span>的教学原则。</span></li></ul><p><strong><span>（2）演示法的手段</span></strong></p><ul><li><span>实物、标本、模型、图片的演示；</span></li><li><span>图表、示意图地图的演示；</span></li><li><span>实验演示；</span></li><li><span>幻灯片、电影、录像的演示。</span></li></ul><p><strong><span>（3）运用演示法的基本要求</span></strong></p><ul><li><span>教师要做好演示前的准备。</span></li><li><span>教师要尽可能地调动学生的所有感官，使学生全面、立体地观察演示。</span></li><li><span>教师要让学生明确演示的目的、要求和过程。</span></li><li><span>教师要讲究演示的方法，及时辅以讲解。</span></li></ul></li><li><p><strong><span>参观法</span></strong></p><p><strong><span>（1）参观法的概念</span></strong></p><ul><li><span>参观法是教师根据教学目的和要求，组织学生对实物进行实地观察、研究，从而在实际中获得新知识或巩固、验证已学知识的方法。</span></li></ul><p><strong><span>（2）运用参观法的基本要求</span></strong></p><ul><li><span>教师要做好参观的准备。</span></li><li><span>教师要在参观过程中及时对学生进行具体指导。</span></li><li><span>教师要帮助学生总结参观的收获。</span></li></ul></li></ol><h3><a name="三）以实际训练为主的教学方法" class="md-header-anchor"></a><span>（三）以实际训练为主的教学方法</span></h3><ol><li><p><strong><span>练习法</span></strong></p><p><strong><span>（1）练习法的概念</span></strong></p><ul><li><u><span>练习法是学生在教师指导下，</span><strong><span>运用所学知识反复地完成一定的操作</span></strong><span>，以形成技能、技巧的教学方法。</span></u><span>练习法是各科教学普遍使用的教学方法。</span></li></ul><p><strong><span>（2）运用练习法的基本要求</span></strong></p><ul><li><span>教师要使学生明确练习的目的与要求，掌握练习的原理和方法。</span></li><li><span>教师要精选练习材料，适当分配分量、次数和时间，练习的方式要多样化，练习要循序渐进，使学生逐步提高。</span></li><li><span>进行练习时，教师要严格要求学生，并及时向学生反馈练习情况。</span></li></ul></li><li><p><strong><span>实验法</span></strong></p><p><strong><span>（1）实验法的概念</span></strong></p><ul><li><u><span>实验法是指学生在教师的指导下，使用一定的仪器和设备，在一定条件下引起某些事物和现象发生变化，并对其进行观察和分析，以获得知识和技能的教学方法。</span></u><span>实验法不但有利于学生掌握知识，而且有利于培养学生的动手能力和科学、严谨的学习态度。</span></li></ul><p><strong><span>（2）运用实验法的基本要求</span></strong></p><ul><li><span>教师要做好实验前的准备。</span></li><li><span>教师要使学生明确实验目的、要求与做法。</span></li><li><span>教师在实验中要注意指导实验过程。</span></li><li><span>教师要引导学生做好实验小结。</span></li></ul><p><strong><span>（3）备考锦囊</span></strong></p><ul><li><span>演示法的实施主体是教师，一般是教师展示直观教具或进行示范性实验；</span></li><li><span>实验法的实施主体是学生，主要是学生在教师的指导下进行实验。</span></li></ul></li><li><p><strong><span>实习作业法</span></strong></p><p><strong><span>（1）实习作业法的概念</span></strong></p><ul><li><u><span>实习作业法又称</span><strong><span>实习法</span></strong><span>，是教师依据学科课程标准的要求，指导学生运用所学的知识从事一定的工作或操作，</span><strong><span>将书本知识运用于实践</span></strong><span>的教学方法。</span></u></li></ul><p><strong><span>（2）运用实习作业法的基本要求</span></strong></p><ul><li><strong><span>做好实习作业的准备。</span></strong><span>教师要制订计划，确定地点，准备仪器，编好实习作业小组。</span></li><li><strong><span>做好实习作业的动员。</span></strong><span>教师要明确实习作业的目的、任务、注意事项，提高学生的自觉性与积极性。</span></li><li><strong><span>做好实习作业过程中的指导。</span></strong><span>在作业过程中，教师要给予学生必要的指导，与学生及时交流，以保证质量。</span></li><li><strong><span>做好实习作业总结。</span></strong><span>教师要指导学生写出实习报告或体会，并进行评价和总结。</span></li></ul></li><li><p><strong><span>实践活动法</span></strong></p><p><strong><span>（1）实践活动法的概念</span></strong></p><ul><li><u><span>实践活动法是让学生</span><strong><span>参加社会实践活动</span></strong><span>，培养学生解决实际问题的能力和多方面实践能力的教学方法。</span></u><span>在实践活动中，</span><strong><span>学生是中心</span></strong><span>，教师是学生的参谋或顾问。</span></li></ul><p><strong><span>（2）运用实践活动法的基本要求</span></strong></p><ul><li><span>教师在学生参加实践活动之前要做好充分的准备工作。</span></li><li><span>在实践活动过程中，教师应密切注意学生的表现，并给予学生指导或帮助。</span></li><li><span>在实践活动结束时，教师要安排学生进行总结。</span></li></ul></li></ol><h3><a name="四）以情感陶冶为主的教学方法" class="md-header-anchor"></a><span>（四）以情感陶冶为主的教学方法</span></h3><ol><li><p><strong><span>欣赏教学法</span></strong></p><p><span>欣赏教学法是指教师在教学过程中</span><strong><span>指导学生体验客观事物的真、善、美</span></strong><span>的一种教学方法。欣赏一般包括对自然的欣赏、对人生的欣赏和对艺术的欣赏等。</span></p></li><li><p><strong><span>情境教学法</span></strong></p><ul><li><span>情境教学法是指在教学过程中，教师有目的地</span><strong><span>引入或创设以形象为主体的，具有一定情绪色彩的，生动、具体的场景</span></strong><span>，以引起学生一定的情感体验，从而帮助学生理解教材，并使学生的心理机能得到发展的教学方法。</span></li><li><u><span>情境教学法的</span><strong><span>特点在于重视学生的主体作用</span></strong><span>，使认知与情感、活动与环境、学习与应用有机地结合起来。教师创设的情境一般包括生活展现的情境、图画再现的情境、实物演示的情境、音乐渲染的情境、言语描述的情境等。</span></u></li></ul></li></ol><h3><a name="五）以探究为主的教学方法" class="md-header-anchor"></a><span>（五）以探究为主的教学方法</span></h3><ul><li><span>以探究为主的教学方法是指</span><strong><span>教师组织和引导学生</span></strong><span>，通过独立的探索和研究活动，掌握知识、培养能力、开发潜力、形成研究意识和探究精神的方法。</span></li><li><span>这类方法的</span><strong><span>特点是学生具有较大的活动自由</span></strong><span>，由学生积极主动地研究问题、探索解决问题的方法，学生的主体性得到充分彰显，学生的独立性得到高度发挥。</span></li><li><span>美国教育学家</span><strong><span>布鲁纳倡导的“发现法”是以探究为主的教学方法</span></strong><span>。</span><u><span>发现法又称</span><strong><span>探索法、研究法</span></strong><span>，是指教师不直接将学习内容提供给学生，而是为学生创设问题情境，</span><strong><span>引导学生探讨和发现新知识与问题</span></strong><span>的方法。</span></u></li></ul><p>&nbsp;</p><p><a href='#教学方法'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三国外常用的教学方法" class="md-header-anchor"></a><span>三、国外常用的教学方法</span></h2><ol><li><p><strong><span>暗示教学法</span></strong></p><p><span>暗示教学法是由保加利亚心理学家</span><strong><span>洛扎诺夫</span></strong><span>在20世纪60年代提出的，它被称为一种“开发人类智能，加速学习进程”的教学方法。暗示教学，就是对教学环境进行精心的设计，</span><u><span>用</span><strong><span>暗示、联想、练习</span></strong><span>和</span><strong><span>音乐</span></strong><span>等各种综合方式建立起无意识的心理倾向，</span></u><span>，激发学生的学习需要和兴趣，充分发挥学生的潜力，使学生在轻松愉快的学习中获得更好的效果。</span><strong><span>暗示教学法的原理是整体性原理。</span></strong></p></li><li><p><strong><span>范例教学法</span></strong></p><p><span>范例教学法是由德国教育家</span><strong><span>瓦根舍因</span></strong><span>等人提出的。它是指教师</span><strong><span>将事实范例作为教学内容</span></strong><span>，使学生掌握一定的知识，以此来培养学生独立和主动学习的能力，帮助学生形成独立批判能力和判断能力。</span></p></li><li><p><strong><span>探究-研讨教学法</span></strong></p><p><span>探究-研讨教学法的倡导者是美国哈佛大学教授</span><strong><span>兰本达</span></strong><span>。探究-研讨教学法的特点有以下几个方面：</span></p><ul><li><span>从具体材料引发学习经历；</span></li><li><span>经过集体交流和研讨促进学习；</span></li><li><span>鼓励学生的语言表达；</span></li><li><span>肯定学生在学习中所犯错误的意义。</span></li></ul></li><li><p><strong><span>纲要图示教学法</span></strong></p><p><span>纲要图示教学法的倡导者是苏联教师</span><strong><span>沙塔洛夫</span></strong><span>。纲要图示教学法的核心是</span><strong><span>“纲要信号”</span></strong><span>，即一种提纲挈领地概括所讲内容的，由字母、单词、数字或其他信号组成的直观性很强的图表，是教学的辅助工具。</span></p><p><span>其特点是简明扼要、直观性强、知识系统明确。</span></p></li></ol><p>&nbsp;</p><p><a href='#教学方法'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="四教学方法的选择与运用" class="md-header-anchor"></a><span>四、教学方法的选择与运用</span></h2><h3><a name="一）选择教学方法的基本依据" class="md-header-anchor"></a><span>（一）选择教学方法的基本依据</span></h3><ol><li><p><strong><span>教学目标和教学任务的要求</span></strong></p><p><span>每节课的教学目标和教学任务都不尽相同，需要选择不同的教学方法。</span></p></li><li><p><strong><span>课程性质和教材特点（教学内容）</span></strong></p><p><span>课程性质和教材特点不同，选择的教学方法也不同。</span></p></li><li><p><strong><span>学生年龄特征</span></strong></p><p><span>教师在选择教学方法时还要考虑学生的实际情况，主要是学生的心理特征和知识基础情况。</span></p></li><li><p><strong><span>教学时间、设备、条件</span></strong></p><p><span>有些方法需要的时间较长，有些方法对教学设备的要求较高，教师在选择教学方法时要充分考虑这些因素。</span></p></li><li><p><strong><span>教师业务水平、实际经验和个性特点</span></strong></p><p><span>教师要选择适合自己特点的教学方法，充分发挥自己的特长，确保教学过程的优化。</span></p></li><li><p><span>此外，教学方法的选择还受</span><strong><span>教学手段、教学环境、教学原则、学校的实际情况</span></strong><span>等因素的制约。</span></p></li></ol><h3><a name="二）运用教学方法的要求" class="md-header-anchor"></a><span>（二）运用教学方法的要求</span></h3><ol><li><p><strong><span>要发挥教学的整体功能</span></strong></p><p><span>教学方法的运用，要充分发挥由</span><strong><span>教学目的、教学内容、教学方法、教学组织形式</span></strong><span>和</span><strong><span>教学评价</span></strong><span>构成的教学过程的整体功能。</span></p></li><li><p><strong><span>坚持以启发式为指导思想</span></strong></p><p><span>启发式是相对于注入式而言的，强调教学应从学生的实际出发，充分调动学生的积极性、独立性、主动性和自觉性，引导学生通过自己积极的学习活动去掌握知识、形成技能，促进学生个性的健康发展。</span></p></li><li><p><strong><span>做到综合性、灵活性与创造性相结合</span></strong></p><ul><li><span>综合性是指教师根据教学任务和教学内容的需要，综合运用多种教学方法。</span></li><li><span>灵活性是指在实际教学中，教师要从实际需要出发，随时对教学方法进行调整。</span></li><li><span>创造性是指教师从教学实践出发，在把握现有教学方法的基础上有所创造。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#教学方法'><span>返回目录</span></a></p><hr /><p>&nbsp;</p></div>
+</body>
+</html>
