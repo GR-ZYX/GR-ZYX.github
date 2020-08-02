@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>教学评价</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="教学评价" class="md-header-anchor"></a><span>教学评价</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#教学评价">教学评价</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#一教学评价的概念和功能">一、教学评价的概念和功能</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13"><a class="md-toc-inner" href="#二教学评价的基本内容识记理解">二、教学评价的基本内容【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n28"><a class="md-toc-inner" href="#三教学评价原则">三、教学评价原则</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n53"><a class="md-toc-inner" href="#四教学评价的类型">四、教学评价的类型</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n54"><a class="md-toc-inner" href="#一）诊断性评价形成性评价和总结性评价">（一）诊断性评价、形成性评价和总结性评价</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n80"><a class="md-toc-inner" href="#二）相对性评价绝对性评价和个体差异评价">（二）相对性评价、绝对性评价和个体差异评价</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n116"><a class="md-toc-inner" href="#五教学评价的主要方法">五、教学评价的主要方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#一）测验评价">（一）测验评价</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n172"><a class="md-toc-inner" href="#二）非测验评价方式">（二）非测验评价方式</a></span></p></div><h2><a name="一教学评价的概念和功能" class="md-header-anchor"></a><span>一、教学评价的概念和功能</span></h2><ul><li><span>教学评价是指以教学目标为依据，通过一定的标准和手段，对教学活动及其结果进行价值上的判断，即对教学活动及其结果进行测量、分析和评定的过程。</span></li><li><u><span>教学评价有</span><strong><span>诊断功能、反馈功能、导向功能、激励功能</span></strong><span>和</span><strong><span>鉴定功能</span></strong><span>等。</span></u></li></ul><p>&nbsp;</p><p><a href='#教学评价'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二教学评价的基本内容识记理解" class="md-header-anchor"></a><span>二、教学评价的基本内容【识记、理解】</span></h2><ol start='' ><li><p><strong><span>学生学业成绩的评价</span></strong></p><p><u><span>学生学业成绩评价的领域主要包括</span><strong><span>知识领域、智能领域</span></strong><span>和</span><strong><span>情感态度领域</span></strong><span>。</span></u><span>知识领域，包括基础知识、基本概念和原理以及基本技能；智能领域，包括领会、转换、表述、分析、综合、概括、评价和判断等能力；情感态度领域，包括兴趣、志向、价值观、态度和性格等品质。</span></p></li><li><p><strong><span>教师教学质量的评价</span></strong></p><p><span>教师教学质量评价即教师教学活动效果的评价，是对教师的</span><strong><span>教学行为及其成效</span></strong><span>所进行的评价，主要包括六个方面的内容：①教学目标是否明确、全面和具体；②教学内容的组织和安排是否合理；③教学方法的运用是否得当；④教学环节或教学程序是否优化；⑤教师的教学基本功是否扎实；⑥教学所取得的实际效果如何。</span></p></li><li><p><strong><span>课程的评价</span></strong></p><p><span>课程是学校教学改革的基础。在教学过程中，教师可以开展微观的课程评价，如教学内容是否适当，是否考虑了农村或少数民族地区的特殊性。</span><strong><span>教师在教学中遇到的问题都可以成为评价的议题。</span></strong></p></li></ol><p>&nbsp;</p><p><a href='#教学评价'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三教学评价原则" class="md-header-anchor"></a><span>三、教学评价原则</span></h2><ol start='' ><li><p><strong><span>客观性原则</span></strong></p><p><span>客观性是教学评价的</span><strong><span>基本要求</span></strong><span>。贯彻客观性原则，要遵循以下三点要求：</span></p><ul><li><span>评价标准客观，不带随意性；</span></li><li><span>评价方法客观，不带偶然性；</span></li><li><span>评价态度客观，不带主观性。</span></li></ul></li><li><p><strong><span>发展性原则</span></strong></p><p><u><span>教学评价应着眼于学生的学习进步、动态发展，着眼于教师的教学改进和能力提高，以调动师生的积极性，提高教学质量。</span></u><span>因此，教学评价应是鼓励师生、促进教学的手段，要尊重学生的人格，促进学生发展。</span></p></li><li><p><strong><span>整体性原则</span></strong></p><p><span>教学评价应树立全面观点，</span><strong><span>从教学工作的整体出发</span></strong><span>，进行多方面的检查和评定，防止以偏概全，以局部代替整体。</span></p></li><li><p><strong><span>指导性原则</span></strong></p><p><span>教学评价应在指出教师和学生的长处、不足的基础上，</span><strong><span>提出建设性意见</span></strong><span>，使被评价者能够发扬优点，克服缺点，不断前进。</span></p></li></ol><p>&nbsp;</p><p><a href='#教学评价'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="四教学评价的类型" class="md-header-anchor"></a><span>四、教学评价的类型</span></h2><h3><a name="一）诊断性评价形成性评价和总结性评价" class="md-header-anchor"></a><span>（一）诊断性评价、形成性评价和总结性评价</span></h3><p><span>根据</span><strong><span>评价的功能</span></strong><span>，教学评价可分为</span><strong><span>诊断性评价、形成性评价</span></strong><span>和</span><strong><span>总结性评价</span></strong><span>。</span></p><ol start='' ><li><p><strong><span>诊断性评价</span></strong><span>（了解学生、因材施教）【识记】</span></p><ul><li><u><span>诊断性评价是指在</span><strong><span>学期教学开始</span></strong><span>或</span><strong><span>单元教学开始</span></strong><span>时，对学生现有的知识水平、能力发展进行的评价。</span></u><span>它包括各种摸底考试、了解学生学习困难之所在的考试，以弄清学生已有的</span><strong><span>知识和能力发展情况</span></strong><span>，学习上的</span><strong><span>特点、优点与不足之处</span></strong><span>。</span></li><li><span>其</span><strong><span>目的</span></strong><span>是更好地组织后续的新授课的教学内容和改进教学方法，以便</span><strong><span>对症下药、因材施教</span></strong><span>。</span></li></ul></li><li><p><strong><span>形成性评价</span></strong><span>【识记】</span></p><ul><li><span>形成性评价是在</span><strong><span>教学进程中</span></strong><span>对学生的知识掌握和能力发展进行的比较</span><strong><span>经常而及时</span></strong><span>的测评与反馈。它包括在一节课或一个课题教学中，对学生的</span><strong><span>口头提问、课堂作业与评议</span></strong><span>以及</span><strong><span>书面测验</span></strong><span>等，使教师与学生都能及时获得反馈信息。</span></li><li><u><span>其</span><strong><span>目的</span></strong><span>是</span><strong><span>更好地促进学生的学习与发展</span></strong><span>，以</span><strong><span>改进教学过程提高教学质量</span></strong><span>，而不强调成绩的评定。</span></u></li></ul></li><li><p><strong><span>总结性评价</span></strong></p><ul><li><span>总结性评价也称</span><strong><span>终结性评价</span></strong><span>，是在一个大的学习阶段，如</span><strong><span>一个学期或一门学科终结时</span></strong><span>，对学生学习的成行的较正规的，制度化的考察、考试及其成绩的全面评定。</span></li><li><u><span>其目的是给学生评定成绩。</span></u></li><li><strong><span>PS：期中考试不属于总结性评价。</span></strong></li></ul></li></ol><h3><a name="二）相对性评价绝对性评价和个体差异评价" class="md-header-anchor"></a><span>（二）相对性评价、绝对性评价和个体差异评价</span></h3><p><span>根据</span><strong><span>评价的标准</span></strong><span>，教学评价可分为</span><strong><span>相对性评价、绝对性评价</span></strong><span>和</span><strong><span>个体内差异评价</span></strong></p><ol start='' ><li><p><strong><span>相对性评价（常模参照性评价）</span></strong><span>【识记】</span></p><ul><li><span>相对性评价又称</span><strong><span>常模参照性评价</span></strong><span>，是运用常模参照性测验对学生的学习成绩进行的评价。</span></li><li><u><span>主要</span><strong><span>依据学生个人的学习成绩在该班学生成绩的序列（排名）或常模中所处的位置（排名）</span></strong><span>来评价和判定他的成绩的优劣</span></u><span>，而不考虑他是否达到教学目标的要求。</span></li><li><span>相对性评价具有</span><strong><span>甄选性强</span></strong><span>的特点，因而</span><strong><span>可以作为选拔人才、分类排队的依据</span></strong><span>。它的缺点是不能明确表示学生的真正水平，不能表明他在学业上是否达到了特定的标准，对于个人的努力状况和进步的程度也不够重视。</span></li></ul></li><li><p><strong><span>绝对性评价（目标参照性评价、标准参照评价）</span></strong></p><ul><li><span>绝对性评价又称</span><strong><span>目标参照性评价</span></strong><span>，是用目标参照性测验对学生的学习成绩进行的评价。</span></li><li><span>主要依据教学目标和教材编制试题来测量学生的学业成绩，</span><strong><span>将评价结果与评价的客观标准（分数线）相比较</span></strong><span>，判断学生是否达到了教学目标的要求，而不以评定学生之间的差异为目的。 </span></li><li><span>分数绝对性评价可以</span><strong><span>衡量学生的实际水平</span></strong><span>，了解学生对知识、技能的掌握情况，它关心的是学生掌握了什么、能做什么或没掌握什么、不能做什么，</span><strong><span>适用于毕业考试和合格考试</span></strong><span>。</span></li><li><span>它的缺点是</span><strong><span>不适用于甄选人才。</span></strong></li></ul></li><li><p><strong><span>个体内差异评价</span></strong><span>（自己和自己比）</span></p><ul><li><u><span>个体内差异评价是指把评价对象</span><strong><span>过去和现在的成绩进行比较</span></strong><span>，或把</span><strong><span>个体的有关侧面进行相互比较、判断</span></strong><span>的评价。</span></u></li><li><u><span>个体内差异评价的最大优点是充分体现了尊重个体差异的</span><strong><span>因材施教</span></strong><span>原则</span></u><span>，适当</span><strong><span>减轻了被评价对象的压力</span></strong><span>。</span></li><li><span>但是，因为评价本身缺乏客观标准，所以个体内差异评价不易给评价对象提供明确目标，难以发挥评价的应有功能。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#教学评价'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="五教学评价的主要方法" class="md-header-anchor"></a><span>五、教学评价的主要方法</span></h2><h3><a name="一）测验评价" class="md-header-anchor"></a><span>（一）测验评价</span></h3><ol start='' ><li><p><strong><span>测验评价的概念</span></strong></p><p><u><span>测验评价是指运用</span><strong><span>口试、笔试、操作测验</span></strong><span>等多种具体方法，对学生的学业成绩进行评价。</span></u><span>它是主要侧重于评定学生在学科知识方面学习成就高低或在认知能力方面发展强弱的一种评价方式。</span></p></li><li><p><strong><span>测验的种类</span></strong></p><p><strong><span>（1）标准化成就测验和教师自编测验</span></strong></p><ul><li><span>按照</span><strong><span>编制程序的严格程度</span></strong><span>，教育测验可分为</span><strong><span>标准化成就测验</span></strong><span>和</span><strong><span>教师自编测验</span></strong><span>。</span></li><li><strong><span>标准化成就测验</span></strong><span>是指由专家或学者编制的适用于</span><strong><span>大规模范围内评定个体学业成就水平的测验</span></strong><span>。</span><u><span>这种测验是由专门机构或专家学者按一定测验理论和技术，根据全国或某一地区所有学校的步共同教育目标来编制的。</span></u></li><li><u><span>教师自编测验是由</span><strong><span>教师根据具体的教学目标、教材内容和测验目</span></strong><span>的自己编制的测验，通常用于测量学生的学习状况。</span></u></li><li><span>自编测验的特点：操作过程简单；施测手续方便；应用范围一般限于自己所教的学科，在实际教学中颇为实用。</span></li></ul><p><strong><span>（2）客观性测验和主观性测验</span></strong></p><ul><li><span>按照</span><strong><span>试题类型</span></strong><span>，教育测验可分为</span><strong><span>客观性测验</span></strong><span>和</span><strong><span>主观性测验</span></strong><span>。</span></li><li><span>客观性测验是指采用客观性试题的测验。客观性测验评分的客观性强，能有效消除评分者的评分误差。</span></li><li><span>主观性测验是指采用主观性试题的测验。主观性测验的评分受评分者主观因素影响较大，但有利于考查学生高层次的学习能力。</span></li></ul></li><li><p><strong><span>测验的质量指标</span></strong><span>【识记】【四个“度”】</span></p><p><strong><span>（1）信度</span></strong></p><ul><li><span>信度又称</span><strong><span>测验的可靠度</span></strong><span>，是指一个测验经过多次测量所得结果的一致性程度，以及一次测量所得结果的准确性程度。</span></li><li><u><span>如果一个测验在反复使用或以不同方式使用时都能得出大致相同的可靠结果，那么这个测验的信度就较高，否则，信度较低。</span></u></li><li><span>影响信度的因素有很多，可以归纳为四个方面：</span><strong><span>测验长度、测验难度、施测对象、施测过程</span></strong><span>。</span></li></ul><p><strong><span>（2）效度</span></strong></p><ul><li><u><span>效度是指测验达到测验目的的程度，即是否测出了它所要测的东西。</span></u></li><li><span>效度包括</span><strong><span>内容效度、构想效度</span></strong><span>和</span><strong><span>校标关联效度</span></strong><span>。其中，校标关联效度分为两种，一种叫同时效度，一种叫预测效度。</span></li><li><span>信度和效度的关系：信度高是效度高的必要而非充分条件，效度高的测验，信度一定高，反之，信度高的测验，效度不一定高；效度受信度制约。</span></li></ul><p><strong><span>（3）难度</span></strong></p><ul><li><u><span>难度是指测验包含的试题的难易程度。</span></u></li><li><span>试题过难或过易都不能准确测出学生的真实成绩。所以，一张试卷总的来说难易程度要适中。</span></li></ul><p><strong><span>（4）区分度</span></strong></p><ul><li><u><span>区分度是指测验对考生的不同水平能够区分的程度，即测验是否具有</span><strong><span>区分不同水平考生</span></strong><span>的能力。</span></u></li><li><strong><span>区分度与难度有关</span></strong><span>，只有在试卷中包含有不同难度的试题时，才能提高区分度，拉开考生得分的差距。</span></li></ul></li></ol><h3><a name="二）非测验评价方式" class="md-header-anchor"></a><span>（二）非测验评价方式</span></h3><ol start='' ><li><p><strong><span>实作评价（表现性评价）</span></strong></p><p><span>实作评价是指通过客观测验以外的</span><strong><span>行动、表演、展示、操作、写作</span></strong><span>等更真实的表现来</span><strong><span>评价学生的口头表达能力、文字表达能力、思维能力、创造能力、实践能力</span></strong><span>的评价方法。</span></p></li><li><p><strong><span>档案袋评价（成长记录袋评价）</span></strong></p><p><span>档案袋评价又称</span><strong><span>学习档案评价</span></strong><span>或</span><strong><span>成长记录袋评价</span></strong><span>，是指在一段时间内，以学生个体为单位，有目的地从各种角度和层次收集个体在学习过程中参与学习、努力、进步和取得成就的证明，并有组织地汇总，经由师生合作、学生与家长合作，根据评价标准评价学生表现的评价方法。</span></p></li><li><p><strong><span>量表评价</span></strong></p><p><span>量表评价是指在一个阶段学习结束后对学生进行的</span><strong><span>综合性评价</span></strong><span>，一般通过分项目、分内容、分等级、分不同的评价者进行评价。这也是</span><strong><span>传统课堂教学评价中最常采用的方法</span></strong><span>，它是事先确定好需要进行评价的指标，并给出评价的等级，在评价过程中，评价者对照课堂教学的实际状况，逐项给出相应的等级评定的评价方法。</span></p></li><li><p><strong><span>观察法</span></strong></p><p><span>观察法适用于在教学中评价那些不易量化的行为表现（如兴趣、爱好、态度、习惯、性格）和技能（如唱歌、绘画、体育技巧和手工制作）。</span></p></li><li><p><strong><span>调查法</span></strong></p><p><span>调查法是通过了解学生的学习情况，为进行学生成绩评定收集资料的一种方法。它一般通过问卷、交谈进行。问卷是通过预先设计好的调查题目要求学生笔答，以获取有关评价资料的方法；交谈是通过谈话了解学生学习的兴趣、需要、态度和课后学习情况的方法。</span></p></li><li><p><strong><span>自我评价法</span></strong></p><p><span>自我评价法就是</span><strong><span>自己对自己的评价</span></strong><span>。自我评价的主要方法有运用标准答案、核对表，运用录音机、录像机等对自己做出评价。</span></p></li></ol><p>&nbsp;</p><p><a href='#教学评价'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

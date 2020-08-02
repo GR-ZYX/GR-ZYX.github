@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>教学组织形式</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="教学组织形式" class="md-header-anchor"></a><span>教学组织形式</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#教学组织形式">教学组织形式</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#一教学组织形式的概念">一、教学组织形式的概念</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n15"><a class="md-toc-inner" href="#二常见的教学组织形式">二、常见的教学组织形式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n16"><a class="md-toc-inner" href="#一）古代教学的基本组织形式------个别教学制">（一）古代教学的基本组织形式——个别教学制</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n38"><a class="md-toc-inner" href="#二）现代教学的基本组织形式------班级授课制">（二）现代教学的基本组织形式——班级授课制</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" href="#三）现代教学的辅助形式------个别辅导与现场教学">（三）现代教学的辅助形式——个别辅导与现场教学</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n111"><a class="md-toc-inner" href="#四）现代教学的特殊组织形式------复式教学">（四）现代教学的特殊组织形式——复式教学</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#五）其他教学组织形式">（五）其他教学组织形式</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n409"><a class="md-toc-inner" href="#三新型教学形式">三、新型教学形式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n411"><a class="md-toc-inner" href="#一）小班教学">（一）小班教学</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n436"><a class="md-toc-inner" href="#二）翻转课堂单选">（二）翻转课堂【单选】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n456"><a class="md-toc-inner" href="#三）微课">（三）微课</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n491"><a class="md-toc-inner" href="#四）微格教学单选">（四）微格教学【单选】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n508"><a class="md-toc-inner" href="#五）慕课">（五）慕课</a></span></p></div><h2><a name="一教学组织形式的概念" class="md-header-anchor"></a><span>一、教学组织形式的概念</span></h2><ul><li><span>教学组织形式是指为完成特定的教学任务，教师和学生按照一定要求组合起来进行活动的结构。</span></li><li><span>教学组织形式所要解决的问题包括教师以什么样的形式将学生组织起来，通过什么样的形式与学生发生联系，教学活动按照什么样的程序展开，教学时间如何分配和安排等。</span></li><li><span>教学组织形式的选择和运用主要受</span><strong><span>教学观念、教学任务、教学内容、教学对象</span></strong><span>和</span><strong><span>教学条件</span></strong><span>等因素的制约。</span></li></ul><p>&nbsp;</p><p><a href='#教学组织形式'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二常见的教学组织形式" class="md-header-anchor"></a><span>二、常见的教学组织形式</span></h2><h3><a name="一）古代教学的基本组织形式------个别教学制" class="md-header-anchor"></a><span>（一）古代教学的基本组织形式——个别教学制</span></h3><ol start='' ><li><p><strong><span>个别教学制的概念</span></strong></p><ul><li><span>个别教学制是指在同一时空内，教师只与</span><strong><span>单个学生</span></strong><span>发生教学关系的一种组织形式。</span></li><li><span>这种个别教学形式在古代学校中普遍推行是与当时</span><strong><span>社会生产力发展水平比较低</span></strong><span>的状况相适应的。</span></li></ul></li><li><p><strong><span>个别教学制的优缺点</span></strong></p><ul><li><p><strong><span>优点：</span></strong></p><ul><li><span>教师能根据学生的特点因材施教，使教学内容、进度与每一个学生的接受能力相匹配。</span></li></ul></li><li><p><strong><span>缺点：</span></strong></p><ul><li><span>一个教师所能教的学生数量是很有限的，致使这种教学组织形式存在</span><strong><span>办学规模小、速度慢、效率低</span></strong><span>的不足。</span></li></ul></li></ul></li></ol><h3><a name="二）现代教学的基本组织形式------班级授课制" class="md-header-anchor"></a><span>（二）现代教学的基本组织形式——班级授课制</span></h3><ol start='' ><li><p><strong><span>班级授课制的概念</span></strong></p><ul><li><span>班级授课制又称</span><strong><span>班级上课制、班级教学</span></strong><span>，是一种</span><strong><span>集体教学形式</span></strong><span>。</span></li><li><u><span>班级授课制可以用三个字简单概括：</span><strong><span>“班”、“课”、“时”</span></strong></u></li><li><span>1632年，</span><strong><span>夸美纽斯</span></strong><span>在</span><u><span>《大教学论》</span></u><span>中首次从理论上对班级授课制进行了论述，为其奠定了理论基础。</span></li><li><strong><span>我国最早采用班级授课制的学校</span></strong><span>是1862年清政府在北京开办的</span><strong><span>京师同文馆</span></strong><span>。</span></li><li><span>班级授课制是与现代化大生产相适应的集体教学形式，是当今世界普遍采用的教学组织形式，也是</span><u><span>我国目前教学的基本组织形式。</span></u></li></ul></li><li><p><strong><span>班级授课制的优缺点</span></strong></p><ul><li><p><strong><span>班级授课制的优点：</span></strong></p><ul><li><span>有利于经济有效地大面积培养人才，提高教学效率；</span></li><li><span>有利于学生获得系统的科学知识；</span></li><li><span>有利于发挥教师的主导作用；</span></li><li><span>有利于发挥学生集体的教育作用；</span></li><li><span>有利于学生德、智、体等多方面的发展；</span></li><li><span>有利于进行教学管理和教学检查。</span></li></ul></li><li><p><span>班级授课制的缺点：</span></p><ul><li><span>不利于学生主体性的发挥；</span></li><li><span>不利于培养学生的探索精神、创造能力和实际操作能力；</span></li><li><span>不能很好地适应教学内容和教学方法的多样化；</span></li><li><span>不利于因材施教，难以满足学生个性化的学习需要；</span></li><li><span>不利于学生之间真正的交流和启发；</span></li><li><span>以“课”为基本的教学活动单位，某些情况下会割裂内容的整体性。</span></li></ul></li></ul></li></ol><h3><a name="三）现代教学的辅助形式------个别辅导与现场教学" class="md-header-anchor"></a><span>（三）现代教学的辅助形式——个别辅导与现场教学</span></h3><ol start='' ><li><p><strong><span>个别辅导</span></strong></p><ul><li><u><span>个别辅导是教师在课堂教学的基础上针对不同学生的具体情况进行个别辅导的教学组织形式。</span></u></li><li><span>个别辅导主要是通过个别答疑、对个别学生的课外作业和课外阅读进行指导等方式来进行的。它既可以在课内实施，也可以在课外进行。</span></li></ul></li><li><p><strong><span>现场教学</span></strong></p><ul><li><p><u><span>现场教学是指教师根据一定的教学任务与教学内容，将学生带领到与生产或生活相关的场所进行教学的一种辅助性教学组织形式。</span></u><span>现场教学不仅是课堂教学的必要的补充，而且是课堂教学的继续和发展，是与课堂教学相联系的一种教学形式。</span></p></li><li><p><span>现场教学的优点：</span></p><ul><li><span>有利于学生获得直接经验，深刻理解理论知识，在某种程度上弥补课堂教学的不足；</span></li><li><span>增强教学的趣味性，使教学更为生动；</span></li><li><span>可以让学生在轻松、愉快的环境下掌握知识、技能，使学生感受自然、社会，丰富了学生的情感世界；</span></li><li><span>可以增强学生的动手操作能力，提高学生解决实际问题的能力。</span></li></ul></li></ul></li></ol><h3><a name="四）现代教学的特殊组织形式------复式教学" class="md-header-anchor"></a><span>（四）现代教学的特殊组织形式——复式教学</span></h3><ul><li><p><u><span>复式教学是把两个或两个以上年级的学生编在同一个班里，由一位教师分别用不同的教材，在同一节课里对不同年级的学生，采取直接教学和学生自学或做作业交替的办法进行教学的组织形式。</span></u></p></li><li><p><span>复式教学适用于学生少、教师少、校舍和教学设备较差的农村以及偏远地区，有利于普及教育。</span></p></li><li><p><strong><span>复式教学的特点：</span></strong></p><ul><li><span>直接教学和学生自学或做作业交替进行。</span></li><li><span>复式教学对</span><strong><span>教学过程的组织、教学时间的分配</span></strong><span>和</span><strong><span>教学秩序的处理</span></strong><span>等有更多的要求。</span></li></ul></li></ul><h3><a name="五）其他教学组织形式" class="md-header-anchor"></a><span>（五）其他教学组织形式</span></h3><ol><li><p><strong><span>分组教学</span></strong></p><p><u><span>分组教学也称</span><strong><span>分层教学</span></strong><span>，是按学生的能力或学习成绩把他们分成水平不同的组进行教学的组织形式。</span></u><span>目前，美、英、法、德等国家多实行分组教学。分组应遵循</span><u><span>“组间同质，组内异质，优势互补”</span></u><span>的原则。</span></p><p><strong><span>（1）分组教学的类型</span></strong></p><ul><li><span>分组教学可分为</span><strong><span>内部分组</span></strong><span>和</span><strong><span>外部分组</span></strong><span>，</span><strong><span>能力分组</span></strong><span>和</span><strong><span>作业分组</span></strong><span>等。</span></li><li><strong><span>内部分组</span></strong><span>是在按年龄编班的基础上，根据学习能力或学习成绩的差异编组。</span></li><li><strong><span>外部分组</span></strong><span>突破了传统的按年龄分班的做法，按学生能力或成绩的差异编组。</span></li><li><strong><span>能力分组</span></strong><span>是根据学生的能力发展水平进行分组教学，学习的课程相同，但不同组的学习年限不同。</span></li><li><strong><span>作业分组</span></strong><span>是根据学生特点和意愿分组，学习年限相同，但不同组的学习课程不同。</span></li></ul><p><strong><span>（2）分组教学的优缺点</span></strong></p><ul><li><p><strong><span>分组教学的优点：</span></strong></p><ul><li><span>便于教师组织教学，能够适应不同层次学生的学习准备和学习要求，有利于因材施教。</span></li></ul></li><li><p><strong><span>分组教学的缺点：</span></strong></p><ul><li><span>不利于学生个性的健康发展，能力强的学生易滋生骄傲情绪，能力差的学生会产生自卑感；</span></li><li><span>由于缺乏不同水平学生间的相互交流，学生发展的机会受到了限制。</span></li></ul></li></ul></li><li><p><strong><span>贝尔-兰卡斯特制</span></strong></p><ul><li><u><span>贝尔-兰卡斯特制</span></u><span>（也译为贝尔-兰喀斯特制），也称</span><strong><span>导生制</span></strong><span>，是由英国人贝尔和兰卡斯特在18世纪末19世纪初创立的。这种教学组织形式仍</span><strong><span>以班级为基础</span></strong><span>，但教师不直接面向班级全体学生。教师先把教学内容教给适应能力强、年龄较大、成绩优异的学生（导生），而后由他们去教年幼的或成绩较差的其他学生。</span></li></ul><ul><li><span>这种教学组织形式的教学质量一般很低，很难满足大工业生产对学校教育质量的要求。</span></li></ul></li><li><p><strong><span>设计教学法和道尔顿制</span></strong></p><ul><li><p><u><span>设计教学法</span></u><span>是美国教育家</span><u><span>克伯屈</span></u><span>等人于1918年创立的一种教学组织形式。这种教学组织形式主张废除班级授课制，摒弃教科书，打破传统的学科界限，</span><u><span>在教师指导下，由</span><strong><span>学生自己决定学习目的和内容</span></strong><span>，在自己设计、自己负责的单元活动中获得有关的知识和能力。</span></u></p></li><li><p><u><span>道尔顿制</span></u><span>是美国教育家</span><u><span>柏克赫斯特</span></u><span>于1920年创建的一种教学组织形式，是指教师在上课时不再向学生系统地讲授教材，而只为学生分别指定自学参考书、布置作业，由学生自学和独立作业，有疑难时才请教师辅导，学生完成一定阶段的学习任务后，向教师汇报学习情况并接受考查。</span></p></li><li><p><strong><span>设计教学法与道尔顿制的优点：</span></strong></p><ul><li><u><span>有利于调动学生学习的主动性，培养学生的学习能力和创造才能</span></u></li></ul></li><li><p><strong><span>设计教学法与道尔顿制的缺点：</span></strong></p><ul><li><u><span>不利于系统知识的掌握，且对教学设施和条件要求较高</span></u></li></ul></li><li><p><strong><span>设计教学法和道尔顿制的区别</span></strong></p><ul><li><span>设计教学法和道尔顿制是</span><strong><span>针对班级授课制的缺点提出</span></strong><span>的。</span></li><li><span>设计教学法是强调学生自己设计、自己决定学习内容；</span></li><li><span>道尔顿制强调教师要为学生指定自学参考书目、布置作业，由学生自学和独立作业。</span></li></ul></li></ul></li><li><p><strong><span>文纳特卡制</span></strong></p><ul><li><p><span>文纳特卡制是美国人</span><strong><span>华虚朋</span></strong><span>于1919年在芝加哥市文纳特卡镇公立学校实行的教学组织形式。按照这种教学组织形式，课程分两部分进行，一部分按学科进行，由学生个人自学读、写、算和历史、地理等方面的知识和技能；另一部分是通过音乐、艺术、运动、集会以及开办商店、组织自治会等活动来进行，旨在培养学生的“社会意识”。</span></p></li><li><p><strong><span>文纳特卡制的特点：</span></strong></p><ul><li><span>按单元进行学习，各单元都有明确的学习目标和具体的学习内容，并配以小步子的自学教材；</span></li><li><span>每个单元结束后，进行测验诊断，接着学习新的单元；</span></li><li><span>教师随时对学生进行个别指导。</span></li></ul></li></ul></li><li><p><strong><span>特朗普制</span></strong><span>【理解】</span></p><ul><li><u><span>特朗普制又称“灵活的课程表”</span></u><span>，是由美国教育家</span><strong><span>劳伊德·特朗普</span></strong><span>在20世纪50年代创立的。</span><u><span>它把大班上课、小组讨论、个人自学结合在一起，以灵活的时间单位代替固定统一的上课时间，以大约20分钟为一个课时。</span></u></li><li><span>首先，由优秀教师采用现代化教学手段给几个平行班统一上课；之后分成小组，研究讨论大班课上的教学材料，由15-20人组成；最后由学生个人独立自学、研习、作业。</span></li><li><u><span>教学时间分配：大班上课占40%，小组讨论占20%，个人自学占40%。</span></u></li></ul></li></ol><p>&nbsp;</p><p><a href='#教学组织形式'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三新型教学形式" class="md-header-anchor"></a><span>三、新型教学形式</span></h2><h3><a name="一）小班教学" class="md-header-anchor"></a><span>（一）小班教学</span></h3><ul><li><p><span>小班教学是相对于以往40人以上的班额压缩人数，让教学活动在学生人数较少的班级中开展的一种教学组织形式。</span></p></li><li><p><span>实行小班教学应注意的问题：</span></p><ul><li><span>第一，取消教师分科任教或延缓教师分科年限；</span></li><li><span>第二，改革班级制度以保证给予学生均等的机会。</span></li></ul></li></ul><h3><a name="二）翻转课堂单选" class="md-header-anchor"></a><span>（二）翻转课堂【单选】</span></h3><ul><li><p><u><span>翻转课堂是指在信息化环境中，教师提供</span><strong><span>以教学视频为主要形式的学习资源</span></strong><span>，学生在上课前完成对新学视频等学习资源的观看和学习，师生在课堂上一起完成作业答疑、协作探究和互动交流等活动的新型教学组织形式。</span></u></p></li><li><p><span>开展翻转课堂的步骤：</span></p><ul><li><span>第一，创建教学视频；</span></li><li><span>第二，组织课堂学习活动。</span></li></ul></li></ul><h3><a name="三）微课" class="md-header-anchor"></a><span>（三）微课</span></h3><ul><li><p><u><span>微课是指按照新课程标准及教学实践要求，</span><strong><span>以视频为主要载体</span></strong><span>，记录教师在课堂内外教育教学过程中围绕某个知识点（重点、难点、疑点）或教学环节而开展的精彩的教与学活动的全过程。</span></u></p></li><li><p><span>微课的主要特点：</span></p><ul><li><span>教学时间较短。微课的时长一般为5~8分钟，最长不宜超过10分钟。</span></li><li><span>教学内容较少。微课主要是为了突出课堂教学中某个学科知识点的教学，或是反映课堂中某个教学环节。</span></li><li><span>资源容量较小。</span></li><li><span>资源构成“情景化”。</span></li><li><span>主题突出，内容具体。</span></li><li><span>草根研究，趣味创作。</span></li><li><span>成果简化，传播便捷。</span></li><li><span>反馈及时，针对性强。</span></li></ul></li></ul><h3><a name="四）微格教学单选" class="md-header-anchor"></a><span>（四）微格教学【单选】</span></h3><ul><li><span>微格教学是一个有控制的实践系统。从操作方式上来说，它是指</span><u><span>以少数的学生为对象，在较短的时间内(5~20分钟)，尝试小型的课堂教学，可以把这种教学过程摄制成录像，课后再进行分析。</span></u></li><li><span>它是训练新教师、提高教学水平的一条重要途径。</span></li></ul><h3><a name="五）慕课" class="md-header-anchor"></a><span>（五）慕课</span></h3><ul><li><p><u><span>慕课(MOOC) 是大规模的网络开放课程， 它是为了增强知识传播而由具有分享和协作精神的个人组织发布的，</span><strong><span>散布于互联网上的开放课程</span></strong><span>。</span></u></p></li><li><p><strong><span>慕课的主要特点：</span></strong></p><ul><li><u><span>大规模课程。</span></u></li><li><u><span>开放课程。</span></u><span>慕课具有开放、免费的特点。</span></li><li><u><span>网络课程。</span></u><span>慕课不是面对面的课程，而是课程材料散布于互联网的网络课程。学习者的学习地点、时间不受限制，但学习方式受互联网限制。</span></li></ul></li></ul><p>&nbsp;</p><p>&nbsp;</p><p><a href='#教学组织形式'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>
