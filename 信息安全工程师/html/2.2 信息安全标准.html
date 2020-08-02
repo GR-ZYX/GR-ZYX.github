@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>2.2 信息安全标准</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="22-信息安全标准" class="md-header-anchor"></a><span>2.2 信息安全标准</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#22-信息安全标准">2.2 信息安全标准</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#221-信息安全标准体系">2.2.1 信息安全标准体系</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#222-标准化组织">2.2.2 标准化组织</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n237"><a class="md-toc-inner" href="#223-信息安全标准">2.2.3 信息安全标准</a></span></p></div><h2><a name="221-信息安全标准体系" class="md-header-anchor"></a><span>2.2.1 信息安全标准体系</span></h2><p><span>依据《中华人民共和国标准化法》，标准体系分为四层，分别是</span><strong><span>国家标准、行业标准、地方标准、企业标准</span></strong><span>。</span></p><p><span>除此之外，国家质量技术监督局颁布的《国家标准准化指导性技术文件管理规定》，补充了一种“国家标准化指导性技术文件”。符合下列情况之一的]项目，可制定指导性技术文件：</span></p><ul><li><p><span>技术尚在发展中，需要有相应的标准文件引导其发展或具有标准化价值，尚不能制定为标准的项目。</span></p></li><li><p><span>采用国际标准化组织、国际电工委员会及其他国际组织（包括区域性国际组织）的技术报告的项目。</span></p><p><span>常见的标准代号如下：</span></p><ul><li><span>我国国家标准代号：强制性标准代号为GB、推荐性标准代号为GB/T、指导性标准代号为GB/Z、实物标准代号GSB。</span></li><li><span>行业标准代号：由汉语拼音大写字母组成（如电力行业为DL）。</span></li><li><span>地方标准代号：由DB加上省级行政区划代码的前两位。</span></li><li><span>企业标准代号：由Ｑ加上企业代号组成。</span></li><li><span>美国国家标准学会(American National Standard Institute， ANSI) 是美国国家标准。</span></li><li><span>国家标准化指导性技术文件：指导性技术文件的代号由大写汉语拼音字母GB/Z构成；指导性技术文件的编号，由指导性技术文件的代号、顺序号和年号(即发布年份的四位数字)组成。</span></li></ul></li></ul><p>&nbsp;</p><p><a href='#22-信息安全标准'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h3><a name="222-标准化组织" class="md-header-anchor"></a><span>2.2.2 标准化组织</span></h3><p><span>本小节主要介绍信息安全相关的</span><strong><span>国际标准组织</span></strong><span>和</span><strong><span>我国的信息安全标准化委员会</span></strong><span>。</span></p><ol><li><p><strong><span>国际标准化组织</span></strong></p><figure><table><thead><tr><th><span>组织名  </span></th><th><span>组织介绍  </span></th><th><span>相关标准、草案  </span></th></tr></thead><tbody><tr><td><span>SC27（信息安全通用方法及技术标准化工作的分技术委员会）</span></td><td><span>ISO和IEC成的JTC1（第一联合技术委员会）下的分技术委员会。SC27下设三个小组：</span><br><span>第一工作组(WG1)：需求、安全服务及指南工作组。</span><br><span>第二工作组(WG2)：安全技术与机制工作组。</span><br><span>第三工作组(WG3)：安全评估准则工作组  </span></td><td><span>安全技术与机制：散列函数、密码算法、数字签名机制、实体鉴别机制等。</span><br><span>安全评估准则和安全管理：安全管理指南、安全管理控制措施等</span></td></tr><tr><td><span>IEC（国际电工委员会）</span></td><td><span>研究和制定电工、电子、电磁领域的国际标准</span></td><td><span>信息技术设备安全(IEC 60950)  </span></td></tr><tr><td><span>SG17  </span></td><td><span>ITU(国际电信联盟) 下的第17研究组，研究通信系统安全标准  </span></td><td><span>消息处理系统(MHS) 、目录系统(X.400和X.500系列)和安全框架、安全模型等方面的信息安全标准，其中X.509标准成为电子商务认证的重要标准  </span></td></tr><tr><td><span>IETF（Internet工程任务组）</span></td><td><span>提出Internet标准草案和RFC（请求评议）文稿  </span></td><td><span>  RFC 1352（SNMP安全协议）、RFC 1421-1424（因特网电子邮件保密增强）、RFC1825（因特网协议安全体系结构）PKI、IPSec等  </span></td></tr><tr><td><span>IEEE(美国电气电工工程师协会)  </span></td><td><span>国际性的电子技术与信息科学工程师协会  </span></td><td><span>IEEE 802.10（可互操作局域网安全标准）；</span><br><span>IEEE 802.11i（无线安全标准）</span></td></tr><tr><td><span>ECMA（欧洲计算机厂商协会）</span></td><td><span>国际的计算机与计算机应用相关标准。ECMA有11个技术委员会， 其中：TC 36 （IT安全）是制定信息技术设备的安全标准  </span></td><td><span>商业与政府的信息技术产品和系统安全性评估标准化框架；开放系统环境下逻辑安全设备框架  </span></td></tr><tr><td><span>ANSI（美国国家标准化协会）</span></td><td><span>主要制定美国的信息技术标准，也承担JTC 1的部分工作  </span></td><td><span>制定数据加密、银行业务安全、商业交易、EDI安全等美国标准，  很多成为国际标准  </span></td></tr><tr><td><span>NIST（美国国家标准技术研究所）</span></td><td><span>主要制定美国联邦计算机系统标准和指导文件  </span></td><td><span>FIPS（联邦信息处理标准）， DES是FIPS的著名标准  </span></td></tr><tr><td><span>DOD（美国国防部）  </span></td><td><span>发布过信息安全和自动信息系统安全相关标准  </span></td><td><span> DOD 5200.28-STD（可信计算机系统评估准则）  </span></td></tr></tbody></table></figure></li><li><p><strong><span>全国信息安全标准化技术委员会</span></strong></p><p><span>全国信息安全标准化技术委员会是在信息安全技术专业领域内，从事信息安全标准化工作的技术工作组织。委员会负责组织开展国内信息安全有关的标准化技术工作，技术委员会主要工作范围包括</span><strong><span>安全技术、安全机制、安全服务、安全管理、安全评估</span></strong><span>等领域的标准化技术工作。</span></p><figure><table><thead><tr><th><span>工作组名称  </span></th><th><span>各工作组职能  </span></th></tr></thead><tbody><tr><td><span>WG1(信息安全标准体系与协调工作组) </span></td><td><span>研究信息安全标准体系；跟踪信息安全标准发展动态；研究、分析国内信息安全标准的应用需求：研究并提出新工作项目及工作建议  </span></td></tr><tr><td><span>WG2(涉密信息系统安全保密标准工作组)  </span></td><td><span>研究提出涉密信息系统安全保密标准体系：制定和修订涉密信息系统安全保密标准，以保证我国涉密信息系统的安全  </span></td></tr><tr><td><span>WG3(密码技术工作组)  </span></td><td><span>密码算法、密码模块，密钥管理标准的研究与制定  </span></td></tr><tr><td><span>WG4(鉴别与授权工作组)  </span></td><td><span>国内外PKI/PM I标准的分析、研究和制定  </span></td></tr><tr><td><span>WG5(信息安全评估工作组)  </span></td><td><span>研究提出测评标准项目和制定计划  </span></td></tr><tr><td><span>WG6(通信安全标准工作组)  </span></td><td><span>研究提出通信安全标准体系，制定和修订通信安全标准  </span></td></tr><tr><td><span>WG7(信息安全管理工作组)  </span></td><td><span>信息安全管理标准体系的研究，信息安全管理标准的制定  </span></td></tr><tr><td><span>大数据安全标准特别工作组  </span></td><td><span>负责大数据和云计算相关的安全标准化研制工作  </span></td></tr></tbody></table></figure></li></ol><p>&nbsp;</p><p><a href='#22-信息安全标准'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h3><a name="223-信息安全标准" class="md-header-anchor"></a><span>2.2.3 信息安全标准</span></h3><p><span>信息安全管理标准可分为信息安全管理体系和技术与工程类标准。</span></p><ol><li><p><strong><span>信息安全管理体系</span></strong></p><p><span>BS7799是由英国贸易工业部立项，由英国标准协会制定的信息安全管理体系。BS7799分为两部分：</span></p><ul><li><span>（1）BS7799-1《信息安全管理实施规则》：提供了一套由信息安全最佳惯例组成的实施规则，可以作为企业信息安全管理体系建设的参考。该部分被ISO/IEC JTC1认可， 正式成为国际标准ISO/IEC17799：2000《信息技术一信息安全管理实施细则》。</span></li><li><span>（2）BS7799-2《信息安全管理体系规范》：规定了信息安全管理体系各方面的达标指标。</span></li></ul></li><li><p><strong><span>技术与工程标准</span></strong></p><p><span>《可信计算机系统评估准则》(Trusted Computer System Evaluation Criteria， TCSEC) ， 俗称“橘皮书”，是美国国防部在1985年发表的一份技术文件。制定该准则的目的是向制造商提供一种制造标准；同时向用户提供一种验证标准。</span></p><p><span>TCSEC将系统分为A、B、C、D四类：</span></p><ul><li><span>D级：最小保护级</span></li><li><span>C级：自主保护级</span></li><li><span>C1级：自主安全保护级（又称选择性保护级）</span></li><li><span>C2级：可控访问保护级</span></li><li><span>B级：强制保护级</span></li><li><span>B1级：标记安全保护级</span></li><li><span>B2级：结构化保护级</span></li><li><span>B3级：安全区域保护级</span></li><li><span>A级：验证保护</span></li><li><span>A1级：验证设计级</span></li><li><span>A2级：超A1级</span></li></ul><p><span>TCSEC的发起者和其他组织联合起来， 将各自的准则组合成一个通用的IT安全准则。发起组织包括六国七方：加拿大、法国、德国、荷兰、英国、美国NIST及美国NSA， 他们的代表建立了CC编辑委员会来开发CC。1999年12月ISO采纳CC， 并作为国际标准ISO/IEC 15408《信息技术安全评估准则》(简称CC) 发布。</span></p><p><span>2001年， 我国参考国际标准ISO/IEC 15408， 制定了国家标准GB/T18336《信息技术安全性评估准则》。</span></p><p><span>CC适用于硬件、固件和软件实现的信息技术安全措施。CC包括三个部分：</span></p><ul><li><span>第一部分：简介和一般模型；</span></li><li><span>第二部分：安全功能要求；</span></li><li><span>第三部分：安全保证要求。</span></li></ul><p><span>系统安全工程能力成熟模型(Systems Security Engineering Capability Maturity Model，SSE-CMM) 是由美国国家安全局发起的研究项目。SSE-CMM确定了一个评价安全工程实施的综合框架， 提供了度量与改善安全工程的方法。SSE-CMM目标是将安全工程变为可定义的、成熟的、可度量、可评估的工程项目。</span></p><p><strong><span>我国安全评测中心评审机构信息安全服务资质的依据就是SSE-CMM。</span></strong></p></li></ol><p>&nbsp;</p><p><a href='#22-信息安全标准'><span>返回目录</span></a></p><hr /><p>&nbsp;</p></div>
+</body>
+</html>
