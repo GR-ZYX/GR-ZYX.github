@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>认知过程</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = ' first-line-indent'><h1><a name="认知过程重点）" class="md-header-anchor"></a><span>认知过程（重点）</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#认知过程重点）">认知过程（重点）</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#一感觉">一、感觉</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4"><a class="md-toc-inner" href="#一）感觉的概念">（一）感觉的概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n6"><a class="md-toc-inner" href="#二）感觉的特性">（二）感觉的特性</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n68"><a class="md-toc-inner" href="#二知觉">二、知觉</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#一）知觉的概念">（一）知觉的概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n72"><a class="md-toc-inner" href="#二）知觉的种类理解">（二）知觉的种类【理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n123"><a class="md-toc-inner" href="#三）知觉的特性知觉的基本特性）识记理解">（三）知觉的特性（知觉的基本特性）【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n162"><a class="md-toc-inner" href="#四）观察">（四）观察</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n207"><a class="md-toc-inner" href="#三注意">三、注意</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n208"><a class="md-toc-inner" href="#一）注意的概念">（一）注意的概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n212"><a class="md-toc-inner" href="#二）注意的特点">（二）注意的特点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n220"><a class="md-toc-inner" href="#三）注意的分类理解">（三）注意的分类【理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n260"><a class="md-toc-inner" href="#四）注意的品质及影响因素识记理解">（四）注意的品质及影响因素【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n397"><a class="md-toc-inner" href="#五）注意规律在教学中的应用理解运用">（五）注意规律在教学中的应用【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n538"><a class="md-toc-inner" href="#六）中学生注意力的培养识记理解">（六）中学生注意力的培养【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n619"><a class="md-toc-inner" href="#四记忆">四、记忆</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n621"><a class="md-toc-inner" href="#一）记忆的概念">（一）记忆的概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n624"><a class="md-toc-inner" href="#二）记忆的分类">（二）记忆的分类</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n863"><a class="md-toc-inner" href="#三）记忆的过程">（三）记忆的过程</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n960"><a class="md-toc-inner" href="#四）遗忘理解">（四）遗忘【理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1195"><a class="md-toc-inner" href="#五）记忆规律在教学中的运用理解运用">（五）记忆规律在教学中的运用【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1423"><a class="md-toc-inner" href="#五思维">五、思维</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1425"><a class="md-toc-inner" href="#一）思维的概念">（一）思维的概念</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1428"><a class="md-toc-inner" href="#二）思维的主要特征">（二）思维的主要特征</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1487"><a class="md-toc-inner" href="#三）思维的种类识记理解">（三）思维的种类【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1738"><a class="md-toc-inner" href="#四）思维的基本形式识记理解">（四）思维的基本形式【识记、理解】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1793"><a class="md-toc-inner" href="#五）问题解决理解运用">（五）问题解决【理解、运用】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2235"><a class="md-toc-inner" href="#六想象">六、想象</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2237"><a class="md-toc-inner" href="#一）表象与想象">（一）表象与想象</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2246"><a class="md-toc-inner" href="#二）想象的种类">（二）想象的种类</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2328"><a class="md-toc-inner" href="#三）学生想象力的培养想象规律在教学中的应用）">（三）学生想象力的培养（想象规律在教学中的应用）</a></span></p></div><h2><a name="一感觉" class="md-header-anchor"></a><span>一、感觉</span></h2><h3><a name="一）感觉的概念" class="md-header-anchor"></a><span>（一）感觉的概念</span></h3><p><span>感觉是直接作用于感觉器官的客观事物的</span><strong><span>个别属性</span></strong><span>在人脑中的反映，是认知的起点。</span></p><h3><a name="二）感觉的特性" class="md-header-anchor"></a><span>（二）感觉的特性</span></h3><ol start='' ><li><p><strong><span>感受性与感觉阈（yu）限</span></strong><span>【了解】</span></p><p><u><span>感受性是感觉器官对适宜刺激的感觉能力，也是</span><strong><span>人对刺激的感觉灵敏程度</span></strong><span>。</span></u></p><p><span>感受性可分为</span><strong><span>绝对感受性</span></strong><span>和</span><strong><span>差别感受性</span></strong><span>。</span></p><ul><li><span>绝对感受性是指感觉出最小刺激量的能力。</span></li><li><span>差别感受性是指能察觉出两个同类刺激物之间的最小差别量的能力。</span></li></ul></li></ol><p><span>   </span><u><strong><span>感觉阈限</span></strong><span>是指能够</span><strong><span>引起人的感觉的刺激量</span></strong><span>。</span></u></p><p><span>   感受性是通过感觉阈限来测量的。</span></p><p><span>   感觉阈限可分为</span><strong><span>绝对感觉阈限</span></strong><span>和</span><strong><span>差别感觉阈限</span></strong><span>。</span></p><ul><li><span>绝对感觉阈限是指刚刚能引起感觉的最小刺激量。</span></li><li><span>差别感觉阈限也叫差别阈限或最小可觉差，是指刚刚能引起差别感觉的刺激物间的最小差异量，是将一个刺激与另一个刺激区别开来的最小差别量。</span></li></ul><p><span>   感受性与感觉阈限在数值上呈</span><strong><span>反比关系</span></strong><span>，感受性高，则感觉阈限低；感受性低，则感觉阈限高。</span></p><ol start='2' ><li><p><strong><span>感觉现象（感受性的变化）</span></strong><span>【理解】</span></p><p><strong><span>（1）感觉适应</span></strong></p><ul><li><u><span>感觉适应是指在外界</span><strong><span>刺激持续作用</span></strong><span>下</span><strong><span>感受性发生变化</span></strong><span>的现象。</span></u></li><li><span>适应现象发生在所有的感觉中，如</span><u><span>“入芝兰之室，久而不闻其香；人鲍鱼之肆，久而不闻其臭”</span></u><span>，这是嗅觉的适应。手放在温水里，开始觉得热，慢慢就不觉得热了，这是温度觉的适应。</span></li><li><span>视觉的适应分为</span><strong><span>暗适应</span></strong><span>和</span><strong><span>明适应</span></strong><span>。暗适应是指照明停止或由亮处转人暗处时，视觉感受性提高的现象。明适应是指照明开始或由暗处转人亮处时，视觉感受性下降的现象。</span></li></ul><p><strong><span>（2）感觉对比</span></strong></p><ul><li><p><u><span>感觉对比是指</span><strong><span>不同刺激</span></strong><span>作用于</span><strong><span>同一感觉器官</span></strong><span>，使感受性发生变化的现象。</span></u></p></li><li><p><span>感觉对比分为</span><strong><span>同时对比</span></strong><span>和</span><strong><span>继时对比</span></strong><span>两种。</span></p><ul><li><span>同时对比是指几个刺激物同时作用于同一感觉器官，使感受性发生变化的现象。例如，明暗相邻的边界上，看起来亮处更亮，暗处更暗(即马赫带现象)，这是明度的对比；绿叶陪衬下的红花看起来更红，这是颜色的对比。</span></li><li><span>继时对比是指几个刺激物先后作用于同一感觉器官，使感受性发生变化的现象。例如，</span><u><span>吃完苦药以后再吃糖觉得糖更甜了；从冷水里出来再到稍热一点的水里觉得水更热了</span></u><span>。</span></li></ul></li></ul><p><strong><span>（3）感觉后效（感觉后像）</span></strong></p><ul><li><u><span>感觉后效又称感觉后像，是指对感受器的刺激作用停止以后，感觉</span><strong><span>印象并不立即消失</span></strong><span>，仍能</span><strong><span>保留一段短暂时间</span></strong><span>的现象。</span></u></li><li><span>感觉后效在视觉中表现得尤其明显，称为视觉后像。视觉后像分为正后像和负后像。正后像的性质和原感觉的性质相同，负后像的性质与原感觉的性质相反。例如，在注视灯光一段时间后，闭上眼睛，眼前会出现灯的光亮形象位于黑色背景之上，这就是正后像；之后可能看到灯的黑色形象出现在光亮背景之上，这就是负后像。</span></li></ul><p><strong><span>（4）感觉的相互补偿</span></strong></p><ul><li><span>感觉的相互补偿是指</span><u><span>某种感觉系统的机能缺失后，可以通过其他感觉系统的机能来弥补</span></u><span>。如盲人一般具有较好的听觉和触觉。</span></li></ul><p><strong><span>（5）联觉</span></strong></p><ul><li><u><span>联觉是指一个刺激不仅能引起一种感觉，同时还能引起另一种感觉的现象，是不同感觉间相互作用的结果。</span></u></li><li><span>联觉有多种表现，在颜色感觉中容易产生联觉，如红、橙、黄等暖色使人产生温暖的感觉；蓝、青绿、白等冷色使人产生清凉的感觉。在其他感觉中也能产生联觉，如尖锐的声音会使人产生冷觉。人们常说的“甜蜜的嗓音”、“沉重的乐曲”等都属于联觉现象。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="二知觉" class="md-header-anchor"></a><span>二、知觉</span></h2><h3><a name="一）知觉的概念" class="md-header-anchor"></a><span>（一）知觉的概念</span></h3><p><span>知觉是直接作用于感觉器官的客观事物的</span><strong><span>整体属性</span></strong><span>在人脑中的反映，它是在感觉的基础上产生的。</span></p><p><span>知觉是各种感觉器官协同活动的结果，受人的知识经验和态度的制约。同一物体，不同的人对它的感觉是相同的，但对它的知觉却会有差别。</span></p><h3><a name="二）知觉的种类理解" class="md-header-anchor"></a><span>（二）知觉的种类【理解】</span></h3><p><span>根据</span><strong><span>知觉对象的性质</span></strong><span>，知觉可分为</span><strong><span>物体知觉</span></strong><span>和</span><strong><span>社会知觉</span></strong><span>两类。知觉还有一种特殊的形态叫作</span><strong><span>错觉</span></strong><span>。</span></p><ol start='' ><li><p><strong><span>物体知觉</span></strong></p><p><span>物体知觉是指</span><strong><span>个体对客观事物</span></strong><span>的知觉。物体知觉可分为</span><strong><span>空间知觉</span></strong><span>、</span><strong><span>时间知觉</span></strong><span>和</span><strong><span>运动知觉</span></strong><span>。</span></p><p><strong><span>（1）空间知觉</span></strong></p><ul><li><span>空间知觉是对物体的大小、形状、距离、方位等空间特性的知觉。它包括大小知觉、形状知觉、距离知觉（深度知觉）、方位知觉等。著名的“视崖”实验证明了6个月的婴儿便有了深度知觉。</span></li></ul><p><strong><span>（2）时间知觉</span></strong></p><ul><li><span>时间知觉是对物质现象的</span><strong><span>延续性和顺序性</span></strong><span>的反映。人们对时间的知觉可以以计时器提供的信息为依据，也可以以自然界昼夜、四季周期性的变化，人体生理或心理活动周期性的变化为依据。</span></li></ul><p><strong><span>（3）运动知觉</span></strong></p><ul><li><span>运动知觉是对物体在空间中的位移产生的知觉。运动知觉包括真动知觉（对物体真正运动的知）和似动知觉。似动是指在一定时间和空间条件下，人们在静止的物体间看到了运动，或者在没有连续位移的地方，看到了连续运动的现象。</span></li></ul></li><li><p><strong><span>社会知觉</span></strong></p><p><span>社会知觉是人对</span><strong><span>社会现象</span></strong><span>和</span><strong><span>社会关系</span></strong><span>的知觉。社会知觉主要包括</span><strong><span>对他人的知觉、人际知觉</span></strong><span>和</span><strong><span>自我知觉</span></strong><span>。</span></p><figure><table><thead><tr><th><span>社会知觉偏差</span></th><th><span>概念</span></th><th><span>举例</span></th></tr></thead><tbody><tr><td><span>首因效应（最初效应）</span></td><td><span>个体在社会认知过程中，通过</span><strong><span>“第一印象”</span></strong><span>最先输人的信息对客体以后的认知产生的强烈影响</span></td><td><span>人们交往时注重第一印象；“新官上任三把火”</span></td></tr><tr><td><span>近因效应（最近效应）</span></td><td><span>与原来获得的信息相比，个体</span><strong><span>最近新获得的信息</span></strong><span>对个体知觉印象的形成具有更大的影响</span></td><td><span>多年不见的好友，留在脑海中最深的印象是临别时的情景</span></td></tr><tr><td><span>刻板效应（定型效应、刻板印象）</span></td><td><u><span>对某一类事物或人物的一种比较固定、概括而笼统的看法</span></u></td><td><span>认为北方人粗犷豪爽，南方人精明细致；</span><br><span>认为商人都很精明，知识分子文质彬彬</span></td></tr><tr><td><span>晕轮效应（光环效应）</span></td><td><u><span>对某个人的某方面特征形成好的或者坏的印象后，会将其扩散到该个体的其他方面的知觉印象，是一种以偏概全的现象</span></u></td><td><span>“情人眼里出西施”、“一好百好”、“一坏百坏”、“爱屋及乌”</span></td></tr><tr><td><span>投射效应</span></td><td><u><span>个体在知觉他人时，总以为他人也具备与自己相似的特性，即把自己的特点转移到他人身上的倾向</span></u></td><td><span>“以小人之心，度君子之腹”；推己及人</span></td></tr></tbody></table></figure><p><img src="..\..\image\社会知觉偏差.jpg" style="zoom:33%;" /></p></li><li><p><strong><span>错觉</span></strong></p><p><u><span>错觉是在特定条件下产生的对客观事物的</span><strong><span>歪曲知觉</span></strong><span>，</span></u><span>这种歪曲往往带有固定的倾向。只要产生错觉的条件存在，个体就无法通过主观努力去克服错觉。</span></p><p><span>错觉在社会实践中有</span><strong><span>积极作用</span></strong><span>。例如，某些建筑设计巧妙地利用错觉原理引起的良好的心理效应，给人们的生活带来舒畅愉悦。错觉在社会实践中也有</span><strong><span>消极作用</span></strong><span>。例如，飞机驾驶员在海上飞行时，容易产生“倒飞”错觉，这可能会引起严重的飞行事故。</span></p></li></ol><h3><a name="三）知觉的特性知觉的基本特性）识记理解" class="md-header-anchor"></a><span>（三）知觉的特性（知觉的基本特性）【识记、理解】</span></h3><ol start='' ><li><p><strong><span>知觉的选择性</span></strong></p><ul><li><span>知</span><u><span>觉的选择性是指人在知觉过程中把知觉对象从背景中区分出来，优先加以清晰地反映的特性。</span></u></li><li><span>从某种意义上说，知觉的过程就是从背景中选择出知觉对象的过程。作为知觉对象的物体并不是一直固定不变的，而是随着条件的变化而变化的。知觉对象和知觉背景可以相互转化。如图4-1-5可以知觉为黑色背景上的白色花瓶，又可以知觉为白色背景上的两个侧面人像。</span></li><li><span>影响知觉选择性的</span><strong><span>客观因素</span></strong><span>：①刺激物的绝对强度；②对象和背景的差别性；③对象的活动性；④刺激物的新颖性、奇特性。</span></li><li><span>影响知觉选择性的</span><strong><span>主观因素</span></strong><span>：①知觉有无目的和任务；②个体已有知识经验的丰富程度；③个体的需要、动机、兴趣、爱好、定势与情绪态度等。</span></li></ul><p><img src="..\..\image\图4-1-5.jpg" style="zoom:33%;" /></p></li><li><p><strong><span>知觉的整体性</span></strong></p><ul><li><u><span>知觉的整体性是指人在知觉时，并不把知觉对象感知为个别孤立的部分，而总是把它知觉为</span><strong><span>统一的整体</span></strong><span>的特性。</span></u></li><li><span>当感知一个熟悉的对象时，只要感知了它的个别属性或主要特征，就可以根据已有的知识经验，把它作为一个整体进行识别反映；当感知的是没有经验过的或不熟悉的对象时，知觉就会以感知对象的特点为转移，把它组织成具有一定结构的整体。例如，在图4-1-6中，我们可以看到一个并不存在的正三角形。</span><u><span>“管中窥豹，时见一斑”说的也是知觉的整体性。</span></u></li></ul><p><img src="..\..\image\图4-1-6.jpg" style="zoom:33%;" /></p></li><li><p><strong><span>知觉的理解性</span></strong></p><ul><li><u><span>知觉的理解性是指个体</span><strong><span>根据以往的知识经验理解知觉对象</span></strong><span>，并用词把它标示出来的知觉特性。</span></u></li><li><span>知觉的理解性受人的知识经验的影响。例如，同样是一棵香樟树，植物学家可能把它称为“双子叶植物”，木匠可能把它称为“优质木材”。同样一幅画，成人和儿童的感知也会因知识经验不同而存在差异。</span></li><li><span>知觉对象本身的特点也会影响个体知觉的理解性。如图4-1-7，如果遮住横排的A和C，我们会将中间的符号知觉为数字13；如果遮住竖排的12和14，我们会将中间的符号知觉为字母B。</span></li></ul><p><img src="D:\基础\Web 前端\note\GR-ZYX.github\education\image\图4-1-7.jpg" style="zoom:33%;" /></p></li><li><p><strong><span>知觉的恒常性</span></strong></p><ul><li><u><span>知觉的恒常性是指知觉的条件在一定范围内改变时，知觉的映象仍然保持相对不变的特性。</span></u></li><li><span>例如，从不同距离看同一个人，由于距离的改变，投射到视网膜上的视像大小有差别，但我们总是认为人的大小没有改变，仍然依其实际大小来知觉他，这就是大小的恒常性。又如，一面红旗，不管在白天还是在晚上，在路灯下还是在阳光下，在红光照射下还是在黄光照射下，人们都会把它知觉为红色，这就是颜色的恒常性。</span></li></ul></li></ol><h3><a name="四）观察" class="md-header-anchor"></a><span>（四）观察</span></h3><ol start='' ><li><p><strong><span>观察的概念</span></strong></p><p><span>观察又叫</span><strong><span>“思维的知觉”</span></strong><span>，是人的一种</span><strong><span>有目的、有计划、有思维参加</span></strong><span>的比较持久的知觉，是</span><strong><span>知觉的高级形式</span></strong><span>。</span></p></li><li><p><strong><span>观察的品质</span></strong></p><p><span>观察具有</span><strong><span>目的性、全面性、精确性</span></strong><span>和</span><strong><span>敏锐性</span></strong><span>。</span></p><ul><li><span>观察的</span><strong><span>目的性</span></strong><span>是指善于组织知觉活动从而达到预期观察目的的品质。</span></li><li><span>观察的</span><strong><span>全面性</span></strong><span>要求通过观察反映事物的全貌以及事物的组成部分及其相互联系。</span></li><li><span>观察的</span><strong><span>精确性</span></strong><span>是指在观察中善于区分出事物细微而重要的特征的品质。</span></li><li><span>观察的</span><strong><span>敏锐性</span></strong><span>是指善于迅速发现事物重要特征的品质。</span></li></ul></li><li><p><strong><span>学生观察力的培养</span></strong></p><p><strong><span>（1）观察前要做好观察的准备</span></strong></p><ul><li><span>①明确目的与任务，这是良好观察的重要条件。</span></li><li><span>②丰富相应的知识。已有的知识经验会直接影响观察效果，无论是课外观察还是实验观察。</span></li><li><span>③要有充分的观察准备，提出观察的具体方法，制订观察的计划。</span></li></ul><p><strong><span>（2）观察中培养观察技能</span></strong></p><ul><li><span>①指导学生有顺序地进行观察。观察的顺序应根据观察对象的特点而变化。</span></li><li><span>②指导学生进行多种感官的活动。多种感官的活动能够使学生了解事物的各种属性，从而全面地认识对象。</span></li><li><span>③锻炼学生积极的思维。观察中的思维体现在善于比较，教师要引导学生从相似对象中寻找到不同，在貌似无关的对象中发现联系。</span></li></ul><p><strong><span>（3）观察后及时总结观察结果</span></strong></p><ul><li><span>①指导学生学会记录并整理观察结果，在分析研究的基础上，写观察报告、日记或作文。</span></li><li><span>②引导学生开展讨论，交流并汇报观察成果，不断提高学生的观察能力。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="三注意" class="md-header-anchor"></a><span>三、注意</span></h2><h3><a name="一）注意的概念" class="md-header-anchor"></a><span>（一）注意的概念</span></h3><p><span>注意是心理活动或意识对一定对象的指向和集中，是心理过程的动力特征之一。</span></p><p><span>它是人们获得知识、掌握技能、完成各种智力活动和实际操作的重要心理条件。</span></p><p><u><span>注意不是一个独立的心理过程，它总伴随着其他心理过程而发生。</span></u></p><h3><a name="二）注意的特点" class="md-header-anchor"></a><span>（二）注意的特点</span></h3><ol start='' ><li><p><strong><span>指向性</span></strong></p><p><span>注意的指向性是指心理活动有选择地反映一定的对象，而离开其余的对象。注意的指向性表现出人的心理活动具有选择性。</span></p></li><li><p><strong><span>集中性</span></strong></p><p><span>注意的集中性是指</span><strong><span>心理活动停留在被选择的对象上的强度或紧张度</span></strong><span>。它使心理活动离开一切无关的事物，并且抑制多余的活动，以保证注意的对象能得到比较鲜明和清晰的反应。</span></p></li></ol><h3><a name="三）注意的分类理解" class="md-header-anchor"></a><span>（三）注意的分类【理解】</span></h3><p><span>根据</span><strong><span>有无目的和意志努力的程度</span></strong><span>，注意可分为</span><strong><span>无意注意、有意注意</span></strong><span>和</span><strong><span>有意后注意</span></strong><span>三种。</span></p><ol start='' ><li><p><strong><span>无意注意（不随意注意）</span></strong></p><p><strong><span>（1）无意注意的概念</span></strong></p><ul><li><u><span>无意注意也称</span><strong><span>不随意注意</span></strong><span>，是没有预定目的，也不需要意志努力，不由自主地对一定事物发生的注意。</span></u><span>个体在发生无意注意时，其心理活动对一定事物的指向和集中是由一些主客观条件引起的。</span></li></ul><p><strong><span>（2）引起无注意注意的条件</span></strong></p><ul><li><strong><span>客观条件（即刺激物本身的特点）：</span></strong><span>刺激物的强度、刺激物的新异性、刺激物的运动变化、刺激物之间的对比关系等。对无意注意起决定作用的是刺激物的相对强度。</span></li><li><strong><span>主观条件（即人本身的状态）：</span></strong><span>人的需要、兴趣、态度，当时的情绪状态和精神状态，个体的心境、主观期待等。</span></li></ul></li><li><p><strong><span>有意注意</span></strong></p><p><strong><span>（1）有意注意的概念</span></strong></p><ul><li><u><span>有意注意也称</span><strong><span>随意注意</span></strong><span>，是</span><strong><span>有预先目的</span></strong><span>，必要时</span><strong><span>需要意志努力</span></strong><span>，主动地对一定事物发生的注意。</span></u></li></ul><p><strong><span>（2）引起和维持有意注意的条件</span></strong></p><ul><li><span>①</span><u><span>加强对活动目的、任务的理解。</span></u><span>对所从事的学习、工作的目的和任务越明确，对其意义的理解越深刻，完成任务达到目的的愿望也越强烈，就越能引起和保持有意注意。</span></li><li><span>②</span><u><span>合理组织活动。</span></u><span>如及时提出问题、进行积极的思维活动。</span></li><li><span>③</span><u><span>培养间接兴趣。</span></u><span>如果对活动的目的、获得的结果有兴趣，人们就会自觉地把注意维持在该活动上。间接兴趣越稳定，就越能对活动的对象产生有意注意。</span></li><li><span>④</span><u><span>排除干扰（坚强的意志力）。</span></u><span>有意注意是与排除干扰相联系的，人在进行某种活动时，难免会碰到其他诱因或环境的干扰，使注意难以集中，这时就需要意志力与干扰做斗争，坚强的意志力有利于克服分心，集中注意。</span></li></ul></li><li><p><strong><span>有意后注意</span></strong></p><ul><li><span>有意后注意也称</span><strong><span>随意后注意</span></strong><span>，是指</span><strong><span>事前有预定目的，不需要意志努力</span></strong><span>的注意。</span></li><li><span>有意后注意是</span><strong><span>由有意注意转化而来</span></strong><span>的一种特殊形态的注意。这种注意既不同于一般的无意注意即它仍然是自觉的，有目的的；又不同于一般的有意注意，即</span><strong><span>它不需要意志努力</span></strong><span>。</span></li><li><span>引起有意后注意的条件：①对活动浓厚的兴趣；②活动的自动化。</span></li></ul></li></ol><h3><a name="四）注意的品质及影响因素识记理解" class="md-header-anchor"></a><span>（四）注意的品质及影响因素【识记、理解】</span></h3><ol start='' ><li><p><strong><span>注意的广度（注意的范围）</span></strong></p><p><u><span>注意的广度也称</span><strong><span>注意的范围</span></strong><span>，是指在同一时间内，意识所能清楚地把握的对象的</span><strong><span>数量</span></strong><span>。</span></u><span>平时说的“眼观六路”、“耳听八方”、“一目十行”指的就是注意的广度。</span></p><p><span>影响注意的广度的因素主要包括以下两个方面。</span></p><p><strong><span>（1）知觉对象的特点</span></strong></p><ul><li><span>研究表明，知觉对象越集中，排列越有规律，就越能成为相互联系的整体，注意的广度就越大；反之，注意的广度就越小。</span></li></ul><p><strong><span>（2）个人的活动任务和知识经验中</span></strong></p><ul><li><span>在知觉对象相同的情况下，注意的广度大小会随着活动任务的不同而有所改变。另外，个体的知识经验越丰富，对知觉对象越熟悉，注意的广度也就越大。</span></li></ul></li><li><p><strong><span>注意的稳定性</span></strong></p><p><u><span>注意的稳定性是指注意集中在一定对象上的</span><strong><span>持续时间</span></strong><span>。注意维持的时间越长，注意越稳定。在稳定注意的条件下，</span><strong><span>感受性</span></strong><span>也会发生</span><strong><span>周期性的增强和减弱</span></strong><span>，这种现象称为</span><strong><span>注意的起伏</span></strong><span>，也称</span><strong><span>注意的动摇</span></strong><span>。</span></u></p><p><span>影响注意稳定性的因素有以下两个方面。</span></p><p><strong><span>（1）注意对象的特点</span></strong></p><ul><li><span>在一定范围内，注意的稳定程度随注意对象的复杂性的增加而提高。但过于复杂、变幻莫测的对象反而容易使人产生疲劳感，导致注意的分散。</span></li></ul><p><strong><span>（2）人的主体状态</span></strong></p><ul><li><span>人对所从事的活动认识越深刻，态度越积极，注意就越稳定。</span></li><li><span>身体健康、精力充沛、心情舒畅有利于提高注意的稳定性。</span></li><li><span>注意的稳定性有明显的年龄特征，幼儿注意的稳定性比较差，但随着幼儿年龄的增长，其注意的稳定性逐渐提高。</span></li></ul><p><span>与注意稳定性相反的状态是</span><strong><span>注意的分散</span></strong><span>，也称</span><strong><span>分心</span></strong><span>。注意的分散是注意离开了当前指向和集中的对象，而指向了</span><strong><span>其他无关</span></strong><span>的对象的现象。</span></p><p><img src="..\..\image\注意的稳定性.jpg" style="zoom:33%;" /></p></li><li><p><strong><span>注意的分配</span></strong></p><p><u><span>注意的分配是指在</span><strong><span>同一时间</span></strong><span>内把注意力指向</span><strong><span>两种或两种以上</span></strong><span>的对象或活动。</span></u><span>它表现在“一心多用”问题上。例如，钢琴家弹奏时右手奏主旋律，左手伴奏；老师一边讲课，一边观察学生的听课情况。</span></p><p><span>影响注意分配的因素有以下两个方面。</span></p><p><strong><span>（1）同时进行的几种活动至少有一种应是高度熟练的</span></strong></p><ul><li><span>当一种活动达到自动化的熟练程度时，个体就可以集中大部分精力去关注比较生疏的活动，从而保证几种活动同时进行。</span></li></ul><p><strong><span>（2）同时进行的几种活动必须有内在联系</span></strong></p><ul><li><span>有利于形成固定的反应系统，经过训练掌握这种反应模式，从而兼顾集中活动。</span></li></ul></li><li><p><strong><span>注意的转移</span></strong></p><p><u><span>注意的转移是个体根据新的任务，</span><strong><span>主动</span></strong><span>把注意由一个对象或活动转移到另一个对象或活动上的现象。</span></u></p><p><span>注意的转移和注意的分散是不同的。注意的转移是</span><strong><span>主动</span></strong><span>的行为，是注意灵活性的表现；注意的分散是</span><strong><span>被动</span></strong><span>的行为，是注意不稳定的表现。</span></p><p><span>影响</span><strong><span>注意转移快慢和难易</span></strong><span>的因素有以下三个方面。</span>
+<strong><span>（1）原来注意的紧张度和新活动的性质</span></strong></p><ul><li><span>原来从事的活动吸引力越强，紧张程度越高，新活动越不符合引起注意的条件，转移越困难；反之，如果新的活动对象非常符合人们的需要和兴趣，即使原来的活动注意紧张度高也能比较迅速且顺利地实现注意转移。</span></li></ul><p><strong><span>（2）个体神经过程的灵活性</span></strong></p><p><strong><span>（3）个体自我控制能力</span></strong></p></li></ol><h3><a name="五）注意规律在教学中的应用理解运用" class="md-header-anchor"></a><span>（五）注意规律在教学中的应用【理解、运用】</span></h3><ol><li><p><strong><span>充分利用无意注意的规律组织教学</span></strong></p><p><strong><span>（1）创造良好的教学环境</span></strong></p><ul><li><span>为了使学生在学习过程中</span><u><span>不受外部无关刺激的干扰</span></u><span>，教师应创造一个安静、整洁的教学环境。首先，教师应该注意教室外环境对课堂的干扰。其次，教师应注意教室内的环境。最后，</span><u><span>教师的服饰、发型不宜过于耀眼</span></u><span>。</span></li></ul><p><strong><span>（2）注重讲演、板书技巧和教具的使用</span></strong></p><ul><li><span>首先，在讲课过程中，教师应该做到音量适中，</span><strong><span>语音、语调抑扬顿挫</span></strong><span>，遇到重点、难点加强语气，伴以适当的手势和表情。其次，</span><u><span>板书应该做到运用有度、重点突出、清晰醒目</span></u><span>，必要时还要用彩色粉笔和图、表格加以强调。</span></li></ul><p><strong><span>（3）注重教学内容的组织和教学形式的多样化</span></strong></p><ul><li><span>个体的知识经验是影响无意注意产生的因素，学生更愿意关注与自己知识经验有联系的事物。教师应找出</span><strong><span>教学内容与学生原有知识结构的结合点</span></strong><span>，提供具体的实例，引起学生的直接兴趣，维持学生的注意。教师应运用多种教学方法和灵活多样的教学手段，调动学生饱满的情绪状态和学习积极性。</span></li></ul></li><li><p><strong><span>充分利用有意注意的规律组织教学</span></strong></p><p><strong><span>（1）明确学习的目的和任务</span></strong></p><ul><li><span>首先，教师应使学生有明确的学习目的，明确所要解决的问题，</span><strong><span>提高学生学习的自觉性</span></strong><span>；</span></li><li><span>其次，教师对学生的要求要宽严适度，</span><strong><span>培养学生克服困难的意志力</span></strong><span>。</span></li></ul><p><strong><span>（2）培养间接兴趣</span></strong></p><ul><li><span>为了引起学生学习的间接兴趣，教师应在一门课开始时对学生阐明本学科知识学习的意义和重要性，即在</span><strong><span>知识教学中渗透思想教育</span></strong><span>。</span></li></ul><p><strong><span>（3）合理组织课堂教学，防止学生分心</span></strong></p><ul><li><span>教师在教学中应该张弛有度，给学生留有适当放松休息的时间。</span></li><li><span>教师可以运用多种电化教学手段，采取生动活泼的教学形式，来调整学生的注意状态。</span></li></ul></li><li><p><strong><span>运用两种注意相互转换的规律组织教学</span></strong></p><p><span>有意注意虽然是学生学习的</span><strong><span>重要保证</span></strong><span>，但是完全依赖有意注意进行学习，容易引起学生的紧张和疲劳，使他们不能长时间地坚持。</span></p><p><span>如果学生单纯依赖无意注意进行学习，又会因缺乏目的性而难以完成学习任务，并且学生克服困难的意志力也不能得到锻炼。</span></p><p><span>因此，在教学过程中，教师要做到两种注意交替运用，恰当地组织教学，培养学生学习的兴趣，促使有意注意向有意后注意转化。</span></p></li></ol><h3><a name="六）中学生注意力的培养识记理解" class="md-header-anchor"></a><span>（六）中学生注意力的培养【识记、理解】</span></h3><p><span>教师培养中学生的注意力，可以采取以下几种方法。</span></p><ol><li><p><strong><span>培养学生广阔而稳定的兴趣（培养间接兴趣）</span></strong></p><p><span>兴趣和注意有密切的关系，它是培养注意力的一个重要的</span><strong><span>心理条件</span></strong><span>。</span></p></li><li><p><strong><span>培养学生良好的学习习惯</span></strong></p><p><span>良好的学习习惯有助于提高注意力。首先，教师要教会学生在学习中认真把握学习重点，使其养成</span><strong><span>勤于思考的习惯</span></strong><span>。其次，教师要教会学生科学用脑，使其养成</span><strong><span>劳逸结合的习惯</span></strong><span>。</span></p></li><li><p><strong><span>使学生保持良好的心理状态</span></strong></p><p><span>良好的心理状态是维持注意的</span><strong><span>重要条件</span></strong><span>。首先，教师应使学生明白良好的</span><strong><span>心理暗示</span></strong><span>对注意的集中很重要。其次，教师应使学生明白</span><strong><span>心情舒畅或联想愉快的事情</span></strong><span>有利于注意的集中。</span></p></li><li><p><strong><span>重视集中注意的自我训练</span></strong></p><p><span>培养集中注意力的有效途径就是训练学生在各种各样的环境、条件下都能专心学习或工作的能力。</span></p></li></ol><p>&nbsp;</p><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="四记忆" class="md-header-anchor"></a><span>四、记忆</span></h2><h3><a name="一）记忆的概念" class="md-header-anchor"></a><span>（一）记忆的概念</span></h3><p><span>记忆是过去的经验在头脑中的反映，也可以说是人脑</span><strong><span>对经验的识记、保持和再现</span></strong><span>的过程。</span></p><h3><a name="二）记忆的分类" class="md-header-anchor"></a><span>（二）记忆的分类</span></h3><ol><li><p><strong><span>感觉记忆、短时记忆和长时记忆</span></strong><span>【识记、理解】</span></p><p><span>根据</span><strong><span>信息保持时间的长短</span></strong><span>，记忆可分为</span><strong><span>感觉记忆（瞬时记忆）、短时记忆</span></strong><span>和</span><strong><span>长时记忆</span></strong><span>。</span></p><p><strong><span>（1）感觉记忆（瞬时记忆）</span></strong></p><ul><li><p><u><span>感觉记忆也称</span><strong><span>瞬时记忆、感觉登记</span></strong><span>，是指当客观刺激停止作用后，感觉信息会在一个极短的时间内保存下来。</span></u></p></li><li><p><span>感觉记忆最明显的例子是视觉后像。例如，在观看电影时，虽然呈现在屏幕上的是一幅幅静止的图像，但是我们却可以将这些图像看成是连续运动的，这就是感觉记忆存在的结果。</span></p></li><li><p><strong><span>感觉记忆的特点：</span></strong></p><ul><li><span>①</span><u><strong><span>保持时间极短</span></strong><span>。</span></u><span>一般是0.25~4秒。</span></li><li><span>②</span><u><strong><span>容量较大</span></strong><span>。</span></u><span>一般来说，凡是进人感觉通道的信息都能被登记。</span></li><li><span>③</span><u><strong><span>形象鲜明</span></strong><span>。</span></u><span>信息未经任何处理，以感觉痕迹的形式存在，完全按客观刺激的物理特性编码，并按感知的先后顺序被登记，所以形象鲜明。</span></li><li><span>④</span><u><strong><span>信息原始</span></strong><span>，记忆痕迹容易衰退。</span></u></li></ul></li><li><p><strong><span>感觉记忆编码</span></strong><span>主要是</span><strong><span>图像记忆</span></strong><span>和</span><strong><span>声像记忆</span></strong><span>。</span></p></li></ul><p><strong><span>（2）短时记忆</span></strong></p><ul><li><p><span>短时记忆是指人脑中的信息在</span><strong><span>一分钟之内</span></strong><span>加工与编码的记忆，是信息</span><strong><span>从感觉记忆到长时记忆的过渡阶段</span></strong><span>。处在工作状态中的短时记忆或者在完成当前任务中起作用的短时记忆，称为</span><strong><span>工作记忆</span></strong><span>。</span></p></li><li><p><strong><span>短时记忆的特点：</span></strong></p><ul><li><span>①</span><u><strong><span>保持时间很短</span></strong><span>。</span></u><span>在无复述的条件下，信息在短时记忆中保持的时间很短，一般是30秒左右，最长不会超过1分钟。</span></li><li><span>②</span><u><strong><span>容量有限</span></strong><span>。短时记忆的容量为7±2个组块。</span></u></li><li><span>③</span><u><strong><span>意识清晰</span></strong><span>。</span></u><span>短时记忆是服从当前任务需要，主体正在操作、使用的记忆，主体有清晰的意识。</span></li><li><span>④</span><u><strong><span>操作性强</span></strong><span>。</span></u><span>短时记忆就其心理功能而言具有操作性。</span></li><li><span>⑤</span><u><strong><span>易受干扰</span></strong><span>。</span></u><span>短时记忆中的信息保持的时间既短又易受干扰，当有新的信息插人，即阻止了复述时，原有信息就会很快消失，而且不能再恢复。</span></li></ul></li><li><p><span> 短时记忆的编码：</span><strong><span>听觉编码</span></strong><span>和</span><strong><span>视觉编码</span></strong><span>。其中，</span><u><strong><span>听觉编码</span></strong><span>是短时记忆的</span><strong><span>主要编码</span></strong><span>方式</span></u><span>。</span></p></li><li><p><span>短时记忆信息的存储：</span><u><strong><span>复述</span></strong><span>是短时记忆信息存储的</span><strong><span>有效方法</span></strong><span>，它可以防止短时记忆中的信息受到无关刺激的干扰而发生遗忘。</span></u></p></li></ul><p><strong><span>（3）长时记忆</span></strong></p><ul><li><p><span>长时记忆是指信息经过充分的和有一定深度的加工后，在头脑中长时间存储的记忆。长时记忆的保持时间在1分钟以上，直至几天、几周或数年，甚至终生。</span></p></li><li><p><strong><span>长时记忆的特点：</span></strong></p><ul><li><span>①</span><strong><span>容量无限</span></strong><span>。长时记忆是一个庞大的信息库。</span></li><li><span>②</span><strong><span>保存时间长久</span></strong><span>。长时记忆在理论上被认为是永久存在的。</span></li></ul></li><li><p><span>长时记忆的编码：长时记忆以</span><strong><span>意义编码</span></strong><span>为主。意义编码有两种方式，这两种方式被称为信息的双重编码，即</span><strong><span>语义编码</span></strong><span>和</span><strong><span>表象编码</span></strong><span>。</span></p></li><li><p><span> 长时记忆信息的存储：与遗忘进行斗争的首要条件是组织识记后的</span><strong><span>复习</span></strong><span>。</span><u><strong><span>复习</span></strong><span>在信息存储中有很大的作用。刺激物的重复出现（复述）是短时记忆向长时记忆转化的条件，没有复述的信息是不可能进人长时记忆的。</span></u></p></li></ul></li><li><p><strong><span>形象记忆、逻辑记忆、情绪记忆、动作记忆</span></strong><span>【了解】</span></p><p><span>根据</span><strong><span>记忆内容</span></strong><span>的不同，记忆可分为</span><strong><span>形象记忆、逻辑记忆、情绪记忆</span></strong><span>和</span><strong><span>动作记忆</span></strong><span>。</span></p><ul><li><u><strong><span>形象记忆</span></strong><span>是指以感知过的事物形象为内容的记忆。</span></u><span>例如，我们对见过的人、看到的风景、听过的音乐、尝过的味道、触摸过的物体等的记忆。</span></li><li><u><strong><span>逻辑记忆</span></strong><span>又叫</span><strong><span>语义记忆</span></strong><span>，</span></u><span>是指以概念、判断、推理等形式对事物的关系以及事物本身的意义、性质等内容的记忆。如对学过的知识、概念、原理和公式的记忆。</span></li><li><u><strong><span>情绪记忆</span></strong></u><span>是指以个体体验过的某种情绪和情感为内容的记忆。例如，对自己经历过的喜悦、悲伤、愤怒、恐惧等情绪体验的记忆，或对曾激起自己某种强烈情绪或情感的事物的记忆。</span></li><li><u><strong><span>动作记忆</span></strong><span>又叫</span><strong><span>运动记忆</span></strong><span>，</span></u><span>是指以操作过的动作、运动、活动为内容的记忆。例如，对游泳、体操、舞蹈动作等的记忆。</span></li></ul></li><li><p><strong><span>陈述性记忆和程序性记忆</span></strong><span>【了解】</span></p><p><span>根据</span><strong><span>信息加工与存储方式</span></strong><span>的不同，记忆可分为</span><strong><span>陈述性记忆</span></strong><span>和</span><strong><span>程序性记忆</span></strong><span>。</span></p><ul><li><u><strong><span>陈述性记忆</span></strong><span>是指有关事实和事件的记忆</span></u><span>，它可以通过语言传授而一次性获得，它的提取</span><strong><span>往往需要意识的参与</span></strong><span>。如学生在课堂上学习的各种课本知识和日常了解的生活常识都属于陈述性记忆。</span></li><li><u><strong><span>程序性记忆</span></strong><span>是指如何做事情的记忆或者如何掌握技能的记忆，</span></u><span>包括对知觉技能、认知技能和运动技能的记忆。这类记忆往往需要</span><strong><span>通过多次尝试</span></strong><span>才能逐渐获得，这类记忆的提取</span><strong><span>往往不需要意识的参与</span></strong><span>。例如，在学习游泳之前，你可能读过有关的一些书籍，记住了某些动作要领，这种记忆就是陈述性记忆；随后，你经过不断的练习，把知识转化成运动技能，真正学会了在水中游泳，这时，陈述性记忆就转化为程序性记忆了</span></li></ul></li></ol><h3><a name="三）记忆的过程" class="md-header-anchor"></a><span>（三）记忆的过程</span></h3><p><u><span>记忆过程包括</span><strong><span>识记、保持、再认和回忆（再现）</span></strong><span>三个环节</span></u><span>，它们是相互联系、相互制约的完整统一的过程。</span></p><p><u><span>从信息加工的角度来看，记忆过程是对输人信息的</span><strong><span>编码、储存</span></strong><span>和</span><strong><span>提取</span></strong><span>的过程。</span></u><span>信息的编码相当于识记过程，信息的储存相当于保持过程，信息的提取相当于再认和回忆过程。</span></p><ol><li><p><strong><span>识记</span></strong></p><p><span>识记是记忆过程的第一个环节，是个体获取知识经验的过程。</span></p><p><span>根据识记</span><strong><span>有无目的性</span></strong><span>，识记可分为</span><strong><span>无意识记</span></strong><span>和</span><strong><span>有意识记</span></strong><span>。</span></p><ul><li><strong><span>无意识记</span></strong><span>是事先没有明确目的，也不需要运用任何有助于识记的方法和意志努力的识记。</span></li><li><strong><span>有意识记</span></strong><span>是有明确的目的，并运用一定方法的识记，在识记过程中需要一定的意志努力。</span></li><li><span>学生的学习活动主要依靠</span><strong><span>有意识记</span></strong><span>。</span></li></ul><p><span>根据</span><strong><span>识记材料的性质和识记方法的不同</span></strong><span>，识记可分为</span><strong><span>机械识记</span></strong><span>和</span><strong><span>意义识记</span></strong><span>。</span></p><ul><li><strong><span>机械识记</span></strong><span>是只根据材料的外部联系或表现形式，以简单、重复的方式进行的识记，如对无意义音节、地名、人名、历史年代等的识记。</span></li><li><strong><span>意义识记</span></strong><span>是在理解的基础上，依据材料的内在联系或已有知识之间的联系所进行的识记，它是</span><strong><span>学生识记的主要形式</span></strong><span>。</span></li></ul></li><li><p><strong><span>保持</span></strong></p><p><span>保持是记忆过程的第二个环节，是指</span><u><span>已获得的</span><strong><span>知识经验在人脑中的巩固过程</span></strong></u><span>。</span></p><p><span>识记的材料在保持过程中总会发生不同程度的变化和遗忘。保持并非原封不动地保存头脑中识记过的材料的静态过程，而是一个富于变化的动态过程。保持中的信息变化表现在</span><strong><span>保持内容质的变化</span></strong><span>和</span><strong><span>保持内容量的变化</span></strong><span>两个方面。</span></p></li><li><p><strong><span>再认和回忆（再现）</span></strong><span>【了解】</span></p><p><span>再认和回忆是记忆过程的第三个环节，是指</span><strong><span>在不同的条件下重现过去经验的过程</span></strong><span>。</span></p><p><u><strong><span>再认</span></strong><span>就是过去经历过的事物再度呈现时，仍能确认和辨认出来的过程。</span></u><span>例如，考试中的判断题与选择题，就是通过再认来检查学生知识掌握情况的。</span></p><p><u><strong><span>回忆</span></strong><span>就是经历过的事物不在眼前时，仍然能从头脑中提取出来的过程。</span></u><span>例如，考试中的问答题和填空题主要是通过回忆来解答的。</span></p></li></ol><h3><a name="四）遗忘理解" class="md-header-anchor"></a><span>（四）遗忘【理解】</span></h3><ol><li><p><strong><span>遗忘的概念</span></strong></p><p><span>遗忘是指对识记过的材料不能回忆或再认，或者表现为错误的回忆或再认。</span></p><p><span>按照信息加工的观点，遗忘是信息提取不出或提取错误的现象。</span></p></li><li><p><strong><span>遗忘的规律</span></strong></p><p><span>德国著名心理学家</span><strong><span>艾宾浩斯</span></strong><span>首先对遗忘现象进行了研究，他认为</span><strong><span>“保持和遗忘是时间的函数”</span></strong><span>。</span></p><p><img src="..\..\image\遗忘曲线.jpg" style="zoom:33%;" /></p><p><u><span>艾宾浩斯遗忘曲线表明，遗忘在学习之后立即开始，最初的遗忘速度很快，随着时间的推移，遗忘的速度逐渐下降，达到一定程度后就不再遗忘了。由此看出，遗忘的进程是不均衡的，其规律是</span><strong><span>先快后慢，呈现负加速</span></strong><span>。</span></u></p></li><li><p><strong><span>影响遗忘进程的因素</span></strong></p><p><strong><span>（1）学习材料的性质</span></strong></p><ul><li><span>学习材料的性质是指材料的种类、长度、难度以及意义性等。从材料的种类看，有意义材料的遗忘速度比无意义材料的遗忘速度慢；形象、直观材料的遗忘速度比抽象材料的遗忘速度慢。</span></li></ul><p><strong><span>（2）识记材料的数量和学习程度</span></strong></p><ul><li><span>一般来说，材料越多，要平均诵读的次数和时间也越多，如果不及时复习，就容易遗忘。学习程度太小或太大，都不利于对知识的记忆。</span></li></ul><p><strong><span>（3）记忆任务的长久性与记忆材料的重要性</span></strong></p><ul><li><span>一般说来，长久的识记任务有利于材料在头脑中保持时间的延长，不重要和未经复习的内容则容易被遗忘。</span></li></ul><p><strong><span>（4）识记方法</span></strong></p><ul><li><span>识记方法是学生学习的重要手段。研究表明，以理解为基础的意义识记比机械识记的效果好得多。</span></li></ul><p><strong><span>（5）时间因素</span></strong></p><ul><li><span>根据遗忘规律，记忆的最初阶段遗忘速度快，随后逐渐变慢。学习内容的保存量随时间减少。</span></li></ul><p><strong><span>（6）识记者的态度</span></strong></p><ul><li><span>识记者对识记内容的需要、兴趣等，对遗忘的速度也有一定影响。</span></li></ul><p><strong><span>（7）识记材料的系列位置</span></strong></p><ul><li><span>人们发现在回忆系列材料时，材料的顺序对记忆效果有重要影响。最后呈现的材料最易回忆，遗忘最少。这种现象叫作近因效应。最先呈现的材料较易回忆，遗忘较少。这种现象叫作首因效应。这些在回忆系列材料时发生的现象叫作系列位置效应。</span></li></ul></li><li><p><strong><span>遗忘的原因</span></strong></p><p><span>关于遗忘的原因，主要有以下几种理论。</span>
+<strong><span>（1）痕迹衰退说（消退说）</span></strong></p><ul><li><span>痕迹衰退说也称消退说，是一种对遗忘原因的最古老的解释。该学说</span><strong><span>起源于亚里士多德</span></strong><span>，由</span><strong><span>桑代克进一步发展</span></strong><span>。</span></li><li><span>这种理论认为，遗忘是记忆痕迹得不到强化而逐渐衰退，以致最后消退的结果。</span></li></ul><p><strong><span>（2）干扰说</span></strong></p><ul><li><span>干扰说的代表人物是</span><strong><span>詹金斯</span></strong><span>和</span><strong><span>达伦巴希</span></strong><span>。</span></li><li><span>这种理论认为，遗忘是在</span><strong><span>学习和回忆之间受到其他刺激的干扰</span></strong><span>所致。干扰说可用前摄抑制和倒摄抑制来说明。</span><u><span>前摄抑制是先学习的材料对识记和回忆后学习的材料的干扰作用。倒摄抑制是指后学习的材料对保持和回忆先学习的材料的干扰作用。</span></u></li></ul><p><strong><span>（3）压抑说（动机说）</span></strong></p><ul><li><span>压抑说是由</span><strong><span>弗洛伊德</span></strong><span>提出的。</span></li><li><span>弗洛伊德认为遗忘是由情绪或动机的压抑作用引起的。如果这种压抑被解除，记忆就能恢复。</span></li></ul><p><strong><span>（4）提取失败说</span></strong></p><ul><li><span>从信息加工的观点来看，遗忘是一时难以提取出要求的信息，一旦有了正确的线索，经过搜索，那么所要的信息就能被提取出来。这就是</span><strong><span>遗忘的提取失败理论</span></strong><span>。</span></li></ul><p><strong><span>（5）同化说</span></strong></p><ul><li><span>同化说是</span><strong><span>奥苏伯尔</span></strong><span>解释遗忘原因的理论。</span></li><li><span>该理论认为，遗忘实际上是</span><strong><span>知识的组织与认知结构简化</span></strong><span>的过程。</span></li><li><span>学习到更高级的概念与规律以后，高级的概念与规律可代替低级的概念与规律，使低级的概念与规律遗忘，从而简化知识，减轻记忆量，是</span><strong><span>积极的遗忘</span></strong><span>；</span></li><li><span>相反若巩固原有知识导致新旧知识混淆，记忆错误，是</span><strong><span>消极的遗忘</span></strong><span>。</span></li></ul></li></ol><h3><a name="五）记忆规律在教学中的运用理解运用" class="md-header-anchor"></a><span>（五）记忆规律在教学中的运用【理解、运用】</span></h3><ol><li><p><strong><span>依据记忆规律合理安排和组织教学</span></strong></p><p><strong><span>（1）合理安排教学</span></strong></p><ul><li><span>首先，学校在排课时应尽可能避免把性质相近的课程排在一起。其次，教师要保证学生的课间休息。最后，教师应控制每堂课的信息投人量。</span></li></ul><p><strong><span>（2）向学生提出具体的识记任务</span></strong></p><ul><li><span>教师每节课讲的内容要求学生记忆的程度是不同的：有的需要完整记忆；有的需要部分记忆；有的需要记忆大意；有的需要牢固精确记忆；有的需要短时记忆；有的需要长时记忆。这就需要教师向学生提出具体的识记任务，让学生知道应该记什么，记忆应该达到何种程度。</span></li></ul><p><strong><span>（3）使学生处于良好的情绪和注意状态</span></strong></p><ul><li><span>教师要善于调节课堂情绪气氛，使学生在轻松、愉快、平和的气氛中学习和记忆，尽可能排除不利于记忆活动的负性情绪的干扰。</span></li></ul><p><strong><span>（4）充分利用无意识记的规律组织教学</span></strong></p><ul><li><span>教师在教学中使学生无意地记住更多的内容，是一种更高级的教学艺术。</span></li></ul><p><strong><span>（5）使学生理解所学内容并将其系统化</span></strong></p><ul><li><span>教师在教学中，要使学生通过思考去理解所学内容，使所教内容在学生头脑中建立多方面的联系，使知识系统化，不要让学生死记硬背知识。要充分利用直观形式组织教学，帮助学生进行理解，以利于识记。</span></li></ul><p><strong><span>（6）培养学生良好的记忆品质，提高其记忆能力</span></strong></p><ul><li><span>要使学生获得良好的记忆效果，教师在教学中就要有意识地培养学生良好的记忆品质。如通过布置各种定时性记忆作业并进行课堂提问，来培养学生记忆的敏捷性；通过要求学生对识记材料进行深人的理解，使材料在学生头脑中系统化，进行合理的复习等，来培养学生记忆的持久性；通过要求学生认真地识记和复习，使材料形成精确的联系，使学生养成经常检查自己记忆效果的习惯等，来培养学生记忆的准确性；通过使学生对所学知识条理化、系统化和掌握追忆的技能等，来提高学生记忆的准备性。</span></li></ul></li><li><p><strong><span>有效组织复习的方法</span></strong></p><p><strong><span>（1）及时复习</span></strong></p><ul><li><span>根据遗忘进程先快后慢的规律，在初期大规模遗忘之前复习，用极少的时间挽回大量的内容。</span></li></ul><p><strong><span>（2）合理分配复习时间</span></strong></p><ul><li><span>在复习时要制订复习计划，合理安排复习内容和时间，提高复习效率。</span></li></ul><p><strong><span>（3）分散复习与集中复习相结合</span></strong></p><ul><li><span>分散复习是将对同一材料的复习分成多次进行，每两次复习之间有一定的时间间隔。</span></li><li><span>集中复习是指在一段时间内相对集中地复习一种材料。</span></li><li><span>使用集中复习还是分散复习，一般视材料的性质、数量、难易程度以及记忆已经达到的水平而定。在内容较多时，分散复习的效果优于集中复习的效果，但分散复习的时间间隔不宜过短或过长。</span></li></ul><p><strong><span>（4）复习方式多样化</span></strong></p><ul><li><span>多样化的复习方式使学生感到新颖，能引起和加强他们的注意，激发他们的兴趣，调动他们学习的积极性，从而提高复习效果。同时，多样化的复习是采用不同的方法对材料进行加工，有助于学习材料更好地被纳人学生已有的知识结构。</span></li></ul><p><strong><span>（5）运用多种感官参与复习</span></strong></p><ul><li><span>多种感官参与复习可以更好地提高记忆效果。在复习时应尽量运用多感官参与，要眼看、耳听、口读、手写相互配合，在头脑中构成神经联系，形成记忆痕迹，以后遇到一种刺激信号，就可以引起多种相关的记忆痕迹的复活。</span></li></ul><p><strong><span>（6）尝试回忆与反复识记相结合</span></strong></p><ul><li><span>尝试回忆是指在识记的材料尚未牢固记住之前试图回忆的复习方法。尝试回忆与反复识记相结合是一种有效的复习手段。</span></li></ul><p><strong><span>（7）掌握复习的“量”</span></strong></p><ul><li><p><span>掌握复习的“量”主要包括两个方面：</span></p><ul><li><span>一是</span><strong><span>复习内容的数量要适当</span></strong><span>，即一次复习内容的数量不宜过多；</span></li><li><span>二是提倡</span><strong><span>适当的过度学习</span></strong><span>。</span><u><span>过度学习是指在学习达到目的后的</span><strong><span>附加学习</span></strong><span>。</span></u><span>过度学习并不意味着复习次数越多越好。</span><u><span>研究表明，学习的熟练程度达到150%，即过度学习程度达到50%时，记忆效果最好，知识最牢固；</span></u><span>超过150%时，效果并不递增，并且很可能引起厌倦、疲劳等，从而使过度学习成为无效劳动。</span></li></ul></li></ul><p>&nbsp;</p></li></ol><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="五思维" class="md-header-anchor"></a><span>五、思维</span></h2><h3><a name="一）思维的概念" class="md-header-anchor"></a><span>（一）思维的概念</span></h3><p><span>思维是人脑对客观事物间接的、概括的反映。它能认识事物的本质和事物之间的内在联系。平时人们说的“思考”、“考虑”、“揣度”、“反省”、“设想”等都是思维活动的形式。思维是认知过程的核心。</span></p><h3><a name="二）思维的主要特征" class="md-header-anchor"></a><span>（二）思维的主要特征</span></h3><ol><li><p><strong><span>思维的间接性</span></strong></p><p><span>思维的间接性是指借助于一定的媒介和一定的知识经验对客观事物进行间接的认识。例如，根据动物的行动可推知天气，根据太阳的位置可推知时间。</span></p></li><li><p><strong><span>思维的概括性</span></strong></p><p><span>思维的概括性是指在大量感性材料的基础上，把</span><strong><span>一类事物共同的特征和规律</span></strong><span>抽取出来，</span><strong><span>加以概括</span></strong><span>。如人们依据根、茎、叶、果等共性，把枣树、梨树这些树称为果树；又如，每次看到“月晕”就要“刮风”，地板“潮湿”就要“下雨”，就得出“月晕而风，础润而雨”的结论。</span></p></li></ol><h3><a name="三）思维的种类识记理解" class="md-header-anchor"></a><span>（三）思维的种类【识记、理解】</span></h3><ol><li><p><strong><span>直观动作思维、具体形象思维和抽象逻辑思维</span></strong></p><p><span>根据</span><strong><span>思维任务的性质、内容和解决问题的方法</span></strong><span>，思维可分为</span><strong><span>直观动作思维、具体形象思维</span></strong><span>和</span><strong><span>抽象逻辑思维</span></strong><span>。</span></p><ul><li><strong><span>直观动作思维</span></strong><span>也称</span><strong><span>动作思维</span></strong><span>，是指人们</span><strong><span>通过实际操作</span></strong><span>解决直观具体问题的思维。离开了感知活动或动作，思维就不能进行，如儿童边数手指边数数，感知动作中断，思维也就停止了。</span></li><li><strong><span>具体形象思维</span></strong><span>是指人们</span><strong><span>利用头脑中的具体形象（表象）</span></strong><span>来解决问题的思维。如儿童计算3+4=7，不是对抽象数字进行分析、综合，而是在头脑中用三个手指加上四个手指，或三个苹果加上四个苹果等实物表象相加而计算出来的。</span></li><li><strong><span>抽象逻辑思维</span></strong><span>是指当人们面对理性任务时，运用</span><strong><span>概念、判断、推理</span></strong><span>等形式来解决问题的思维。抽象逻辑思维是</span><strong><span>人类思维的核心形态</span></strong><span>。</span></li></ul></li><li><p><strong><span>直觉思维和分析思维</span></strong></p><p><span>根据</span><strong><span>思维的逻辑性</span></strong><span>，思维可分为</span><strong><span>直觉思维</span></strong><span>和</span><strong><span>分析思维</span></strong><span>。</span></p><ul><li><strong><span>直觉思维</span></strong><span>是指未经逐步分析就迅速对问题答案做出合理的猜测、设想或突然领悟的思维。例如，医生听到病人的简单自述，迅速做出疾病的诊断；学生在解题时未经逐步分析，就对问题的答案做出合理的猜测、猜想等。</span></li><li><strong><span>分析思维</span></strong><span>是指经过逐步分析后，对问题解决做出明确结论的思维。例如，学生解几何题的多步推理和论证；医生面对疑难病症的多种检查、会诊分析等。</span></li></ul></li><li><p><strong><span>集中思维和发散思维</span></strong></p><p><span>根据</span><strong><span>思维的指向性</span></strong><span>，思维可分为</span><strong><span>集中思维</span></strong><span>和</span><strong><span>发散思维</span></strong><span>。</span></p><ul><li><u><strong><span>集中思维</span></strong><span>又称</span><strong><span>聚合思维、求同思维、辐合思维、会聚思维</span></strong><span>，  是指人们根据已知的信息，利用熟悉的规则解决问题，或者从给予的信息中，产生逻辑的结论的思维。</span></u><span>它是一种</span><strong><span>有方向、有范围、有条理</span></strong><span>的思维方式，是把问题所提供的各种信息集中起来，</span><strong><span>得出一个正确的或最好的答案</span></strong><span>的思维。例如，学生从各种解题方法中筛选出一种最佳解法；工程建设中工程人员把多种实施方案经过筛选和比较找出最佳方案等。</span><strong><span>（结果唯一）</span></strong></li><li><u><strong><span>发散思维</span></strong><span>又称</span><strong><span>辐射思维、求异思维、分散思维</span></strong><span>是指人们在解决问题的过程中，沿着不同的方向进行思考，对问题中所提供的信息和记忆系统中储存的信息进行重新组织，产生大量独特的新思想的思维活动形式，即从一个目标出发，沿着各种不同途径寻求各种答案的思维。</span></u><span>例如，数学中的</span><u><span>“一题多解”；</span></u><span>科学研究中对某一问题的解决提出多种设想等。</span></li></ul><p><strong><span>集中思维</span></strong><span>与发散思维都是智力活动不可缺少的思维，都带有创造的成分，但发散思维最能代表创造性的特征，</span><u><span>发散思维是创造性思维的核心</span></u><span>。</span></p></li><li><p><strong><span>常规性思维和创造性思维</span></strong></p><p><span>根据</span><strong><span>思维的创新程度</span></strong><span>，思维可分为</span><strong><span>常规性思维</span></strong><span>和</span><strong><span>创造性思维</span></strong><span>。</span></p><ul><li><strong><span>常规性思维</span></strong><span>也称</span><strong><span>再造性思维</span></strong><span>，是指人们运用已获得的知识经验，按现成的方案和程序，用惯常的方法、固定的模式来解决问题的思维。</span></li><li><strong><span>创造性思维</span></strong><span>是指</span><strong><span>以新颖、独特的方式来解决问题</span></strong><span>的思维。许多心理学家认为创造性思维是多种思维的综合表现，它既是集中思维与发散思维的结合，也是直觉思维与分析思维的结合。</span></li></ul><p><span>发散性思维的基本特征（即</span><u><span>创造性思维的基本特征</span></u><span>）包括以下三方面。</span></p><ul><li><p><strong><span>流畅性</span></strong><span>，流畅性是指个人面对问题情境时，在规定的时间内产生</span><strong><span>不同观念的数量的多少</span></strong><span>。对同一问题所想到的可能答案越多者，其思维的流畅性越高。</span></p></li><li><p><strong><span>变通性（灵活性）</span></strong><span>，变通性是指个人面对问题情境时，不墨守成规，不钻牛角尖，能</span><strong><span>随机应变，触类旁通</span></strong><span>。对同一问题所想出的</span><strong><span>不同类型答案</span></strong><span>越多者，其思维的变通性越高。</span></p></li><li><p><strong><span>独创性（独特性）</span></strong><span>，独创性是指个人面对问题情境时，能</span><strong><span>独具匠心</span></strong><span>，想出不同寻常的、超越自己也超越前辈的意见，具有新奇性。对同一问题所提意见越新奇独特者，其思维的独创性越高。</span></p><p><img src="..\..\image\砖的用途.jpg" style="zoom:33%;" /></p></li></ul></li><li><p><strong><span>经验思维和理论思维</span></strong></p><p><span>根据</span><strong><span>思维过程的依据</span></strong><span>，思维可分为</span><strong><span>经验思维</span></strong><span>和</span><strong><span>理论思维</span></strong><span>。</span></p><ul><li><strong><span>经验思维</span></strong><span>是</span><strong><span>以日常生活经验为依据</span></strong><span>，判断生产、生活中的问题的思维。例如，儿童凭自己的经验认为“鸟是会飞的动物”；人们通常认为“太阳从东边升起，从西边落下”等。</span></li><li><strong><span>理论思维</span></strong><span>是</span><strong><span>以科学的原理、定理、定律等理论为依据</span></strong><span>，对问题进行分析、判断的思维。例如，根据“凡绿色植物都是可以进行光合作用的”这一一般原理，去判断某一种绿色植物是否可以进行光合作用；科学家、理论家运用理论思维发现事物的客观规律等。</span></li></ul></li></ol><h3><a name="四）思维的基本形式识记理解" class="md-header-anchor"></a><span>（四）思维的基本形式【识记、理解】</span></h3><ol><li><p><strong><span>概念</span></strong></p><p><u><strong><span>概念</span></strong><span>是思维</span><strong><span>最基本的形式</span></strong><span>。</span></u><span>概念是</span><strong><span>具有共同属性的一类事物的总称</span></strong><span>。例如，鸟就是“有羽毛，无齿有喙”的动物的总称，这些特征使鸟类与其他动物区别开来。每一个概念都包括内涵和外延两个方面，内涵是指概念对事物的特有属性的反映，外延是指具体的、具有概念所反映的特有属性的事物。</span></p></li><li><p><strong><span>判断</span></strong></p><p><u><span>判断是用概念去肯定或否定事物具有某种属性的思维形式，</span></u><span>是事物之间的联系和关系在人脑中的反映。依据不同标准，判断可分为</span><strong><span>直接判断</span></strong><span>和</span><strong><span>间接判断</span></strong><span>，</span><strong><span>肯定判断</span></strong><span>和</span><strong><span>否定判断</span></strong><span>等。判断大都是借助语言、词汇并用句子形式来完成的。</span></p></li><li><p><strong><span>推理</span></strong></p><p><span>推理是指</span><strong><span>从已知的判断推出新的判断</span></strong><span>的思维形式。推理分为</span><strong><span>归纳推理</span></strong><span>和</span><strong><span>演绎推理</span></strong><span>。</span></p><ul><li><span>归纳推理是由具体事物归纳出一般规律的推理过程，即由特殊到一般。</span></li><li><span>演绎推理是由一般到特殊或具体的推理过程。</span></li></ul></li></ol><h3><a name="五）问题解决理解运用" class="md-header-anchor"></a><span>（五）问题解决【理解、运用】</span></h3><ol><li><p><strong><span>问题的概念及类型</span></strong></p><p><span>问题是指给定信息和要达到的目标之间的某些障碍需要被克服的刺激情境。</span></p><p><span>按照</span><strong><span>问题的组织程度</span></strong><span>，问题可分为</span><strong><span>有结构的问题</span></strong><span>和</span><strong><span>无结构的问题</span></strong><span>。</span></p></li><li><p><strong><span>问题解决的概念及类型</span></strong></p><p><u><span>问题解决是由一定的情境引起的，按照一定的目标，应用各种认知活动、技能等，经过一系列的思维操作，从问题的起始状态到达目标状态，使问题得以解决的过程。</span></u><span>每一个问题的解决都必然包含四种成分：</span><strong><span>目的、个体已有的知识、障碍、方法</span></strong><span>。</span></p><p><strong><span>问题解决</span></strong><span>可以分为两类，一是</span><strong><span>常规性问题解决</span></strong><span>，即使用常规方法来解决有结构的、有固定答案的问题；二是</span><strong><span>创造性问题解决</span></strong><span>，即综合应用各种方法或通过发展新方法、新程序等来解决无结构的、无固定答案的问题。</span></p></li><li><p><strong><span>问题解决的特征</span></strong></p><ul><li><strong><span>①目的性</span></strong><span>。问题解决具有明确的目的性，它总是要达到某个特定的目标状态。</span></li><li><strong><span>②序列性</span></strong><span>。问题解决包含一系列的心理活动，即认知操作，如分析、联想、比较、推论等。这些认知操作是存在一定序列的，一旦序列出错，问题就无法解决。</span></li><li><strong><span>③认知性</span></strong><span>。问题解决活动必须由认知操作来进行，即通过内在的心理加工实现。</span></li></ul></li><li><p><strong><span>问题解决的一般过程</span></strong></p><p><span>问题解决的一般过程：</span><strong><span>发现问题一理解问题一提出假设一检验假设</span></strong><span>。</span></p><ul><li><p><span>从完整的问题解决过程来看，</span><strong><u><span>发现问题</span></strong><span>是首要环节</span></u><span>。只有存在问题时，人们才有可能产生解决问题的认知活动。</span></p></li><li><p><strong><span>理解问题</span></strong><span>也称</span><strong><span>明确问题</span></strong><span>或</span><strong><span>分析问题</span></strong><span>，就是把握问题的性质和关键信息，摒弃无关因素，并在头脑中形成有关问题的初步印象，即形成问题的表征。表征既是个体在头脑中对所面临的事件或情境的表现和记载，也是个体解决问题时加工的对象。</span></p></li><li><p><strong><span>提出假设</span></strong><span>就是提出解决问题的可能途径和方案，选择恰当的问题解决操作步骤。提出假设是问题解决的</span><strong><span>关键阶段</span></strong><span>。</span></p></li><li><p><strong><span>检验假设</span></strong><span>就是通过一定的方法来确定假设是否合乎实际、是否符合科学原理。</span></p><ul><li><span>检验假设分为</span><strong><span>直接检验</span></strong><span>和</span><strong><span>间接检验</span></strong><span>。</span></li><li><strong><span>直接检验</span></strong><span>即通过实践来检验，通过问题解决的结果来检验；</span></li><li><strong><span>间接检验</span></strong><span>即通过推论来淘汰错误的假设，保留并选择合理的、最佳的假设。</span></li></ul></li></ul></li><li><p><strong><span>问题解决策略</span></strong></p><p><strong><span>（1）算法式策略（尝试策略）</span></strong></p><ul><li><span>算法式策略就是在问题空间中</span><strong><span>搜索所有可能的解决问题的方法</span></strong><span>，直至选择一种有效的方法解决问题。用算法式策略可以保证问题的解决，但需要大量的尝试。在采用算法式策略解决问题时，可能会发生胡乱地应用算法，碰巧得到了正确答案，但却不知道正确解决问题的方法的情况。</span></li></ul><p><strong><span>（2）启发式策略（启发法）</span></strong></p><ul><li><p><span>启发式策略是人</span><strong><span>根据一定的经验和目标的指示</span></strong><span>，在问题空间内进行较少的搜索，以达到问题解决的方法。常见的启发式策略有以下几种。</span></p><ul><li><strong><span>①手段-目的分析法</span></strong><span>。手段-目的分析法是指问题解决者不断地将当前状态和目标状态进行比较，然后采取措施尽可能地缩小这两个状态之间的差异。当问题可分成若干个各自具有目标的更小问题时，人们常常采用手段-目的分析法。它的基本步骤：第一，比较初始状态和目标状态，提出第一个子目标；第二，找出完成第一个子目标的方法或操作，实现子目标；第三，提出新的子目标。如此循环往复，直至问题解决。但有时，人们为了达到目的，不得不暂时扩大目标状态与初始状态的差异，以便最终达到目标。</span></li><li><strong><span>②逆向工作法（逆推法）</span></strong><span>。逆向工作法是指从问题的目标状态出发，以此为起点逐步向初始状态递归，得出达到目标需要的条件，将这些条件与问题提供的已知条件进行比较，若吻合，则推理成功，问题得到解决。</span></li><li><strong><span>③爬山法</span></strong><span>。爬山法是一种类似于手段-目的分析法的解题策略。它是采用一定的方法</span><strong><span>逐步降低初始状态和目标状态的距离</span></strong><span>，以达到问题解决的方法。</span></li></ul></li></ul></li><li><p><strong><span>影响问题解决的主要因素</span></strong></p><p><strong><span>（1）问题情境与表征方式</span></strong></p><ul><li><span>问题情境是指人们所要解决问题的客观情境或刺激模式，也就是问题中材料的组织方式或问题呈现的知觉方式。</span></li><li><span>问题表征是在头脑中对问题进行信息记载、理解和表达的方式。刺激的呈现方式能够影响人们的表征方式，而问题的表征方式直接影响了问题的解决。</span></li><li><u><span>问题情境中的刺激模式与个人的知识结构越接近，问题就越容易解决，反之则越困难。</span></u></li></ul><p><strong><span>（2）知识经验与迁移</span></strong></p><ul><li><span>心理学研究表明，</span><u><span>专家和新手在解决问题效率上的差异，主要是由专家和新手在</span><strong><span>知识数量上的差异和知识组织方式上的不同</span></strong><span>造成的。</span></u></li><li><strong><span>迁移</span></strong><span>是指已有的知识经验、技能和方法对解决新问题的影响。任何问题的解决都离不开一定的知识作为基础，必要的知识经验、完善的知识结构有利于问题的顺利解决。迁移有</span><strong><span>正迁移</span></strong><span>和</span><strong><span>负迁移</span></strong><span>之分。正迁移对解决新问题有促进作用。负迁移对解决新问题有阻碍或干扰作用。</span></li></ul><p><strong><span>（3）思维定势（心理定势）与功能固着</span></strong></p><ul><li><u><span>思维定势是指由先前的活动形成的并影响后继活动趋势的一种心理准备状态。</span></u><span>它在思维活动中表现为一种易于以习惯的方式解决问题的倾向。</span><u><span>当问题情境不变时t，定势对问题的解决有积极的作用，有利于问题的解决；当问题情境发生了变化时，定势对问题的解决有消极作用，不利于问题的解决。</span></u></li><li><span>功能固着是指个体在解决问题时往往只看到某种事物的通常功能，而看不到它其他方面可能有的功能。这是人们长期以来形成的对某些事物的功能或用途的固定看法。功能固着影响人的思维，不利于新假设的提出和问题的解决。</span></li></ul><p><img src="..\..\image\思维.jpg" style="zoom:33%;" /></p><p><span>（4）</span><strong><span>原型启发</span></strong></p><ul><li><u><span>原型启发是指在其他事物或现象中获得的信息对解决当前问题的启发。具有启发作用的事物或现象叫原型。</span></u><span>任何一个人在进行某一项发明创造或革新时，都不是凭空想象出来的，在开始时总要受到某种类似的事物或模型的启发。例如，鲁班被带齿的茅草划破了手而发明了锯子；瓦特看到水烧开时蒸汽把壶盖顶起来，受到启发发明了蒸汽机。</span></li></ul><p><strong><span>（5）动机强度与情绪状态</span></strong></p><ul><li><span>人们对活动的态度、社会责任感、认识兴趣等，都可以成为发现问题的动机，从而影响到问题解决的效果。</span><u><span>研究表明，动机强度与问题解决的效果之间的关系可以用一条</span><strong><span>倒“U”形曲线</span></strong><span>来说明。</span></u><span>它表明在一定的范围内，问题解决的效果随动机强度的增加而上升，中等强度的动机是问题解决的最佳水平。超过一定的限度，提高动机的水平，反而会降低问题解决的效果。</span></li><li><span>情绪对问题解决有一定的影响，紧张、惶恐、烦躁、压抑等消极情绪会阻碍问题的解决，而乐观、平静等积极情绪将有助于问题的解决。</span></li><li><span>除了上述因素外，个体的智力水平、性格特征、认知风格和世界观等个性心理特性也制约着问题解决的方向和效果。</span></li></ul></li><li><p><strong><span>学生问题解决能力的培养（提高问题解决能力的教学）</span></strong></p><p><strong><span>（1）提高学生知识储备的数量与质量</span></strong></p><ul><li><strong><span>①帮助学生牢固记忆知识</span></strong><span>。知识记忆越牢固、越准确，提取得也就越快、越准确，成功地解决问题的可能性也就越大。</span></li><li><strong><span>②提供多种变式，促进知识的概括。</span></strong><span>只有深刻领会和理解的知识才能被牢固地记忆和有效地应用。</span></li><li><strong><span>③重视知识的联系，建立网络化结构。</span></strong><span>教师要有意识地沟通课内外，不同学科、不同知识点间的纵横交叉联系，使学生将所获得的知识融会贯通，形成一体化的知识结构。</span></li></ul><p><strong><span>（2）教授与训练解决问题的方法与策略</span></strong></p><ul><li><strong><span>①结合具体学科，教授思维方法。</span></strong><span>有效的思维方法或心智技能可以引导学生正确地解决问题。</span></li><li><strong><span>②外化思路，进行显性教学。</span></strong><span>教师在教授思维方法时，应遵循由内而外的方式，即把教师头脑中的思维方法或思路提炼出来，明确地、有意识地将其外化，给学生示范，并要求学生模仿、概括和总结，这在一定程度上可以避免学生盲目摸索。</span></li></ul><p><strong><span>（3）提供多种练习的机会</span></strong></p><ul><li><strong><span>①注重练习的质量，提高练习的有效性。</span></strong><span>教师应考虑练习的质量，根据不同的教学目标、教学内容、教学时段来精选、设计例题与习题等。</span></li><li><strong><span>②注重练习的内容，加强练习的综合性。</span></strong><span>多种形式的练习，可以调动学生主动参与学习的积极性，提高学生知识应用的变通性、灵活性与广泛性。</span></li></ul><p><strong><span>（4）培养思考问题的习惯</span></strong></p><ul><li><strong><span>①鼓励学生主动发现问题。</span></strong><span>教师应鼓励学生对平常事物多观察。</span></li><li><strong><span>②鼓励学生多角度提出假设。</span></strong><span>在明确问题的基础上，教师应鼓励学生从不同的角度，尽可能多地提出各种假设，而不要对这些想法进行过多的评判，以免过早地局限于某一问题解决的方案中。</span></li><li><strong><span>③鼓励学生进行自我评价与反思。</span></strong><span>教师应要求学生自己反复推敲、分析各种假设和各种方法的优劣，对问题解决的整个过程进行监控与评价。</span></li></ul><p><strong><span>（5）训练逻辑思维能力，提高思维水平</span></strong></p><ul><li><span>问题解决需要借助推理进行有效的思考，这需要人们不断地提高思维水平。训练学生思维的形式主要有两种：一种是直接上思维训练课，另一种是在学科教学中穿插思维训练的内容。</span></li></ul><p><span>除以上几个方面外，培养学生问题解决的能力还可从培养学生</span><strong><span>主动质疑</span></strong><span>和</span><strong><span>解决问题的内部动机</span></strong><span>，设置适当难度的问题，帮助学生正确表征问题，帮助学生养成分析问题和对问题归类的习惯等方面着手。</span></p></li></ol><p>&nbsp;</p><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p><h2><a name="六想象" class="md-header-anchor"></a><span>六、想象</span></h2><h3><a name="一）表象与想象" class="md-header-anchor"></a><span>（一）表象与想象</span></h3><p><span>表象是指事物不在面前时，人们在头脑中出现的关于事物的形象。</span></p><p><span>想象是人对头脑中已有的表象进行加工改造，创造出新形象的思维过程。</span></p><p><span>表象是过去感知过的事物的形象在头脑中的再现，并没有创造出新的形象，属于记忆的范畴；想象是对新形象的创造过程，属于思维的范畴。</span></p><h3><a name="二）想象的种类" class="md-header-anchor"></a><span>（二）想象的种类</span></h3><p><span>按照</span><strong><span>想象活动是否具有目的性</span></strong><span>，想象可分为</span><strong><span>无意想象</span></strong><span>和</span><strong><span>有意想象</span></strong><span>。</span></p><ol><li><p><strong><span>无意想象</span></strong></p><p><span>无意想象也称</span><strong><span>不随意想象</span></strong><span>，是</span><strong><span>没有预定目的</span></strong><span>，在一定的刺激影响下，不由自主地引起的想象。例如，人们将看到的浮云想象为各种动物的形象；精神病患者在头脑中产生的幻觉；由药物导致的幻觉等都是无意想象。</span><u><span>梦是在睡眠状态下的一种正常的心理现象，是无意想象的极端表现。</span></u></p></li><li><p><strong><span>有意想象</span></strong></p><p><span>有意想象也称</span><strong><span>随意想象</span></strong><span>，是</span><strong><span>有预定目的、自觉进行</span></strong><span>的想象。人在多数情况下，总是根据一定的目的、自觉地进行想象活动。对于有意想象，根据它的新形象的新颖性、独特性和创造性的不同，又可分为</span><strong><span>再造想象</span></strong><span>和</span><strong><span>创造想象</span></strong><span>。</span><u><span>幻想是创造想象的一种特殊形式。</span></u></p><p><strong><span>（1）再造想象</span></strong><span>【理解】</span></p><ul><li><u><span>再造想象是根据词语的描述或非语言（图样、图解、符号等）的描绘，在头脑中产生有关事物新形象的过程。</span></u><span>例如，人们在阅读文艺作品，学生听教师对课文的描述时，头脑中出现的有关事物的形象。</span></li><li><span>再造想象产生的条件：①丰富的表象储备；②为再造想象提供的词语及实物标志；③理解词语与实物标志的意义。</span></li></ul><p><strong><span>（2）创造想象</span></strong></p><ul><li><span>创造想象是按照一定目的、任务，使用自己以往积累的表象，在头脑中独立地创造出新形象的过程。在创造新产品、新技术、新作品时，人脑所构成的新事物的形象都是创造想象。它的特点是新颖、独创、奇特。</span></li><li><span>创造想象产生的条件：①强烈的创造愿望；②丰富的表象储备；③积累必要的知识经验；④原型启发；⑤积极的思维活动；⑥灵感的作用。</span></li></ul><p><strong><span>（3）幻想</span></strong></p><ul><li><span>幻想是指向未来并与个人愿望相联系的想象。幻想包括</span><strong><span>理想和空想</span></strong><span>。理想指符合事物发展规律、有实现可能的积极幻想；空想是与客观事实相违背的消极幻想。</span></li></ul></li></ol><h3><a name="三）学生想象力的培养想象规律在教学中的应用）" class="md-header-anchor"></a><span>（三）学生想象力的培养（想象规律在教学中的应用）</span></h3><ol><li><p><strong><span>在教学中发展学生的再造想象</span></strong></p><ul><li><span>①扩大学生头脑中的表象储备；</span></li><li><span>②帮助学生真正弄懂描述中关键性词句和实物标志的含义；</span></li><li><span>③唤起学生对教材的想象，以加深学生对知识的理解和巩固。</span></li></ul></li><li><p><strong><span>在教学中培养学生的创造想象</span></strong></p><ul><li><span>①引导学生学会观察，丰富学生的表象储备。</span></li><li><span>②积极引导学生思考，打开学生想象力的大门。</span></li><li><span>③引导学生努力学习科学文化知识，扩大学生的知识经验以发展学生生的空间想象能力。</span></li><li><span>④注意发展学生的语言能力。想象是在语言的调节下进行的，并通过语言来表现。发展学生的语言能力有利于提高他们的想象水平。</span></li><li><span>⑤结合学科教学，有目的地训练学生的想象力。</span></li><li><span>⑥引导学生进行积极的幻想。</span></li></ul></li></ol><p>&nbsp;</p><p><a href='#认知过程'><span>返回目录</span></a></p><hr /><p>&nbsp;</p></div>
+</body>
+</html>
