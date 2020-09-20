@@ -27,18 +27,20 @@ body::-webkit-scrollbar {
     font-size: 20px;
     line-height: 60px;
     text-align: center;
-    margin-right: 10px;
-} 
+    margin-left: 10px;
+}
+
+.return{
+    width: 60px;
+    height: 50px;
+    margin-right: 20px;
+    float: right;
+}
 
 .return a{
-    width: 40px;
-    height: 100%;
-    font-size: 20px;
-    text-align: center;
-    line-height: 60px;
-    margin-right: 80px;
+    font-size: 15px;
+    line-height: 50px;
     color: rgb(97, 94, 94);
-    float: right;
 }
 
 iframe{
