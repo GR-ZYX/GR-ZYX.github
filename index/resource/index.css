@@ -60,12 +60,12 @@ iframe{
 @media screen and (max-width: 600px){
   
     .title h1{
-        line-height: 70px;
+        line-height: 60px;
         font-size: 15px;
     } 
 
     .return a{
-        line-height: 70px;
+        line-height: 60px;
         font-size: 15px;
     }
 
