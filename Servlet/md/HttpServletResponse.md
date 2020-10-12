@@ -278,7 +278,7 @@ try(InputStream in = getServletContext().getResourceAsStream("/WEB-INF/jdbc.pdf"
 
 
 
-为了取得 Web 应用程序中的文件串流， 可以使用 HttpServle t的 **`getServletContext()`** 取得 ServletContext 对象， 这个对象代表了目前这个Web应用程序可以使用 servletContext 的 **`getResourceAsStream()`** 方法以串流程序读取文件， 指定的路径要是相对于Web 应用程序环境根目录。为了不让浏览器直接请求 PDF 文件，在这里将 PDF 文件放在 WEB-INF 目录中。
+为了取得 Web 应用程序中的文件串流，可以使用 HttpServlet 的 **`getServletContext()`** 取得 ServletContext 对象， 这个对象代表了目前这个Web应用程序可以使用 servletContext 的 **`getResourceAsStream()`** 方法以串流程序读取文件， 指定的路径要是相对于Web 应用程序环境根目录。为了不让浏览器直接请求 PDF 文件，在这里将 PDF 文件放在 WEB-INF 目录中。
 
 然后通过 HttpServletResponse 的 **`getOutputStream()`** 来取得 servletOutputStream 对象。接下来就是 Java IO 的概念了，从PDF 读入字节数据，再用 ServletOutputStream 来对浏览器进行写出响应。
 
